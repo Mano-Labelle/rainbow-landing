@@ -8,12 +8,12 @@ export function FAQ() {
 
   return (
     <section id="faq" className="relative">
-      <div className="mx-auto max-w-3xl px-6 py-24 md:py-32">
-        <div className="text-[11px] font-mono tracking-[0.18em] text-lavender-dim mb-6">
-          · 05 · QUESTIONS FRÉQUENTES ·
+      <div className="mx-auto max-w-3xl px-6 py-20 md:py-28">
+        <div className="font-mono text-[11px] tracking-[0.18em] uppercase text-lavender-dim mb-4">
+          · 09 · Questions fréquentes ·
         </div>
-        <h2 className="text-4xl md:text-5xl font-serif leading-tight">
-          Questions fréquentes.
+        <h2 className="text-4xl md:text-5xl font-serif leading-tight text-lavender">
+          Ce qu&apos;on nous demande.
         </h2>
 
         <div className="mt-12 divide-y divide-ink-border/40 border-y border-ink-border/40">

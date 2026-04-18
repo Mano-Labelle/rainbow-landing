@@ -1,6 +1,7 @@
 import { DIRECTION } from "@/content/direction";
 import { Arc } from "@/components/brand/Arc";
 import { HeroChat } from "@/components/hero/HeroChat";
+import { StoreButton } from "@/components/brand/StoreButton";
 
 export function Hero() {
   return (
@@ -15,7 +16,7 @@ export function Hero() {
         }}
       />
 
-      <div className="relative mx-auto max-w-6xl px-6 pt-16 pb-24 md:pt-24 md:pb-32 grid md:grid-cols-[1.1fr_0.9fr] gap-12 md:gap-16 items-center">
+      <div className="relative mx-auto max-w-6xl px-6 pt-12 pb-20 md:pt-20 md:pb-28 grid md:grid-cols-[1.1fr_0.9fr] gap-10 md:gap-16 items-center">
         {/* Left — copy + CTA */}
         <div>
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-ink-border/60 bg-ink-panel/40 text-xs text-lavender-muted font-mono">
@@ -30,7 +31,10 @@ export function Hero() {
           <h1 className="mt-3 text-5xl md:text-6xl lg:text-7xl font-serif leading-[1.02] tracking-tight">
             <span className="block">Parlez.</span>
             <span className="block">
-              <em className="not-italic"><span className="rink-warm">Rainbow</span></em> prend les notes.
+              <em className="not-italic">
+                <span className="rink-warm">Rainbow</span>
+              </em>{" "}
+              prend les notes.
             </span>
           </h1>
 
@@ -38,19 +42,25 @@ export function Hero() {
             {DIRECTION.hero.subhead}
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-3">
-            <a
-              href="https://app.askrainbow.ai"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-accent text-ink text-sm font-semibold hover:shadow-[0_0_30px_rgba(255,94,196,0.5)] transition"
-            >
-              {DIRECTION.hero.ctaPrimary}
-            </a>
-            <a
-              href="#fonctionnement"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-ink-border/70 text-sm text-lavender-muted hover:text-lavender hover:border-ink-border transition"
-            >
-              {DIRECTION.hero.ctaSecondary}
-            </a>
+          {/* CTA block */}
+          <div className="mt-8">
+            <div className="text-xs font-mono tracking-[0.12em] uppercase text-lavender-dim">
+              Rainbow vit sur ton téléphone
+            </div>
+            <div className="mt-3 flex flex-wrap items-center gap-3">
+              <StoreButton kind="apple" href="https://app.askrainbow.ai" />
+              <StoreButton kind="google" href="https://app.askrainbow.ai" />
+              <a
+                href="#journee"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-ink-border bg-ink-panel/60 text-sm text-lavender-muted hover:text-lavender hover:border-lavender-muted transition"
+              >
+                <span
+                  className="w-1.5 h-1.5 rounded-full bg-accent"
+                  aria-hidden
+                />
+                {DIRECTION.hero.ctaSecondary}
+              </a>
+            </div>
           </div>
 
           {/* Trust strip */}
