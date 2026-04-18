@@ -1,5 +1,6 @@
 import { DIRECTION } from "@/content/direction";
 import { RainbowDivider } from "@/components/brand/RainbowDivider";
+import { ProblemVisual } from "./ProblemVisual";
 
 export function Problem() {
   return (
@@ -25,6 +26,8 @@ export function Problem() {
               Un CRM demande que vous le teniez. Rainbow tient à votre place, et vous le relisez entre deux visites.
             </p>
           </div>
+
+          <ProblemVisual />
         </div>
       </section>
     </>
