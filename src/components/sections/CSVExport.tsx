@@ -21,7 +21,7 @@ const ROWS = [
 export function CSVExport() {
   return (
     <section id="csv" className="relative">
-      <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+      <div className="mx-auto max-w-6xl px-6 py-14 md:py-20">
         <div className="rounded-3xl border border-ink-border/60 bg-ink-panel/40 overflow-hidden grid md:grid-cols-2 gap-8 md:gap-0">
           <div className="p-8 md:p-12">
             <SectionHead
@@ -31,11 +31,11 @@ export function CSVExport() {
               align="left"
             />
             <p className="mt-6 text-lavender-muted leading-relaxed max-w-lg">
-              Rainbow n&apos;est pas un CRM. Tout ce qu&apos;il note — contacts,
-              comptes-rendus, tâches, relances — s&apos;exporte en CSV à tout
-              moment. Importez-le dans HubSpot, Salesforce, Pipedrive, Sellsy,
-              Axonaut, ou gardez-le dans un tableur. Vous partez avec vos données,
-              pas de verrou.
+              Rainbow n&apos;est pas un CRM. Tout ce qu&apos;il note (contacts,
+              comptes-rendus, tâches, relances) s&apos;exporte en CSV à tout moment.
+              Importez-le dans HubSpot, Salesforce, Pipedrive, Sellsy, Axonaut,
+              ou gardez-le dans un tableur. Vous partez avec vos données, pas de
+              verrou.
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
               {TOOLS.map((t) => (

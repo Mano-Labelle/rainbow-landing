@@ -24,7 +24,7 @@ const PORTES = [
 export function Portes() {
   return (
     <section id="portes" className="relative">
-      <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+      <div className="mx-auto max-w-6xl px-6 py-14 md:py-20">
         <SectionHead
           index="07"
           label="Trois portes, une conversation"

@@ -6,7 +6,7 @@ import { SectionHead } from "@/components/brand/SectionHead";
 export function Journee() {
   return (
     <section id="journee" className="relative">
-      <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+      <div className="mx-auto max-w-6xl px-6 py-14 md:py-20">
         <SectionHead
           index="02"
           label="Une journée avec Rainbow"
@@ -249,8 +249,8 @@ function SceneAgenda() {
               </p>
               <p className="mt-2 text-[11px] text-lavender-muted leading-relaxed">
                 <strong className="text-lavender">À ne pas oublier.</strong> Benoît
-                aime le café noisette. Son chef (Fabrice) passe en fin de mois —
-                proposer RDV conjoint.
+                aime le café noisette. Son chef (Fabrice) passe en fin de mois.
+                Proposer un RDV conjoint.
               </p>
             </div>
           </div>

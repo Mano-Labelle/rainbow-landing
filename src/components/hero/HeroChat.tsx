@@ -1,7 +1,25 @@
 "use client";
 
 import { useEffect, useId, useRef, useState } from "react";
-import { Arc } from "@/components/brand/Arc";
+import Image from "next/image";
+
+function RainbowAvatar({ size = 22 }: { size?: number }) {
+  return (
+    <span
+      className="inline-flex items-center justify-center shrink-0"
+      style={{ width: size + 6, height: size + 6 }}
+    >
+      <Image
+        src="/logo.png"
+        alt=""
+        width={size}
+        height={size}
+        className="select-none"
+        style={{ width: size, height: "auto" }}
+      />
+    </span>
+  );
+}
 
 /* =====================================================================
    Spectral voice waveform — used inside voice-message bubbles.
@@ -125,7 +143,7 @@ function Typewriter({
 }
 
 /* =====================================================================
-   Chat bubble — user (right, green) or Rainbow (left, dark w/ rainbow accent)
+   Chat bubble. User bubble right (muted lavender), Rainbow left (dark).
    ===================================================================== */
 type BubbleSide = "user" | "rainbow";
 type BubbleKind = "text" | "voice";
@@ -154,14 +172,14 @@ function ChatBubble({
     <div className={rowClasses}>
       {!isUser && (
         <div className="w-7 h-7 rounded-full bg-ink-elev border border-ink-border flex items-center justify-center shrink-0 self-end">
-          <Arc size={16} withGlow={false} />
+          <RainbowAvatar size={18} />
         </div>
       )}
       <div
         className={[
           "relative max-w-[78%] px-3 py-2 text-[13px] leading-snug",
           isUser
-            ? "bg-[#1f7a5c] text-white rounded-[18px] rounded-br-[4px]"
+            ? "text-lavender rounded-[18px] rounded-br-[4px] border border-lavender/10 bg-[rgba(181,125,255,0.18)]"
             : "bg-ink-elev text-lavender rounded-[18px] rounded-bl-[4px] border border-ink-border/50",
         ].join(" ")}
       >
@@ -216,7 +234,7 @@ function ChatTyping() {
   return (
     <div className="flex gap-2 mb-2 justify-start">
       <div className="w-7 h-7 rounded-full bg-ink-elev border border-ink-border flex items-center justify-center shrink-0 self-end">
-        <Arc size={16} withGlow={false} />
+        <RainbowAvatar size={18} />
       </div>
       <div className="bg-ink-elev rounded-[18px] rounded-bl-[4px] border border-ink-border/50 px-3 py-3 flex gap-1 items-center">
         <span className="w-1.5 h-1.5 rounded-full bg-lavender-muted animate-bounce [animation-delay:-0.3s]" />
@@ -267,7 +285,7 @@ function IPhoneFrame({
             <span className="text-lavender-muted text-lg">‹</span>
             <div className="flex items-center gap-2 flex-1">
               <div className="w-8 h-8 rounded-full bg-ink-elev border border-ink-border flex items-center justify-center">
-                <Arc size={18} withGlow={false} />
+                <RainbowAvatar size={22} />
               </div>
               <div>
                 <div className="text-[13px] font-semibold">Rainbow</div>

@@ -11,7 +11,7 @@ export function Footer() {
           <div>
             <Logo size={28} />
             <p className="mt-4 text-sm text-lavender-muted max-w-xs leading-relaxed">
-              L&apos;assistant commercial IA pour les commerciaux terrain. Fait en France.
+              L&apos;assistant commercial IA pour les commerciaux terrain.
             </p>
             <div className="mt-5 flex items-center gap-2 text-xs text-lavender-dim font-mono">
               <span className="w-2 h-2 rounded-full bg-spec-green animate-pulse" />

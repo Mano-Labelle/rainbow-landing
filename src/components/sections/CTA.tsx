@@ -7,7 +7,7 @@ import { FakeQR } from "@/components/brand/FakeQR";
 export function CTA() {
   return (
     <section id="cta" className="relative">
-      <div className="mx-auto max-w-5xl px-6 py-20 md:py-28">
+      <div className="mx-auto max-w-5xl px-6 py-14 md:py-20">
         <div className="relative overflow-hidden rounded-3xl border border-ink-border/60 bg-ink-panel/40 px-8 py-14 md:px-14 md:py-20">
           {/* Arc glow decoration */}
           <div
@@ -47,7 +47,7 @@ export function CTA() {
                   Installe Rainbow sur ton téléphone.
                 </div>
                 <div className="mt-1 text-sm text-lavender-muted">
-                  Scanne le QR — ou attrape-le dans les stores.
+                  Scanne le QR, ou attrape-le dans les stores.
                 </div>
                 <div className="mt-5 flex flex-wrap gap-3">
                   <StoreButton kind="apple" href="https://app.askrainbow.ai" />

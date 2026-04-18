@@ -7,7 +7,7 @@ export function Problem() {
     <>
       <RainbowDivider />
       <section id="probleme" className="relative">
-        <div className="mx-auto max-w-3xl px-6 py-20 md:py-28">
+        <div className="mx-auto max-w-3xl px-6 py-14 md:py-20">
           <div className="font-mono text-[11px] tracking-[0.18em] uppercase text-lavender-dim mb-6">
             · 01 · Le constat ·
           </div>

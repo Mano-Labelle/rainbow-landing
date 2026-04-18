@@ -11,12 +11,13 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { FAQ } from "@/components/sections/FAQ";
 import { CTA } from "@/components/sections/CTA";
 import { Footer } from "@/components/sections/Footer";
+import { Reveal } from "@/components/brand/Reveal";
 import { ENTITY, WHAT_IS } from "@/content/direction";
 
 export default function Home() {
   return (
     <>
-      {/* Entity declaration — hidden visually but read by LLM crawlers */}
+      {/* Entity declaration. Hidden visually; read by LLM crawlers. */}
       <div className="sr-only">
         <p>{ENTITY}</p>
         <p>{WHAT_IS}</p>
@@ -25,16 +26,36 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
-        <Problem />
-        <Journee />
-        <WebAdmin />
-        <Flow />
-        <Features />
-        <CSVExport />
-        <Portes />
-        <Testimonials />
-        <FAQ />
-        <CTA />
+        <Reveal>
+          <Problem />
+        </Reveal>
+        <Reveal>
+          <Journee />
+        </Reveal>
+        <Reveal>
+          <WebAdmin />
+        </Reveal>
+        <Reveal>
+          <Flow />
+        </Reveal>
+        <Reveal>
+          <Features />
+        </Reveal>
+        <Reveal>
+          <CSVExport />
+        </Reveal>
+        <Reveal>
+          <Portes />
+        </Reveal>
+        <Reveal>
+          <Testimonials />
+        </Reveal>
+        <Reveal>
+          <FAQ />
+        </Reveal>
+        <Reveal>
+          <CTA />
+        </Reveal>
       </main>
       <Footer />
     </>

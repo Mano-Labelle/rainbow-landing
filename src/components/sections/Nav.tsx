@@ -4,20 +4,14 @@ import { Arc } from "@/components/brand/Arc";
 export function Nav() {
   return (
     <nav className="sticky top-0 z-40 backdrop-blur-md bg-ink/70 border-b border-ink-border/40">
-      <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
+      <div className="mx-auto max-w-6xl px-6 py-3.5 flex items-center justify-between">
         <Logo size={22} />
-        <div className="hidden md:flex items-center gap-7 text-sm text-lavender-muted">
+        <div className="hidden md:flex items-center gap-8 text-sm text-lavender-muted">
           <a href="#fonctionnement" className="hover:text-lavender transition">
             Comment ça marche
           </a>
           <a href="#journee" className="hover:text-lavender transition">
             Une journée avec Rainbow
-          </a>
-          <a href="#web" className="hover:text-lavender transition">
-            Web
-          </a>
-          <a href="#csv" className="hover:text-lavender transition">
-            Export CSV
           </a>
           <a href="#faq" className="hover:text-lavender transition">
             FAQ

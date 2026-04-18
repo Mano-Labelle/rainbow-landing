@@ -7,7 +7,7 @@ export function Testimonials() {
       id="avis"
       className="relative bg-ink-panel/40 border-y border-ink-border/40"
     >
-      <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+      <div className="mx-auto max-w-6xl px-6 py-14 md:py-20">
         <SectionHead
           index="08"
           label="Ils chattent avec Rainbow"

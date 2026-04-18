@@ -67,16 +67,16 @@ const SIDEBAR = [
 export function WebAdmin() {
   return (
     <section id="web" className="relative">
-      <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+      <div className="mx-auto max-w-6xl px-6 py-14 md:py-20">
         <SectionHead
           index="03"
           label="Rainbow sur ordinateur"
           title={
             <>
-              L&apos;IA vit dans l&apos;app. Le web, c&apos;est <RInk>la base</RInk>.
+              Un <RInk>assistant IA</RInk> dans l&apos;app, accessible via ton ordinateur.
             </>
           }
-          intro="Sur téléphone, tu parles à Rainbow. Sur ordinateur, tu passes en revue : tes contacts, tes tâches, ton journal. Tu exportes. Tu corriges. Tu pilotes."
+          intro="Sur téléphone, tu parles à Rainbow. Sur ordinateur, tu passes en revue : tes contacts, tes tâches, ton journal. Tu exportes, tu corriges, tu pilotes."
         />
 
         <div className="mt-12 rounded-2xl border border-ink-border/60 overflow-hidden shadow-[0_40px_80px_-40px_rgba(0,0,0,0.7)] bg-ink-panel/40">
