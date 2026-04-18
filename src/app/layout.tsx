@@ -74,13 +74,7 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
-  icons: {
-    icon: [
-      { url: "/favicon-192.png", type: "image/png", sizes: "192x192" },
-      { url: "/favicon.ico" },
-    ],
-    apple: "/favicon-192.png",
-  },
+  // Next.js auto-discovers src/app/icon.png and serves it as the favicon.
   category: "technology",
 };
 
