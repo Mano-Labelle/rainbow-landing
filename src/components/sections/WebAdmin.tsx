@@ -73,7 +73,9 @@ export function WebAdmin() {
           label="Rainbow sur ordinateur"
           title={
             <>
-              Un <RInk>assistant IA</RInk> dans l&apos;app, accessible via ton ordinateur.
+              Un{" "}
+              <RInk>assistant IA</RInk>
+              {" "}dans l&apos;app, accessible via ton ordinateur.
             </>
           }
           intro="Sur téléphone, tu parles à Rainbow. Sur ordinateur, tu passes en revue : tes contacts, tes tâches, ton journal. Tu exportes, tu corriges, tu pilotes."

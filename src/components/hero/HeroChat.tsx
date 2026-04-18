@@ -179,8 +179,8 @@ function ChatBubble({
         className={[
           "relative max-w-[78%] px-3 py-2 text-[13px] leading-snug",
           isUser
-            ? "text-lavender rounded-[18px] rounded-br-[4px] border border-lavender/10 bg-[rgba(181,125,255,0.18)]"
-            : "bg-ink-elev text-lavender rounded-[18px] rounded-bl-[4px] border border-ink-border/50",
+            ? "text-lavender rounded-[18px] rounded-br-[4px] border border-[rgba(91,184,255,0.25)] bg-[rgba(91,184,255,0.14)]"
+            : "text-lavender rounded-[18px] rounded-bl-[4px] border border-[rgba(255,94,196,0.22)] bg-[rgba(255,94,196,0.08)]",
         ].join(" ")}
       >
         {!isUser && (
@@ -188,7 +188,7 @@ function ChatBubble({
             className="absolute inset-0 rounded-[18px] rounded-bl-[4px] pointer-events-none"
             style={{
               background:
-                "linear-gradient(135deg, rgba(255,94,196,0.08), rgba(91,184,255,0.04))",
+                "linear-gradient(135deg, rgba(255,94,196,0.14), rgba(255,160,96,0.06))",
             }}
           />
         )}
@@ -236,7 +236,7 @@ function ChatTyping() {
       <div className="w-7 h-7 rounded-full bg-ink-elev border border-ink-border flex items-center justify-center shrink-0 self-end">
         <RainbowAvatar size={18} />
       </div>
-      <div className="bg-ink-elev rounded-[18px] rounded-bl-[4px] border border-ink-border/50 px-3 py-3 flex gap-1 items-center">
+      <div className="rounded-[18px] rounded-bl-[4px] border border-[rgba(255,94,196,0.22)] bg-[rgba(255,94,196,0.08)] px-3 py-3 flex gap-1 items-center">
         <span className="w-1.5 h-1.5 rounded-full bg-lavender-muted animate-bounce [animation-delay:-0.3s]" />
         <span className="w-1.5 h-1.5 rounded-full bg-lavender-muted animate-bounce [animation-delay:-0.15s]" />
         <span className="w-1.5 h-1.5 rounded-full bg-lavender-muted animate-bounce" />
@@ -296,8 +296,9 @@ function IPhoneFrame({
             </div>
             <span className="text-lavender-muted">⋯</span>
           </div>
-          {/* Chat area */}
-          <div className="px-3 py-3 min-h-[360px] bg-gradient-to-b from-[#0A0612] to-[#0f0a18]">
+          {/* Chat area. Fixed height sized for the full scripted reveal so
+              the phone doesn't grow as messages appear. */}
+          <div className="px-3 py-3 h-[480px] bg-gradient-to-b from-[#0A0612] to-[#0f0a18] overflow-hidden">
             {children}
           </div>
           {/* Composer */}
