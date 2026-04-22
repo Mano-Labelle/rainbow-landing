@@ -9,6 +9,7 @@ import { CSVExport } from "@/components/sections/CSVExport";
 import { Portes } from "@/components/sections/Portes";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { FAQ } from "@/components/sections/FAQ";
+import { Resources } from "@/components/sections/Resources";
 import { CTA } from "@/components/sections/CTA";
 import { Footer } from "@/components/sections/Footer";
 import { Reveal } from "@/components/brand/Reveal";
@@ -52,6 +53,9 @@ export default function Home() {
         </Reveal>
         <Reveal>
           <FAQ />
+        </Reveal>
+        <Reveal>
+          <Resources />
         </Reveal>
         <Reveal>
           <CTA />

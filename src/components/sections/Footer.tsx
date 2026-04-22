@@ -25,12 +25,12 @@ export function Footer() {
               </div>
               <ul className="space-y-2.5">
                 {s.items.map((item) => (
-                  <li key={item}>
+                  <li key={item.label}>
                     <a
-                      href="#"
+                      href={item.href}
                       className="text-sm text-lavender-muted hover:text-lavender transition"
                     >
-                      {item}
+                      {item.label}
                     </a>
                   </li>
                 ))}
