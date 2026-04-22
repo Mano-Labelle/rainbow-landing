@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 80" width="240" height="160" role="img" aria-label="Rainbow">
+  <path d="M 8 68 A 42 42 0 0 1 92 68" fill="none" stroke="#FF5EC4" stroke-width="6" stroke-linecap="round"/>
+  <path d="M 14 68 A 36 36 0 0 1 86 68" fill="none" stroke="#FFA060" stroke-width="6" stroke-linecap="round"/>
+  <path d="M 20 68 A 30 30 0 0 1 80 68" fill="none" stroke="#F7E07A" stroke-width="6" stroke-linecap="round"/>
+  <path d="M 26 68 A 24 24 0 0 1 74 68" fill="none" stroke="#6BE9B0" stroke-width="6" stroke-linecap="round"/>
+  <path d="M 32 68 A 18 18 0 0 1 68 68" fill="none" stroke="#5BB8FF" stroke-width="6" stroke-linecap="round"/>
+  <path d="M 38 68 A 12 12 0 0 1 62 68" fill="none" stroke="#B57DFF" stroke-width="6" stroke-linecap="round"/>
+</svg>
