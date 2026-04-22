@@ -8,7 +8,7 @@ export function Journee() {
     <section id="journee" className="relative">
       <div className="mx-auto max-w-6xl px-6 py-14 md:py-20">
         <SectionHead
-          index="02"
+          index="01"
           label="Une journée avec Rainbow"
           title={
             <>

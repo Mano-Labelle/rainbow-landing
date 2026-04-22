@@ -9,7 +9,7 @@ export function Problem() {
       <section id="probleme" className="relative">
         <div className="mx-auto max-w-3xl px-6 py-14 md:py-20">
           <div className="font-mono text-[11px] tracking-[0.18em] uppercase text-lavender-dim mb-6">
-            · 01 · Le constat ·
+            · 02 · Le constat ·
           </div>
           <h2 className="text-4xl md:text-5xl font-serif leading-tight text-lavender">
             {DIRECTION.problem.title}

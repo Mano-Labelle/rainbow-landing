@@ -28,10 +28,10 @@ export default function Home() {
       <main>
         <Hero />
         <Reveal>
-          <Problem />
+          <Journee />
         </Reveal>
         <Reveal>
-          <Journee />
+          <Problem />
         </Reveal>
         <Reveal>
           <WebAdmin />
