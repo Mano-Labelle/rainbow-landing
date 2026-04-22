@@ -13,6 +13,7 @@ import { Resources } from "@/components/sections/Resources";
 import { CTA } from "@/components/sections/CTA";
 import { Footer } from "@/components/sections/Footer";
 import { Reveal } from "@/components/brand/Reveal";
+import { RainbowDivider } from "@/components/brand/RainbowDivider";
 import { ENTITY, WHAT_IS } from "@/content/direction";
 
 export default function Home() {
@@ -27,6 +28,7 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
+        <RainbowDivider />
         <Reveal>
           <Journee />
         </Reveal>
