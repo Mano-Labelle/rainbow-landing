@@ -225,13 +225,130 @@ export const DIRECTION: Direction = {
   },
 };
 
+export interface CommissionContent {
+  nav: string;
+  meta: { title: string; description: string };
+  hero: { eyebrow: string; h1: string; subh: string; lede: string };
+  inputs: {
+    ote: { label: string; hint: string; min: number; max: number; default: number; step: number };
+    admin: { label: string; hint: string; min: number; max: number; default: number; step: number };
+  };
+  salaryAnchors: Array<{ max: number; text: string }>;
+  output: {
+    eyebrow: string;
+    leadPrefix: string;
+    leadSuffix: string;
+    subPrefix: string;
+    subMiddle: string;
+    subSuffix: string;
+    optionsEyebrow: string;
+    optionA: { name: string; body: string };
+    optionB: { name: string; intro: string; after: string };
+    optionC: { name: string; body: string };
+  };
+  cta: { ios: string; android: string; fine: string; share: string; shareTextTemplate: string };
+  method: { title: string; items: string[] };
+  footerNote: string;
+}
+
+export const COMMISSION: CommissionContent = {
+  nav: "Ma commission",
+
+  meta: {
+    title: "Ma commission — Combien Rainbow te rapporte par an",
+    description:
+      "Calcule en 20 secondes combien Rainbow te rend en temps et en prime chaque année. Pour les commerciaux terrain en France.",
+  },
+
+  hero: {
+    eyebrow: "— CALCULATEUR · 20 SECONDES",
+    h1: "Combien Rainbow te rend par an ?",
+    subh: "En temps. En argent. Les deux.",
+    lede: "Tu es payé pour vendre, pas pour faire de la saisie. Calcule ton gain en 20 secondes.",
+  },
+
+  inputs: {
+    ote: {
+      label: "Ton OTE brut annuel",
+      hint: "Base + variable / commission",
+      min: 28000,
+      max: 75000,
+      default: 42000,
+      step: 1000,
+    },
+    admin: {
+      label: "Heures / semaine en CR, CRM, relances, admin",
+      hint: "Tout ce qui n'est pas de la vente",
+      min: 2,
+      max: 20,
+      default: 8,
+      step: 1,
+    },
+  },
+
+  salaryAnchors: [
+    { max: 33000, text: "Tu es junior. Ça grimpe vite." },
+    { max: 48000, text: "C'est la médiane du terrain français, hors Paris." },
+    { max: 62000, text: "Tu es dans le top 25 % du métier." },
+    { max: 999999, text: "Tu closes du matos industriel ou médical. Respect." },
+  ],
+
+  output: {
+    eyebrow: "— TON GAIN",
+    leadPrefix: "Rainbow te rend ",
+    leadSuffix: " par semaine.",
+    subPrefix: "Soit ",
+    subMiddle: " par an. L'équivalent de ",
+    subSuffix: " semaines complètes de ta vie.",
+    optionsEyebrow: "Tu en fais quoi ?",
+    optionA: {
+      name: "Tu les gardes pour toi",
+      body: "vendredis soirs libérés par an. Tes enfants, ton sport, ton canapé. Au choix.",
+    },
+    optionB: {
+      name: "Tu les remets dans la vente",
+      intro: "de prospection en plus chaque semaine. À ton OTE, ça donne une prime supplémentaire de :",
+      after: "Soit environ un mois de salaire brut en plus, juste en arrêtant de taper tes CR à 21h.",
+    },
+    optionC: {
+      name: "Les deux",
+      body: "Récupérer ton temps et le faire fructifier. C'est pour ça qu'on a construit Rainbow.",
+    },
+  },
+
+  cta: {
+    ios: "Télécharger sur l'App Store",
+    android: "Télécharger sur Google Play",
+    fine: "14 jours gratuits. Pas de carte bancaire. Désinstalle quand tu veux.",
+    share: "Partage à un collègue qui en a marre du vendredi soir",
+    shareTextTemplate:
+      "Rainbow pourrait me rendre {hours}/semaine et environ {commission} de prime par an. Essaie, voir ce que ça donne chez toi :",
+  },
+
+  method: {
+    title: "Comment on calcule",
+    items: [
+      "Rainbow récupère environ 70 % du temps admin grâce à la dictée vocale et l'extraction automatique.",
+      "L'étude Pace Productivity mesure que le commercial terrain passe 10h30/semaine en admin, pour 10h45 en vente effective. On redirige le temps gagné vers la vente.",
+      "On applique un facteur de conversion conservateur (50 %) : les deals prennent du temps à mûrir.",
+      "Salaires 2024 issus d'Apec, Indeed France, et de nos entretiens terrain. Médiane province, hors Paris.",
+    ],
+  },
+
+  footerNote:
+    "Chiffres indicatifs. Ta vraie prime dépend de ton secteur, de ton entreprise, et de ton taux de close. Mais l'ordre de grandeur est solide.",
+};
+
 export const LLMS_TXT = `# Rainbow
 
 Rainbow est un assistant commercial IA destiné aux commerciaux terrain en France. Ce n'est pas un CRM : c'est un assistant à qui l'on parle ou avec qui l'on chatte par écrit. Disponible sur iPhone (App Store), Android (Google Play) et le web sur app.askrainbow.ai, l'application permet au commercial de dicter un mémo vocal après chaque visite client ou de poser des questions par chat : « donne-moi mes rendez-vous », « qui je dois rappeler », « prépare-moi la visite chez Moreau ». Rainbow répond toujours par écrit. Il prend les notes, identifie les contacts, les entreprises, les tâches et les prochaines actions. Toutes les données sont exportables en CSV pour être réimportées dans le CRM de l'entreprise (HubSpot, Salesforce, Pipedrive, Sellsy, Axonaut, Zoho) ou utilisées seules.
 
 Le produit s'adresse principalement aux équipes de un à trente commerciaux dans les secteurs des dispositifs médicaux, des fournitures industrielles et des produits techniques. L'application fonctionne hors-ligne et synchronise dès la reprise du réseau. Les données sont hébergées en France, conformes au RGPD. Facturation par commercial et par mois, sans engagement, essai gratuit de quatorze jours sans carte bancaire.
 
+Un calculateur interactif est disponible sur https://askrainbow.ai/ma-commission : le commercial renseigne son OTE et ses heures d'administratif hebdomadaires, Rainbow estime le temps récupéré et la prime supplémentaire annuelle.
+
 Site officiel : https://askrainbow.ai
+Calculateur : https://askrainbow.ai/ma-commission
 Version web : https://app.askrainbow.ai
 Contact presse : press@askrainbow.ai
 `;

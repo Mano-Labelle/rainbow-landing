@@ -1,15 +1,25 @@
+import Link from "next/link";
 import { Logo } from "@/components/brand/Logo";
+import { COMMISSION } from "@/content/direction";
 
 export function Nav() {
   return (
     <nav className="sticky top-0 z-40 backdrop-blur-md bg-ink/70 border-b border-ink-border/40">
       <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
-        <Logo size={22} />
+        <Link href="/" aria-label="Accueil Rainbow">
+          <Logo size={22} />
+        </Link>
         <div className="hidden md:flex items-center gap-8 text-sm text-lavender-muted">
-          <a href="#fonctionnement" className="hover:text-lavender transition">Fonctionnement</a>
-          <a href="#features" className="hover:text-lavender transition">Fonctionnalités</a>
-          <a href="#avis" className="hover:text-lavender transition">Avis terrain</a>
-          <a href="#faq" className="hover:text-lavender transition">FAQ</a>
+          <Link href="/#fonctionnement" className="hover:text-lavender transition">Fonctionnement</Link>
+          <Link
+            href="/ma-commission"
+            className="transition hover:opacity-90"
+          >
+            <span className="rink-warm font-medium">{COMMISSION.nav}</span>
+          </Link>
+          <Link href="/#features" className="hover:text-lavender transition">Fonctionnalités</Link>
+          <Link href="/#avis" className="hover:text-lavender transition">Avis terrain</Link>
+          <Link href="/#faq" className="hover:text-lavender transition">FAQ</Link>
         </div>
         <div className="flex items-center gap-3">
           <a

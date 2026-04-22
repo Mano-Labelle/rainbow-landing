@@ -45,7 +45,6 @@ export function buildSchemas(dir: Direction) {
     "@type": "Organization",
     "@id": BASE + "#organization",
     name: "Rainbow AI",
-    legalName: "Rainbow AI SAS",
     url: BASE,
     logo: BASE + "/logo.svg",
     description:
@@ -67,10 +66,6 @@ export function buildSchemas(dir: Direction) {
         email: "contact@askrainbow.ai",
         availableLanguage: ["French"],
       },
-    ],
-    sameAs: [
-      "https://www.linkedin.com/company/rainbow-ai-fr",
-      "https://twitter.com/rainbow_ai_fr",
     ],
   };
 

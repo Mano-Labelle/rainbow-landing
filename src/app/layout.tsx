@@ -2,7 +2,11 @@ import type { Metadata, Viewport } from "next";
 import { Instrument_Serif, Inter, JetBrains_Mono } from "next/font/google";
 import { DIRECTION } from "@/content/direction";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { Analytics } from "@/components/seo/Analytics";
 import "./globals.css";
+
+const GSC_VERIFICATION = process.env.NEXT_PUBLIC_GSC_VERIFICATION;
+const BING_VERIFICATION = process.env.NEXT_PUBLIC_BING_VERIFICATION;
 
 const instrumentSerif = Instrument_Serif({
   variable: "--font-serif",
@@ -74,10 +78,11 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
-  icons: {
-    icon: "/favicon.ico",
-  },
   category: "technology",
+  verification: {
+    google: GSC_VERIFICATION,
+    other: BING_VERIFICATION ? { "msvalidate.01": BING_VERIFICATION } : undefined,
+  },
 };
 
 export const viewport: Viewport = {
@@ -100,6 +105,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-ink text-lavender font-sans">
         <JsonLd />
         {children}
+        <Analytics />
       </body>
     </html>
   );
