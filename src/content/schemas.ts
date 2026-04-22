@@ -3,6 +3,12 @@
 
 import type { Direction } from "./direction";
 import { FAQ } from "./direction";
+import type { Article } from "./articles";
+import {
+  articleUrl,
+  articlePath,
+  articleCategoryLabel,
+} from "./articles";
 
 const BASE = "https://askrainbow.ai";
 const APP = "https://app.askrainbow.ai";
@@ -93,4 +99,77 @@ export function buildSchemas(dir: Direction) {
   };
 
   return [softwareApplication, organization, faqPage, breadcrumbList];
+}
+
+/**
+ * Per-article schema set. Injected on /guides/*, /comparaisons/*, /cas/*.
+ * Returns an Article schema, an optional FAQPage schema (if the article has
+ * its own FAQ), and a 3-level BreadcrumbList.
+ */
+export function buildArticleSchemas(article: Article): object[] {
+  const url = BASE + articleUrl(article);
+
+  const articleSchema: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": article.category === "cas" ? "CaseStudy" : "Article",
+    "@id": url + "#article",
+    headline: article.title,
+    description: article.metaDesc,
+    url,
+    inLanguage: "fr-FR",
+    datePublished: article.datePublished,
+    dateModified: article.dateModified,
+    author: { "@id": BASE + "#organization" },
+    publisher: { "@id": BASE + "#organization" },
+    isPartOf: { "@id": BASE + "#organization" },
+    mainEntityOfPage: url,
+    image: BASE + "/og.png",
+  };
+
+  const schemas: object[] = [articleSchema];
+
+  if (article.faq?.length) {
+    schemas.push({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": url + "#faq",
+      inLanguage: "fr-FR",
+      mainEntity: article.faq.map((item) => ({
+        "@type": "Question",
+        name: item.q,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.a,
+        },
+      })),
+    });
+  }
+
+  schemas.push({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": url + "#breadcrumb",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Accueil",
+        item: BASE + "/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: articleCategoryLabel(article.category),
+        item: BASE + articlePath(article.category),
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: article.title,
+        item: url,
+      },
+    ],
+  });
+
+  return schemas;
 }

@@ -51,8 +51,31 @@ if (!existsSync(keyPath)) {
   process.exit(1);
 }
 
-// Single-page site for now. When more pages ship, pull from sitemap.
-const urls = [`https://${HOST}/`];
+async function urlsFromSitemap(sitemapUrl) {
+  try {
+    const res = await fetch(sitemapUrl);
+    if (!res.ok) {
+      console.warn(`  sitemap fetch ${res.status}, falling back to homepage only`);
+      return [`https://${HOST}/`];
+    }
+    const xml = await res.text();
+    const matches = xml.match(/<loc>([^<]+)<\/loc>/g) || [];
+    return matches
+      .map((m) => m.replace(/<\/?loc>/g, "").trim())
+      .filter((u) => u.startsWith("http"));
+  } catch (err) {
+    console.warn(`  sitemap fetch failed (${err.message}), homepage only`);
+    return [`https://${HOST}/`];
+  }
+}
+
+// Pull every URL from the live sitemap so new routes get indexed automatically.
+const urls = await urlsFromSitemap(`https://${HOST}/sitemap.xml`);
+if (urls.length === 0) {
+  console.error("✗ No URLs to submit.");
+  process.exit(1);
+}
+console.log(`• submitting ${urls.length} URL(s) from sitemap.xml`);
 
 const body = {
   host: HOST,
