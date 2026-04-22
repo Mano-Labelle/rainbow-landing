@@ -338,21 +338,21 @@ export const COMMISSION: CommissionContent = {
   nav: "Ma commission",
 
   meta: {
-    title: "Ma commission — Combien Rainbow te rapporte par an",
+    title: "Ma commission — Combien Rainbow vous rapporte par an",
     description:
-      "Calcule en 20 secondes combien Rainbow te rend en temps et en prime chaque année. Pour les commerciaux terrain en France.",
+      "Calculez en 20 secondes combien Rainbow vous rend en temps et en prime chaque année. Pour les commerciaux terrain en France.",
   },
 
   hero: {
     eyebrow: "— CALCULATEUR · 20 SECONDES",
-    h1: "Combien Rainbow te rend par an ?",
+    h1: "Combien Rainbow vous rend par an ?",
     subh: "En temps. En argent. Les deux.",
-    lede: "Tu es payé pour vendre, pas pour faire de la saisie. Calcule ton gain en 20 secondes.",
+    lede: "Vous êtes payé pour vendre, pas pour faire de la saisie. Calculez votre gain en 20 secondes.",
   },
 
   inputs: {
     ote: {
-      label: "Ton OTE brut annuel",
+      label: "Votre OTE brut annuel",
       hint: "Base + variable / commission",
       min: 28000,
       max: 75000,
@@ -370,42 +370,42 @@ export const COMMISSION: CommissionContent = {
   },
 
   salaryAnchors: [
-    { max: 33000, text: "Tu es junior. Ça grimpe vite." },
+    { max: 33000, text: "Vous êtes junior. Ça grimpe vite." },
     { max: 48000, text: "C'est la médiane du terrain français, hors Paris." },
-    { max: 62000, text: "Tu es dans le top 25 % du métier." },
-    { max: 999999, text: "Tu closes du matos industriel ou médical. Respect." },
+    { max: 62000, text: "Vous êtes dans le top 25 % du métier." },
+    { max: 999999, text: "Vous closez du matos industriel ou médical. Respect." },
   ],
 
   output: {
-    eyebrow: "— TON GAIN",
-    leadPrefix: "Rainbow te rend ",
+    eyebrow: "— VOTRE GAIN",
+    leadPrefix: "Rainbow vous rend ",
     leadSuffix: " par semaine.",
     subPrefix: "Soit ",
     subMiddle: " par an. L'équivalent de ",
-    subSuffix: " semaines complètes de ta vie.",
-    optionsEyebrow: "Tu en fais quoi ?",
+    subSuffix: " semaines complètes de votre vie.",
+    optionsEyebrow: "Vous en faites quoi ?",
     optionA: {
-      name: "Tu les gardes pour toi",
-      body: "vendredis soirs libérés par an. Tes enfants, ton sport, ton canapé. Au choix.",
+      name: "Vous les gardez pour vous",
+      body: "vendredis soirs libérés par an. Vos enfants, votre sport, votre canapé. Au choix.",
     },
     optionB: {
-      name: "Tu les remets dans la vente",
-      intro: "de prospection en plus chaque semaine. À ton OTE, ça donne une prime supplémentaire de :",
-      after: "Soit environ un mois de salaire brut en plus, juste en arrêtant de taper tes CR à 21h.",
+      name: "Vous les remettez dans la vente",
+      intro: "de prospection en plus chaque semaine. À votre OTE, ça fait une prime supplémentaire de :",
+      after: "Soit environ un mois de salaire brut en plus, juste en arrêtant de taper vos CR à 21h.",
     },
     optionC: {
       name: "Les deux",
-      body: "Récupérer ton temps et le faire fructifier. C'est pour ça qu'on a construit Rainbow.",
+      body: "Récupérer votre temps et le faire fructifier. C'est pour ça qu'on a construit Rainbow.",
     },
   },
 
   cta: {
     ios: "Télécharger sur l'App Store",
     android: "Télécharger sur Google Play",
-    fine: "14 jours gratuits. Pas de carte bancaire. Désinstalle quand tu veux.",
-    share: "Partage à un collègue qui en a marre du vendredi soir",
+    fine: "14 jours gratuits. Pas de carte bancaire. Désinstallez quand vous voulez.",
+    share: "Partagez à un collègue qui en a marre du vendredi soir",
     shareTextTemplate:
-      "Rainbow pourrait me rendre {hours}/semaine et environ {commission} de prime par an. Essaie, voir ce que ça donne chez toi :",
+      "Rainbow pourrait me rendre {hours}/semaine et environ {commission} de prime par an. Essayez, voir ce que ça donne chez vous :",
   },
 
   method: {
@@ -419,7 +419,7 @@ export const COMMISSION: CommissionContent = {
   },
 
   footerNote:
-    "Chiffres indicatifs. Ta vraie prime dépend de ton secteur, de ton entreprise, et de ton taux de close. Mais l'ordre de grandeur est solide.",
+    "Chiffres indicatifs. Votre vraie prime dépend de votre secteur, de votre entreprise, et de votre taux de close. Mais l'ordre de grandeur est solide.",
 };
 
 export const LLMS_TXT = `# Rainbow

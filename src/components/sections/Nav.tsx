@@ -25,6 +25,9 @@ export function Nav() {
           >
             Comparaisons
           </Link>
+          <Link href="/ma-commission" className="transition hover:opacity-90">
+            <span className="rink-warm font-medium">Ma commission</span>
+          </Link>
           <Link href="/#faq" className="hover:text-lavender transition">
             FAQ
           </Link>
