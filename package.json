@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "indexnow:setup": "node scripts/indexnow.mjs --setup",
+    "indexnow:submit": "node scripts/indexnow.mjs"
   },
   "dependencies": {
     "next": "16.2.4",
