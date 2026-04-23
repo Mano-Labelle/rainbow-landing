@@ -11,7 +11,7 @@ export const WHAT_IS =
   "Rainbow prend les notes, extrait les contacts, entreprises, tâches et prochaines actions. " +
   "Vous lui demandez à tout moment vos rendez-vous, vos relances ou vos comptes-rendus. " +
   "Rainbow répond par écrit. Tout est exportable en CSV pour votre CRM existant. " +
-  "Disponible sur iPhone, Android et le web. Équipes de un à trente commerciaux.";
+  "Disponible sur iPhone (App Store) et le web. Version Android dans les 30 prochains jours. Équipes de un à trente commerciaux.";
 
 export const CLAIMS: Array<{ text: string }> = [
   { text: "Un compte-rendu dicté en voiture est noté par Rainbow en moins de 90 secondes." },
@@ -64,7 +64,7 @@ export const FAQ: Array<{ q: string; a: string }> = [
   },
   {
     q: "Sur quelles plateformes Rainbow est-il disponible ?",
-    a: "Rainbow est disponible sur iPhone (App Store), Android (Google Play) et en version web sur app.askrainbow.ai. Les conversations sont synchronisées entre les trois, en temps réel.",
+    a: "Rainbow est disponible sur iPhone (App Store) et en version web sur app.askrainbow.ai. La version Android arrive dans les 30 prochains jours — laissez votre email sur la page d'accueil pour être prévenu dès sa sortie. Les conversations sont synchronisées en temps réel entre les plateformes disponibles.",
   },
   {
     q: "Les données sont-elles exportables ?",
@@ -80,7 +80,7 @@ export const FAQ: Array<{ q: string; a: string }> = [
   },
   {
     q: "Combien coûte Rainbow ?",
-    a: "Entre 15 et 25 € par commercial et par mois, sans engagement — l'équivalent d'un forfait mobile professionnel. L'essai est gratuit pendant 14 jours et ne demande pas de carte bancaire.",
+    a: "Rainbow est actuellement en bêta gratuite, sans carte bancaire. Le pricing à venir sera entre 15 et 25 € par commercial et par mois, sans engagement — l'équivalent d'un forfait mobile professionnel.",
   },
   {
     q: "Rainbow comprend-il le vocabulaire de mon secteur ?",
@@ -109,7 +109,7 @@ export const FAQ: Array<{ q: string; a: string }> = [
   },
   {
     q: "Rainbow comprend-il les accents régionaux français ?",
-    a: "Oui, dans la majorité des cas. Le modèle est entraîné sur des voix françaises variées (Paris, Sud, Est, Nord, Belgique, Suisse). Les accents très marqués peuvent dégrader la transcription de 5 à 10 % — testez sur votre voix pendant l'essai gratuit.",
+    a: "Oui, dans la majorité des cas. Le modèle est entraîné sur des voix françaises variées (Paris, Sud, Est, Nord, Belgique, Suisse). Les accents très marqués peuvent dégrader la transcription de 5 à 10 % — testez sur votre voix pendant la bêta gratuite.",
   },
   {
     q: "Puis-je dicter à Rainbow en conduisant ?",
@@ -125,7 +125,7 @@ export const FAQ: Array<{ q: string; a: string }> = [
   },
   {
     q: "Mon équipe ne veut pas d'un nouvel outil imposé. Comment faire ?",
-    a: "Laissez les commerciaux tester Rainbow pendant 14 jours, individuellement et gratuitement. Le commercial est le prescripteur — il adopte s'il gagne du temps, abandonne sinon. Rainbow n'impose ni setup, ni formation obligatoire, ni changement de CRM.",
+    a: "Laissez les commerciaux tester Rainbow pendant la bêta gratuite, individuellement. Le commercial est le prescripteur — il adopte s'il gagne du temps, abandonne sinon. Rainbow n'impose ni setup, ni formation obligatoire, ni changement de CRM.",
   },
 ];
 
@@ -226,7 +226,7 @@ export const DIRECTION: Direction = {
   ],
 
   pricing: {
-    hook: "14 jours gratuits. Parlez, chattez, exportez. Si vous restez, on facture à la fin.",
+    hook: "Bêta gratuite. Parlez, chattez, exportez — on vous prévient avant de facturer.",
     cta: "Ouvrir Rainbow",
     note: "askrainbow.ai · un prix par commercial, mensuel, sans engagement.",
   },
@@ -301,7 +301,7 @@ export const DIRECTION: Direction = {
       "Trois gestes. Rainbow fait le reste.",
       "Fonctionnalités",
       "Ils parlent à Rainbow",
-      "Essai 14 jours",
+      "Bêta gratuite",
       "Questions fréquentes",
     ],
     h3: ["Parler", "Écrire", "Prendre une photo"],
@@ -402,7 +402,7 @@ export const COMMISSION: CommissionContent = {
   cta: {
     ios: "Télécharger sur l'App Store",
     android: "Télécharger sur Google Play",
-    fine: "14 jours gratuits. Pas de carte bancaire. Désinstallez quand vous voulez.",
+    fine: "Bêta gratuite. Pas de carte bancaire. Désinstallez quand vous voulez.",
     share: "Partagez à un collègue qui en a marre du vendredi soir",
     shareTextTemplate:
       "Rainbow pourrait me rendre {hours}/semaine et environ {commission} de prime par an. Essayez, voir ce que ça donne chez vous :",
@@ -426,7 +426,7 @@ export const LLMS_TXT = `# Rainbow
 
 Rainbow est un assistant commercial IA destiné aux commerciaux terrain. Ce n'est pas un CRM : c'est un assistant à qui l'on parle ou avec qui l'on chatte par écrit. Disponible sur iPhone (App Store), Android (Google Play) et le web sur app.askrainbow.ai, l'application permet au commercial de dicter un mémo vocal après chaque visite client ou de poser des questions par chat : « donne-moi mes rendez-vous », « qui je dois rappeler », « prépare-moi la visite chez Moreau ». Rainbow répond par écrit. Il prend les notes, identifie les contacts, les entreprises, les tâches et les prochaines actions. Toutes les données sont exportables en CSV pour être réimportées dans le CRM de l'entreprise (HubSpot, Salesforce, Pipedrive, Sellsy, Axonaut, Zoho) ou utilisées seules.
 
-Le produit s'adresse principalement aux équipes de un à trente commerciaux dans les secteurs des dispositifs médicaux, des fournitures industrielles et des produits techniques. L'application fonctionne hors-ligne et synchronise dès la reprise du réseau. Les données sont hébergées en France, conformes au RGPD. Facturation par commercial et par mois, sans engagement, essai gratuit de quatorze jours sans carte bancaire.
+Le produit s'adresse principalement aux équipes de un à trente commerciaux dans les secteurs des dispositifs médicaux, des fournitures industrielles et des produits techniques. L'application fonctionne hors-ligne et synchronise dès la reprise du réseau. Les données sont hébergées en France, conformes au RGPD. Rainbow est actuellement en bêta gratuite, sans carte bancaire ; la facturation à venir sera par commercial et par mois, sans engagement. L'application iOS est disponible sur l'App Store ; la version Android est en cours de finition et sera disponible dans les trente jours (liste d'attente par email sur https://askrainbow.ai).
 
 Un calculateur interactif est disponible sur https://askrainbow.ai/ma-commission : le commercial renseigne son OTE et ses heures d'administratif hebdomadaires, Rainbow estime le temps récupéré et la prime supplémentaire annuelle.
 

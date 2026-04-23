@@ -133,7 +133,7 @@ export const article: Article = {
     },
     {
       q: "Comment un commercial vin démarre-t-il avec Rainbow ?",
-      a: "Essai gratuit 14 jours sans carte bancaire, sur iOS, Android ou Web. La prise en main est d'environ 30 minutes — le temps d'enregistrer le premier mémo vocal et de voir le résultat.",
+      a: "Rainbow est actuellement en bêta gratuite sur iOS (Android dans les 30 prochains jours) — sans carte bancaire. La prise en main est d'environ 30 minutes — le temps d'enregistrer le premier mémo vocal et de voir le résultat.",
     },
   ],
   keyTakeaways: [

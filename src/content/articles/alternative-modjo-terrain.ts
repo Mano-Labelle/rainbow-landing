@@ -87,7 +87,7 @@ export const article: Article = {
     },
     {
       q: "Puis-je essayer Rainbow avant de quitter Modjo ?",
-      a: "Oui, Rainbow propose un essai gratuit de 14 jours sans carte bancaire. Vous pouvez tester Rainbow en parallèle de Modjo sans engagement.",
+      a: "Oui, Rainbow est actuellement en bêta gratuite sans carte bancaire. Vous pouvez tester Rainbow en parallèle de Modjo sans engagement.",
     },
   ],
   keyTakeaways: [

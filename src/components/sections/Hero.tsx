@@ -38,11 +38,20 @@ export function Hero() {
 
           <div className="mt-8">
             <div className="text-xs font-mono tracking-[0.12em] uppercase text-lavender-dim">
-              Rainbow vit sur ton téléphone
+              Rainbow vit sur votre téléphone
             </div>
             <div className="mt-3 flex flex-wrap items-center gap-3">
-              <StoreButton kind="apple" href="https://app.askrainbow.ai" />
-              <StoreButton kind="google" href="https://app.askrainbow.ai" />
+              <StoreButton kind="apple" />
+              <StoreButton kind="web" variant="ghost" />
+            </div>
+            <div className="mt-3 text-xs text-lavender-dim">
+              Android —{" "}
+              <a
+                href="#android-waitlist"
+                className="underline decoration-dotted underline-offset-2 hover:text-lavender transition"
+              >
+                dans les 30 prochains jours (prévenez-moi)
+              </a>
             </div>
           </div>
         </div>
@@ -51,7 +60,7 @@ export function Hero() {
         <div className="relative">
           <HeroChat />
           <div className="mt-6 flex items-center justify-center text-xs text-lavender-dim italic">
-            Tu parles. Rainbow te répond par écrit.
+            Vous parlez. Rainbow vous répond par écrit.
           </div>
         </div>
       </div>

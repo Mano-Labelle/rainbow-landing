@@ -28,7 +28,7 @@ export const article: Article = {
       paragraphs: [
         {
           lead: "Rainbow et Jay occupent la même place dans la journée d'un commercial : la capture vocale post-visite. Leurs différences tiennent à la maturité produit et à la transparence tarifaire.",
-          body: "Jay (heyjay.fr) est un acteur récent du marché français des assistants commerciaux vocaux. À ce jour (avril 2026), la documentation publique est limitée : pas de grille de prix, pas de documentation mode hors ligne, pas de liste d'intégrations. Rainbow publie ces éléments et donne accès à un essai gratuit de 14 jours sans carte bancaire.",
+          body: "Jay (heyjay.fr) est un acteur récent du marché français des assistants commerciaux vocaux. À ce jour (avril 2026), la documentation publique est limitée : pas de grille de prix, pas de documentation mode hors ligne, pas de liste d'intégrations. Rainbow publie ces éléments et donne un accès immédiat en bêta gratuite sans carte bancaire.",
         },
       ],
     },
@@ -43,10 +43,10 @@ export const article: Article = {
         headers: ["", "Rainbow", "Jay (heyjay.fr)"],
         rows: [
           ["Origine", "France", "France"],
-          ["Capture vocale", "Oui — iOS, Android, Web", "Oui"],
+          ["Capture vocale", "Oui — iOS + Web (Android à venir)", "Oui"],
           ["Mode hors ligne documenté", "Oui (natif)", "Non documenté publiquement"],
           ["Prix public", "15–25 €/u/mois", "Non publié"],
-          ["Essai gratuit", "14 jours, sans CB", "Sur demande"],
+          ["Essai gratuit", "Bêta gratuite, sans CB", "Sur demande"],
           ["Export CSV complet", "Oui", "Non documenté"],
           ["Intégrations CRM", "CSV + API sur demande", "Non documenté publiquement"],
           ["Hébergement", "UE (France)", "UE (France) probable"],

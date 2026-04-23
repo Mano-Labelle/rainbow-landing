@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { DIRECTION } from "@/content/direction";
+import { IOS_APP_URL } from "@/content/app-urls";
 import type { Article } from "@/content/articles";
 
 /** Inline TL;DR bullets + post-article CTA block. */
@@ -72,16 +73,22 @@ export function ArticleCta({ article }: { article: Article }) {
         <p className="text-lavender-muted leading-relaxed max-w-lg mx-auto">
           {DIRECTION.positioning}
         </p>
-        <div className="pt-2">
-          <Link
-            href="https://app.askrainbow.ai"
+        <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
+          <a
+            href={IOS_APP_URL}
             className="inline-block px-6 py-3 rounded-lg bg-accent text-ink font-medium hover:opacity-90 transition"
           >
-            Commencer — essai gratuit 14 jours
-          </Link>
+            Télécharger sur iOS
+          </a>
+          <a
+            href="https://app.askrainbow.ai"
+            className="inline-block px-6 py-3 rounded-lg border border-ink-border bg-ink-panel/60 text-lavender font-medium hover:border-lavender-muted transition"
+          >
+            Version web
+          </a>
         </div>
         <div className="text-xs text-lavender-dim font-mono">
-          sans carte bancaire · iOS · Android · Web
+          Bêta gratuite · sans carte · Android dans les 30 prochains jours
         </div>
       </div>
     </section>

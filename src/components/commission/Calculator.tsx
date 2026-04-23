@@ -2,6 +2,8 @@
 
 import { useMemo, useState } from "react";
 import { COMMISSION } from "@/content/direction";
+import { IOS_APP_URL } from "@/content/app-urls";
+import { AndroidWaitlist } from "@/components/waitlist/AndroidWaitlist";
 
 const SAVE_RATE = 0.7; // Rainbow recovers 70% of admin time
 const VARIABLE_PCT = 0.3; // variable comp = 30% of OTE for a typical field rep
@@ -252,19 +254,24 @@ export function Calculator() {
         {/* CTAs */}
         <div className="mt-10 flex flex-wrap gap-3">
           <a
-            href="https://apps.apple.com/app/rainbow"
+            href={IOS_APP_URL}
             className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-accent text-ink text-sm font-semibold hover:shadow-[0_0_30px_rgba(255,94,196,0.5)] transition"
           >
             {COMMISSION.cta.ios}
           </a>
-          <a
-            href="https://play.google.com/store/apps/details?id=ai.askrainbow.app"
-            className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-ink-border bg-ink-elev/60 text-lavender text-sm font-medium hover:border-accent/60 hover:text-lavender transition"
-          >
-            {COMMISSION.cta.android}
-          </a>
         </div>
         <p className="mt-3 text-xs text-lavender-dim">{COMMISSION.cta.fine}</p>
+
+        {/* Android — coming soon + waitlist */}
+        <div className="mt-6 pt-6 border-t border-ink-border/40">
+          <div className="text-xs font-mono tracking-[0.12em] uppercase text-lavender-dim mb-2">
+            Android — dans les 30 prochains jours
+          </div>
+          <div className="text-sm text-lavender-muted mb-3">
+            Laissez votre email, on vous prévient dès que Rainbow Android est dispo.
+          </div>
+          <AndroidWaitlist compact source="android-waitlist" />
+        </div>
 
         {/* Share */}
         <div className="mt-8 pt-6 border-t border-ink-border/40">

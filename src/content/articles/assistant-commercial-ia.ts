@@ -132,7 +132,7 @@ export const article: Article = {
       ],
       callout: {
         kind: "tip",
-        text: "Pour une PME de 5 à 50 commerciaux, visez 14 jours d'essai gratuit sans carte, un contrat mensuel sans engagement, et la possibilité d'exporter toutes les données en CSV à tout moment.",
+        text: "Pour une PME de 5 à 50 commerciaux, privilégiez une bêta gratuite ou un essai sans carte bancaire, un contrat mensuel sans engagement, et la possibilité d'exporter toutes les données en CSV à tout moment.",
       },
     },
     {

@@ -1,13 +1,37 @@
+import { IOS_APP_URL, WEB_APP_URL } from "@/content/app-urls";
+
 interface StoreButtonProps {
-  kind: "apple" | "google";
+  kind: "apple" | "google" | "web";
   variant?: "primary" | "ghost";
+  /** Override the default href. When omitted, resolves to the canonical URL for the kind. */
   href?: string;
 }
 
-export function StoreButton({ kind, variant = "primary", href }: StoreButtonProps) {
-  const isApple = kind === "apple";
-  const label = isApple ? "App Store" : "Google Play";
-  const small = isApple ? "Téléchargez sur l'" : "Disponible sur";
+const DEFAULT_HREF: Record<StoreButtonProps["kind"], string> = {
+  apple: IOS_APP_URL,
+  google: "#android-waitlist",
+  web: WEB_APP_URL,
+};
+
+export function StoreButton({
+  kind,
+  variant = "primary",
+  href,
+}: StoreButtonProps) {
+  const finalHref = href ?? DEFAULT_HREF[kind];
+
+  const label =
+    kind === "apple"
+      ? "App Store"
+      : kind === "google"
+        ? "Google Play"
+        : "Version web";
+  const small =
+    kind === "apple"
+      ? "Téléchargez sur l'"
+      : kind === "google"
+        ? "Bientôt sur"
+        : "Essayez en ligne";
 
   const base =
     "inline-flex items-center gap-3 px-4 py-2.5 rounded-xl border transition select-none";
@@ -19,7 +43,13 @@ export function StoreButton({ kind, variant = "primary", href }: StoreButtonProp
   const body = (
     <>
       <span className="shrink-0" aria-hidden>
-        {isApple ? <AppleGlyph /> : <PlayGlyph />}
+        {kind === "apple" ? (
+          <AppleGlyph />
+        ) : kind === "google" ? (
+          <PlayGlyph />
+        ) : (
+          <WebGlyph />
+        )}
       </span>
       <span className="flex flex-col leading-tight text-left">
         <span className="text-[9px] uppercase tracking-[0.12em] opacity-70 font-mono">
@@ -30,14 +60,11 @@ export function StoreButton({ kind, variant = "primary", href }: StoreButtonProp
     </>
   );
 
-  if (href) {
-    return (
-      <a href={href} className={`${base} ${skin}`}>
-        {body}
-      </a>
-    );
-  }
-  return <span className={`${base} ${skin}`}>{body}</span>;
+  return (
+    <a href={finalHref} className={`${base} ${skin}`}>
+      {body}
+    </a>
+  );
 }
 
 function AppleGlyph() {
@@ -65,6 +92,23 @@ function PlayGlyph() {
         opacity="0.95"
       />
       <path d="M14 12 L20 8 L20 16 Z" fill="currentColor" opacity="0.6" />
+    </svg>
+  );
+}
+
+function WebGlyph() {
+  return (
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+    >
+      <circle cx="12" cy="12" r="9" />
+      <ellipse cx="12" cy="12" rx="4" ry="9" />
+      <path d="M3 12h18" />
     </svg>
   );
 }
