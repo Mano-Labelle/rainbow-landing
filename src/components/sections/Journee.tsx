@@ -12,7 +12,7 @@ export function Journee() {
           label="Une journée avec Rainbow"
           title={
             <>
-              Du café au coucher, <RInk>Rainbow</RInk> tient.
+              <RInk>Rainbow</RInk> est là pour toi.
             </>
           }
         />
