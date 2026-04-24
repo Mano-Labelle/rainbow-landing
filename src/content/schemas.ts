@@ -9,9 +9,10 @@ import {
   articlePath,
   articleCategoryLabel,
 } from "./articles";
+import { IOS_APP_URL, WEB_APP_URL } from "./app-urls";
 
 const BASE = "https://askrainbow.ai";
-const APP = "https://app.askrainbow.ai";
+const APP = WEB_APP_URL;
 
 export function buildSchemas(dir: Direction) {
   const url = BASE + "/";
@@ -21,9 +22,11 @@ export function buildSchemas(dir: Direction) {
     "@type": "SoftwareApplication",
     "@id": url + "#software",
     name: "Rainbow",
-    alternateName: "Rainbow AI",
+    alternateName: ["Rainbow AI", "askrainbow", "Rainbow assistant commercial"],
+    disambiguatingDescription:
+      "Assistant commercial IA (askrainbow.ai) pour commerciaux terrain B2B. À ne pas confondre avec l'application météo rainbow.ai.",
     applicationCategory: "BusinessApplication",
-    applicationSubCategory: "Sales assistant (not a CRM)",
+    applicationSubCategory: "Assistant commercial IA (pas un CRM)",
     operatingSystem: "iOS, Web",
     description: dir.seo.metaDesc,
     url,
@@ -42,8 +45,10 @@ export function buildSchemas(dir: Direction) {
     featureList: dir.features.map((f) => f.name).join(", "),
     screenshot: url + "og.png",
     softwareVersion: "2026.1",
+    downloadUrl: IOS_APP_URL,
+    installUrl: IOS_APP_URL,
     publisher: { "@id": BASE + "#organization" },
-    sameAs: [APP],
+    sameAs: [APP, IOS_APP_URL],
   };
 
   const organization = {
@@ -51,6 +56,9 @@ export function buildSchemas(dir: Direction) {
     "@type": "Organization",
     "@id": BASE + "#organization",
     name: "Rainbow AI",
+    alternateName: ["Rainbow", "askrainbow", "Rainbow AI France"],
+    disambiguatingDescription:
+      "Éditeur de l'assistant commercial IA Rainbow (askrainbow.ai). À ne pas confondre avec rainbow.ai, application de prévisions météo.",
     url: BASE,
     logo: BASE + "/logo.svg",
     description:
@@ -65,6 +73,14 @@ export function buildSchemas(dir: Direction) {
       addressCountry: "FR",
       addressLocality: "Paris",
     },
+    knowsAbout: [
+      "Assistant commercial IA",
+      "Voice CRM",
+      "Compte-rendu de visite",
+      "Commerciaux terrain",
+      "Sales enablement",
+      "B2B field sales",
+    ],
     contactPoint: [
       {
         "@type": "ContactPoint",
@@ -72,7 +88,14 @@ export function buildSchemas(dir: Direction) {
         email: "contact@askrainbow.ai",
         availableLanguage: ["French"],
       },
+      {
+        "@type": "ContactPoint",
+        contactType: "press",
+        email: "press@askrainbow.ai",
+        availableLanguage: ["French"],
+      },
     ],
+    sameAs: [APP, IOS_APP_URL],
   };
 
   const faqPage = {

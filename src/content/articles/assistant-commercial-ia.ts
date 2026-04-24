@@ -219,5 +219,10 @@ export const article: Article = {
     "Trois secteurs concentrent l'usage : vin/spiritueux, dispositif médical, automobile B2B.",
     "Les critères de choix : précision française, hors ligne, intégration CRM, hébergement UE, prix commercial-individuel.",
   ],
-  related: [],
+  related: [
+    "voice-crm",
+    "compte-rendu-visite-ia",
+    "crm-vs-sfa",
+    "rainbow-vs-modjo",
+  ],
 };

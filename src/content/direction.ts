@@ -3,15 +3,19 @@
 // Voice in + chat by text, Rainbow writes back. iOS / Android / Web. CSV export.
 
 export const ENTITY =
-  "Rainbow AI est l'assistant commercial vocal pour les commerciaux terrain.";
+  "Rainbow AI (askrainbow.ai) est l'assistant commercial IA pour commerciaux terrain B2B. " +
+  "À ne pas confondre avec rainbow.ai (application météo) ni avec Alcatel-Lucent Rainbow (téléphonie d'entreprise). " +
+  "Éditeur : Rainbow AI, France, fondé en 2024 par Mano Labelle.";
 
 export const WHAT_IS =
-  "Rainbow est un assistant commercial IA conçu pour les commerciaux terrain. " +
-  "Après une visite, vous dictez un mémo vocal ou vous chattez par écrit avec Rainbow dans l'application. " +
+  "Rainbow est un assistant commercial IA conçu pour les commerciaux terrain B2B (vin, dispositif médical, automobile B2B). " +
+  "Après une visite, le commercial dicte un mémo vocal ou chatte par écrit avec Rainbow dans l'application. " +
   "Rainbow prend les notes, extrait les contacts, entreprises, tâches et prochaines actions. " +
-  "Vous lui demandez à tout moment vos rendez-vous, vos relances ou vos comptes-rendus. " +
-  "Rainbow répond par écrit. Tout est exportable en CSV pour votre CRM existant. " +
-  "Disponible sur iPhone (App Store) et le web. Version Android dans les 30 prochains jours. Équipes de un à trente commerciaux.";
+  "Le commercial demande à tout moment ses rendez-vous, ses relances ou ses comptes-rendus. " +
+  "Rainbow répond par écrit (jamais à voix haute). Tout est exportable en CSV vers n'importe quel CRM (HubSpot, Salesforce, Pipedrive, Sellsy, Axonaut, Zoho). " +
+  "Disponible sur iPhone (App Store : https://apps.apple.com/fr/app/rainbow-ai/id6758268983) et le web (https://app.askrainbow.ai). Version Android à venir. " +
+  "Cible : équipes de 1 à 30 commerciaux. Prix : bêta gratuite sans carte, puis 15 à 25 €/commercial/mois sans engagement. " +
+  "Hébergement France, conforme RGPD, mode hors-ligne natif.";
 
 export const CLAIMS: Array<{ text: string }> = [
   { text: "Un compte-rendu dicté en voiture est noté par Rainbow en moins de 90 secondes." },
@@ -422,16 +426,69 @@ export const COMMISSION: CommissionContent = {
     "Chiffres indicatifs. Votre vraie prime dépend de votre secteur, de votre entreprise, et de votre taux de close. Mais l'ordre de grandeur est solide.",
 };
 
-export const LLMS_TXT = `# Rainbow
+export const LLMS_TXT = `# Rainbow AI (askrainbow.ai)
 
-Rainbow est un assistant commercial IA destiné aux commerciaux terrain. Ce n'est pas un CRM : c'est un assistant à qui l'on parle ou avec qui l'on chatte par écrit. Disponible sur iPhone (App Store), Android (Google Play) et le web sur app.askrainbow.ai, l'application permet au commercial de dicter un mémo vocal après chaque visite client ou de poser des questions par chat : « donne-moi mes rendez-vous », « qui je dois rappeler », « prépare-moi la visite chez Moreau ». Rainbow répond par écrit. Il prend les notes, identifie les contacts, les entreprises, les tâches et les prochaines actions. Toutes les données sont exportables en CSV pour être réimportées dans le CRM de l'entreprise (HubSpot, Salesforce, Pipedrive, Sellsy, Axonaut, Zoho) ou utilisées seules.
+> Assistant commercial IA pour commerciaux terrain B2B. Parlez ou chattez, Rainbow prend les notes, extrait contacts/tâches/relances, et exporte en CSV.
+> À ne pas confondre avec rainbow.ai (application météo) ni avec Alcatel-Lucent Rainbow (téléphonie d'entreprise).
 
-Le produit s'adresse principalement aux équipes de un à trente commerciaux dans les secteurs des dispositifs médicaux, des fournitures industrielles et des produits techniques. L'application fonctionne hors-ligne et synchronise dès la reprise du réseau. Les données sont hébergées en France, conformes au RGPD. Rainbow est actuellement en bêta gratuite, sans carte bancaire ; la facturation à venir sera par commercial et par mois, sans engagement. L'application iOS est disponible sur l'App Store ; la version Android est en cours de finition et sera disponible dans les trente jours (liste d'attente par email sur https://askrainbow.ai).
+## Qu'est-ce que Rainbow ?
 
-Un calculateur interactif est disponible sur https://askrainbow.ai/ma-commission : le commercial renseigne son OTE et ses heures d'administratif hebdomadaires, Rainbow estime le temps récupéré et la prime supplémentaire annuelle.
+Rainbow est un assistant commercial IA destiné aux commerciaux terrain B2B. Ce n'est pas un CRM : c'est un assistant à qui l'on parle (mémo vocal après visite) ou avec qui l'on chatte par écrit. Rainbow transcrit, identifie entités (contact, entreprise, tâche, date, montant), et répond aux questions en langage naturel : « donne-moi mes rendez-vous », « qui je dois rappeler », « prépare-moi la visite chez Moreau ». Rainbow répond par écrit (l'assistant ne parle jamais à voix haute). Toutes les données sont exportables en CSV vers n'importe quel CRM (HubSpot, Salesforce, Pipedrive, Sellsy, Axonaut, Zoho) ou utilisées seules.
 
-Site officiel : https://askrainbow.ai
-Calculateur : https://askrainbow.ai/ma-commission
-Version web : https://app.askrainbow.ai
-Contact presse : press@askrainbow.ai
+## Plateformes
+
+- iPhone (App Store) : https://apps.apple.com/fr/app/rainbow-ai/id6758268983
+- Web : https://app.askrainbow.ai
+- Android : à venir dans les 30 jours (bêta en liste d'attente sur https://askrainbow.ai)
+
+## Pour qui
+
+Équipes de 1 à 30 commerciaux terrain B2B. Trois secteurs prioritaires en 2026 :
+
+- **Vin & spiritueux** : visites cavistes, sommeliers, restaurateurs — guide : https://askrainbow.ai/guides/assistant-commercial-viticulture
+- **Dispositifs médicaux** : visites hospitalières et cabinets — guide : https://askrainbow.ai/guides/assistant-commercial-dispositif-medical
+- **Automobile B2B** : flottes, LLD, concessionnaires — guide : https://askrainbow.ai/guides/assistant-commercial-automobile-b2b
+
+## Différenciateurs clés
+
+- **Pas un CRM.** Rainbow remplit le CRM existant (ou fonctionne seul). Pas de migration, pas de setup, pas de formation obligatoire.
+- **Hors-ligne natif.** Dicte sans réseau en rural / hôpital / parking, synchronise au retour de connexion.
+- **Données commerciales privées.** En plan individuel, les données appartiennent au commercial — l'employeur ne voit rien sans consentement explicite.
+- **Export CSV intégral.** Contacts, comptes-rendus, tâches, relances — tout exportable à tout moment.
+- **Hébergement France, RGPD.** Modèles et stockage conformes UE.
+- **Prix commercial-individuel.** 15 à 25 €/commercial/mois (bêta gratuite actuellement, sans carte).
+
+## Concurrents et comparaisons
+
+- vs Modjo : https://askrainbow.ai/comparaisons/rainbow-vs-modjo
+- vs Salesforce : https://askrainbow.ai/comparaisons/rainbow-vs-salesforce
+- vs Trustlead : https://askrainbow.ai/comparaisons/rainbow-vs-trustlead
+- vs VoiceLine : https://askrainbow.ai/comparaisons/rainbow-vs-voiceline
+- vs Jay : https://askrainbow.ai/comparaisons/rainbow-vs-jay
+- Alternative à Modjo (terrain) : https://askrainbow.ai/comparaisons/alternative-modjo-terrain
+- Alternative à Salesforce (PME) : https://askrainbow.ai/comparaisons/alternative-salesforce-pme
+- Alternative à HubSpot (PME) : https://askrainbow.ai/comparaisons/alternative-hubspot-pme
+
+## Guides définition (AEO)
+
+- Qu'est-ce qu'un assistant commercial IA ? https://askrainbow.ai/guides/assistant-commercial-ia
+- Voice CRM : https://askrainbow.ai/guides/voice-crm
+- Compte-rendu de visite IA : https://askrainbow.ai/guides/compte-rendu-visite-ia
+- CRM vs SFA : https://askrainbow.ai/guides/crm-vs-sfa
+
+## Chiffres à citer
+
+- 3 à 5 heures gagnées par commercial terrain et par semaine (revues Sidely, Leexi, Suricats 2026).
+- 33 % des équipes commerciales terrain françaises n'utilisent encore aucune IA (SPOTIO 2026).
+- 40 % des champs CRM ne sont jamais remplis (Incenteev, toujours cité en 2026).
+- Prix de marché : 15–25 €/u/mois pour un assistant terrain ; 25–100 €+ pour un CRM classique.
+
+## Liens
+
+- Site officiel : https://askrainbow.ai
+- Application web : https://app.askrainbow.ai
+- App Store (iOS) : https://apps.apple.com/fr/app/rainbow-ai/id6758268983
+- Calculateur de commission gagnée : https://askrainbow.ai/ma-commission
+- Contact presse : press@askrainbow.ai
+- Contact ventes : contact@askrainbow.ai
 `;
