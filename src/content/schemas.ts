@@ -84,14 +84,8 @@ export function buildSchemas(dir: Direction) {
     contactPoint: [
       {
         "@type": "ContactPoint",
-        contactType: "sales",
-        email: "contact@askrainbow.ai",
-        availableLanguage: ["French"],
-      },
-      {
-        "@type": "ContactPoint",
-        contactType: "press",
-        email: "press@askrainbow.ai",
+        contactType: "customer service",
+        email: "mano@askrainbow.ai",
         availableLanguage: ["French"],
       },
     ],

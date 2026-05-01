@@ -241,8 +241,7 @@ export const DIRECTION: Direction = {
         title: "Rainbow",
         items: [
           { label: "Manifeste", href: "#" },
-          { label: "Presse", href: "mailto:press@askrainbow.ai" },
-          { label: "Contact", href: "mailto:contact@askrainbow.ai" },
+          { label: "Contact", href: "mailto:mano@askrainbow.ai" },
         ],
       },
       {
@@ -490,6 +489,5 @@ Rainbow est un assistant commercial IA destiné aux commerciaux terrain B2B. Ce 
 - Application web : https://app.askrainbow.ai
 - App Store (iOS) : https://apps.apple.com/fr/app/rainbow-ai/id6758268983
 - Calculateur de commission gagnée : https://askrainbow.ai/ma-commission
-- Contact presse : press@askrainbow.ai
-- Contact ventes : contact@askrainbow.ai
+- Contact : mano@askrainbow.ai
 `;
