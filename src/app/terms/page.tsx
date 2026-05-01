@@ -24,7 +24,7 @@ const ENTITY_NAME = "Mano Labelle";
 const ENTITY_FORM = "Micro-entrepreneur (entreprise individuelle)";
 const ENTITY_SIRET = "889 097 739 00011";
 const ENTITY_ADDRESS = "8 rue du 8 Mai 1945, 76700 Gonfreville l'Orcher, France";
-const CONTACT_EMAIL = "support@askrainbow.ai";
+const CONTACT_EMAIL = "mano@askrainbow.ai";
 
 function H2({ children, id }: { children: React.ReactNode; id?: string }) {
   return (

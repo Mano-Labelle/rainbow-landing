@@ -24,7 +24,7 @@ const ENTITY_FORM = "Micro-entrepreneur (entreprise individuelle)";
 const ENTITY_SIRET = "889 097 739 00011";
 const ENTITY_ADDRESS = "8 rue du 8 Mai 1945, 76700 Gonfreville l'Orcher, France";
 const ENTITY_TVA = "TVA non applicable, article 293 B du CGI";
-const CONTACT_EMAIL = "contact@askrainbow.ai";
+const CONTACT_EMAIL = "mano@askrainbow.ai";
 
 function H2({ children }: { children: React.ReactNode }) {
   return (
