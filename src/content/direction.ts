@@ -268,9 +268,10 @@ export const DIRECTION: Direction = {
       {
         title: "Légal",
         items: [
-          { label: "Mentions légales", href: "#" },
-          { label: "Confidentialité", href: "#" },
-          { label: "RGPD", href: "#" },
+          { label: "Mentions légales", href: "/legal/mentions" },
+          { label: "Confidentialité", href: "/privacy" },
+          { label: "Conditions d'utilisation", href: "/terms" },
+          { label: "RGPD", href: "/privacy#droits-rgpd" },
         ],
       },
     ],
