@@ -16,6 +16,9 @@ export function Nav() {
           >
             Comment ça marche
           </Link>
+          <Link href="/vin" className="hover:text-lavender transition">
+            <span className="rink-warm font-medium">Vin</span>
+          </Link>
           <Link href="/guides" className="hover:text-lavender transition">
             Guides
           </Link>
@@ -24,6 +27,9 @@ export function Nav() {
             className="hover:text-lavender transition"
           >
             Comparaisons
+          </Link>
+          <Link href="/tarifs" className="hover:text-lavender transition">
+            Tarifs
           </Link>
           <Link href="/ma-commission" className="transition hover:opacity-90">
             <span className="rink-warm font-medium">Ma commission</span>

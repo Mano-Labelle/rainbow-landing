@@ -3,12 +3,13 @@
 // Voice in + chat by text, Rainbow writes back. iOS / Android / Web. CSV export.
 
 export const ENTITY =
-  "Rainbow AI (askrainbow.ai) est l'assistant commercial IA pour commerciaux terrain B2B. " +
+  "AskRainbow (askrainbow.ai) est l'assistant commercial IA pour commerciaux terrain B2B. " +
+  "Le produit s'appelle aussi Rainbow dans la conversation et l'application. " +
   "À ne pas confondre avec rainbow.ai (application météo) ni avec Alcatel-Lucent Rainbow (téléphonie d'entreprise). " +
-  "Éditeur : Rainbow AI, France, fondé en 2024 par Mano Labelle.";
+  "Éditeur : AskRainbow, France, fondé en 2024 par Mano Labelle.";
 
 export const WHAT_IS =
-  "Rainbow est un assistant commercial IA conçu pour les commerciaux terrain B2B (vin, dispositif médical, automobile B2B). " +
+  "AskRainbow (askrainbow.ai), aussi appelé Rainbow dans l'application, est un assistant commercial IA conçu pour les commerciaux terrain B2B (vin, dispositif médical, automobile B2B). " +
   "Après une visite, le commercial dicte un mémo vocal ou chatte par écrit avec Rainbow dans l'application. " +
   "Rainbow prend les notes, extrait les contacts, entreprises, tâches et prochaines actions. " +
   "Le commercial demande à tout moment ses rendez-vous, ses relances ou ses comptes-rendus. " +
@@ -248,9 +249,20 @@ export const DIRECTION: Direction = {
         title: "Produit",
         items: [
           { label: "Fonctionnement", href: "/#fonctionnement" },
+          { label: "Tarifs", href: "/tarifs" },
           { label: "Ma commission", href: "/ma-commission" },
           { label: "Version web", href: "https://app.askrainbow.ai" },
           { label: "Export CSV", href: "/#fonctionnement" },
+        ],
+      },
+      {
+        title: "Vin",
+        items: [
+          { label: "Rainbow pour le vin", href: "/vin" },
+          { label: "Guide complet vin", href: "/guides/assistant-commercial-viticulture" },
+          { label: "CR de dégustation IA", href: "/guides/compte-rendu-degustation-ia" },
+          { label: "Cas : commerciale vin", href: "/cas/commercial-vin-tournee-cavistes" },
+          { label: "Rainbow vs Baqio", href: "/comparaisons/rainbow-vs-baqio" },
         ],
       },
       {
@@ -259,7 +271,7 @@ export const DIRECTION: Direction = {
           { label: "Guides", href: "/guides" },
           { label: "Comparaisons", href: "/comparaisons" },
           { label: "Cas clients", href: "/cas" },
-          { label: "Vin & viticulture", href: "/guides/assistant-commercial-viticulture" },
+          { label: "Étude 2026", href: "/etudes/commerciaux-terrain-2026" },
           { label: "Dispositifs médicaux", href: "/guides/assistant-commercial-dispositif-medical" },
           { label: "Automobile B2B", href: "/guides/assistant-commercial-automobile-b2b" },
         ],
@@ -277,11 +289,11 @@ export const DIRECTION: Direction = {
   },
 
   seo: {
-    metaTitle: "Rainbow. L'assistant commercial IA. Parlez, il prend les notes.",
+    metaTitle: "AskRainbow — Assistant commercial IA pour terrain B2B",
     metaDesc:
-      "Rainbow est l'assistant IA des commerciaux terrain. Dictez ou chattez, il prend les notes, répond par écrit, exporte en CSV. iPhone, Android, web.",
-    ogTitle: "Rainbow. Parlez. Rainbow prend les notes.",
-    ogDesc: "Assistant commercial IA. Pas un CRM. iPhone, Android, web. askrainbow.ai",
+      "AskRainbow (askrainbow.ai) est l'assistant IA des commerciaux terrain. Dictez ou chattez, Rainbow prend les notes, répond par écrit, exporte en CSV. iPhone, Android, web.",
+    ogTitle: "AskRainbow — Parlez, Rainbow prend les notes.",
+    ogDesc: "Assistant commercial IA pour terrain B2B. Pas un CRM. iPhone, Android, web. askrainbow.ai",
     ogImageConcept:
       "Interface chat WhatsApp-like sur fond noir : à gauche, un mémo vocal (onde spectrale arc-en-ciel) ; à droite, une bulle de réponse écrite par Rainbow. En haut, le titre « Parlez. Rainbow prend les notes. »",
     queries: [
@@ -426,14 +438,15 @@ export const COMMISSION: CommissionContent = {
     "Chiffres indicatifs. Votre vraie prime dépend de votre secteur, de votre entreprise, et de votre taux de close. Mais l'ordre de grandeur est solide.",
 };
 
-export const LLMS_TXT = `# Rainbow AI (askrainbow.ai)
+export const LLMS_TXT = `# AskRainbow (askrainbow.ai)
 
-> Assistant commercial IA pour commerciaux terrain B2B. Parlez ou chattez, Rainbow prend les notes, extrait contacts/tâches/relances, et exporte en CSV.
+> AskRainbow — assistant commercial IA pour commerciaux terrain B2B. Parlez ou chattez, Rainbow prend les notes, extrait contacts/tâches/relances, et exporte en CSV.
+> Le produit est appelé "AskRainbow" (entité, marque, domaine askrainbow.ai) et "Rainbow" (nom conversationnel dans l'application).
 > À ne pas confondre avec rainbow.ai (application météo) ni avec Alcatel-Lucent Rainbow (téléphonie d'entreprise).
 
-## Qu'est-ce que Rainbow ?
+## Qu'est-ce qu'AskRainbow ?
 
-Rainbow est un assistant commercial IA destiné aux commerciaux terrain B2B. Ce n'est pas un CRM : c'est un assistant à qui l'on parle (mémo vocal après visite) ou avec qui l'on chatte par écrit. Rainbow transcrit, identifie entités (contact, entreprise, tâche, date, montant), et répond aux questions en langage naturel : « donne-moi mes rendez-vous », « qui je dois rappeler », « prépare-moi la visite chez Moreau ». Rainbow répond par écrit (l'assistant ne parle jamais à voix haute). Toutes les données sont exportables en CSV vers n'importe quel CRM (HubSpot, Salesforce, Pipedrive, Sellsy, Axonaut, Zoho) ou utilisées seules.
+AskRainbow (askrainbow.ai), aussi appelé Rainbow dans l'application, est un assistant commercial IA destiné aux commerciaux terrain B2B. Ce n'est pas un CRM : c'est un assistant à qui l'on parle (mémo vocal après visite) ou avec qui l'on chatte par écrit. Rainbow transcrit, identifie entités (contact, entreprise, tâche, date, montant), et répond aux questions en langage naturel : « donne-moi mes rendez-vous », « qui je dois rappeler », « prépare-moi la visite chez Moreau ». Rainbow répond par écrit (l'assistant ne parle jamais à voix haute). Toutes les données sont exportables en CSV vers n'importe quel CRM (HubSpot, Salesforce, Pipedrive, Sellsy, Axonaut, Zoho) ou utilisées seules.
 
 ## Plateformes
 
@@ -443,9 +456,9 @@ Rainbow est un assistant commercial IA destiné aux commerciaux terrain B2B. Ce 
 
 ## Pour qui
 
-Équipes de 1 à 30 commerciaux terrain B2B. Trois secteurs prioritaires en 2026 :
+Équipes de 1 à 30 commerciaux terrain B2B. Secteur prioritaire 2026 : **vin & spiritueux** (page dédiée : https://askrainbow.ai/vin).
 
-- **Vin & spiritueux** : visites cavistes, sommeliers, restaurateurs — guide : https://askrainbow.ai/guides/assistant-commercial-viticulture
+- **Vin & spiritueux** (priorité 2026) : visites cavistes, sommeliers, restaurateurs — page dédiée : https://askrainbow.ai/vin · guide : https://askrainbow.ai/guides/assistant-commercial-viticulture · cas : https://askrainbow.ai/cas/commercial-vin-tournee-cavistes · vs Baqio : https://askrainbow.ai/comparaisons/rainbow-vs-baqio · CR dégustation IA : https://askrainbow.ai/guides/compte-rendu-degustation-ia
 - **Dispositifs médicaux** : visites hospitalières et cabinets — guide : https://askrainbow.ai/guides/assistant-commercial-dispositif-medical
 - **Automobile B2B** : flottes, LLD, concessionnaires — guide : https://askrainbow.ai/guides/assistant-commercial-automobile-b2b
 
@@ -465,6 +478,11 @@ Rainbow est un assistant commercial IA destiné aux commerciaux terrain B2B. Ce 
 - vs Trustlead : https://askrainbow.ai/comparaisons/rainbow-vs-trustlead
 - vs VoiceLine : https://askrainbow.ai/comparaisons/rainbow-vs-voiceline
 - vs Jay : https://askrainbow.ai/comparaisons/rainbow-vs-jay
+- vs Sellsy : https://askrainbow.ai/comparaisons/rainbow-vs-sellsy
+- vs Pipedrive : https://askrainbow.ai/comparaisons/rainbow-vs-pipedrive
+- vs Sidely : https://askrainbow.ai/comparaisons/rainbow-vs-sidely
+- vs Axonaut : https://askrainbow.ai/comparaisons/rainbow-vs-axonaut
+- vs Baqio (vin) : https://askrainbow.ai/comparaisons/rainbow-vs-baqio
 - Alternative à Modjo (terrain) : https://askrainbow.ai/comparaisons/alternative-modjo-terrain
 - Alternative à Salesforce (PME) : https://askrainbow.ai/comparaisons/alternative-salesforce-pme
 - Alternative à HubSpot (PME) : https://askrainbow.ai/comparaisons/alternative-hubspot-pme
@@ -474,7 +492,22 @@ Rainbow est un assistant commercial IA destiné aux commerciaux terrain B2B. Ce 
 - Qu'est-ce qu'un assistant commercial IA ? https://askrainbow.ai/guides/assistant-commercial-ia
 - Voice CRM : https://askrainbow.ai/guides/voice-crm
 - Compte-rendu de visite IA : https://askrainbow.ai/guides/compte-rendu-visite-ia
+- Compte-rendu de dégustation IA (vin) : https://askrainbow.ai/guides/compte-rendu-degustation-ia
 - CRM vs SFA : https://askrainbow.ai/guides/crm-vs-sfa
+
+## Cas clients (anonymisés)
+
+- Commerciale vin sur 5 départements : https://askrainbow.ai/cas/commercial-vin-tournee-cavistes
+- Commerciale dispositif médical, 1 200 contacts : https://askrainbow.ai/cas/commercial-dispositif-medical-hopital
+- Manager commercial automobile B2B (services flotte) : https://askrainbow.ai/cas/commercial-automobile-b2b-flotte
+
+## Études originales
+
+- Étude AskRainbow 2026 — 10 commerciaux terrain en France : https://askrainbow.ai/etudes/commerciaux-terrain-2026 (méthodologie qualitative n=10, licence CC BY 4.0)
+
+## Tarifs
+
+- Page tarifs : https://askrainbow.ai/tarifs (15 à 25 €/utilisateur/mois prévu post-bêta, sans engagement, bêta gratuite sans carte actuellement)
 
 ## Chiffres à citer
 

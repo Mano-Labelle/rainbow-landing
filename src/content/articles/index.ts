@@ -91,6 +91,15 @@ import { article as rainbowVsSalesforce } from "./rainbow-vs-salesforce";
 import { article as alternativeModjoTerrain } from "./alternative-modjo-terrain";
 import { article as alternativeSalesforcePme } from "./alternative-salesforce-pme";
 import { article as alternativeHubspotPme } from "./alternative-hubspot-pme";
+import { article as rainbowVsSellsy } from "./rainbow-vs-sellsy";
+import { article as rainbowVsPipedrive } from "./rainbow-vs-pipedrive";
+import { article as rainbowVsSidely } from "./rainbow-vs-sidely";
+import { article as rainbowVsAxonaut } from "./rainbow-vs-axonaut";
+import { article as rainbowVsBaqio } from "./rainbow-vs-baqio";
+import { article as compteRenduDegustationIa } from "./compte-rendu-degustation-ia";
+import { article as casCommercialVin } from "./cas-commercial-vin";
+import { article as casCommercialMedical } from "./cas-commercial-medical";
+import { article as casCommercialAutomobile } from "./cas-commercial-automobile";
 
 export const ARTICLES: Article[] = [
   // Cornerstone definition
@@ -98,6 +107,7 @@ export const ARTICLES: Article[] = [
   // Definition hub (AEO bait)
   voiceCrm,
   compteRenduVisiteIa,
+  compteRenduDegustationIa,
   crmVsSfa,
   // Vertical trilogy
   assistantViticulture,
@@ -109,10 +119,19 @@ export const ARTICLES: Article[] = [
   rainbowVsVoiceline,
   rainbowVsJay,
   rainbowVsSalesforce,
+  rainbowVsSellsy,
+  rainbowVsPipedrive,
+  rainbowVsSidely,
+  rainbowVsAxonaut,
+  rainbowVsBaqio,
   // Alternative-to-X (intent-rich)
   alternativeModjoTerrain,
   alternativeSalesforcePme,
   alternativeHubspotPme,
+  // Cas clients (anonymized profiles from interview synthesis)
+  casCommercialVin,
+  casCommercialMedical,
+  casCommercialAutomobile,
 ];
 
 /** URL prefix for each article category. Keep plural French. */

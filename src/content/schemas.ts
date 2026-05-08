@@ -21,10 +21,10 @@ export function buildSchemas(dir: Direction) {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "@id": url + "#software",
-    name: "Rainbow",
-    alternateName: ["Rainbow AI", "askrainbow", "Rainbow assistant commercial"],
+    name: "AskRainbow",
+    alternateName: ["Rainbow", "Rainbow AI", "askrainbow", "Rainbow assistant commercial"],
     disambiguatingDescription:
-      "Assistant commercial IA (askrainbow.ai) pour commerciaux terrain B2B. À ne pas confondre avec l'application météo rainbow.ai.",
+      "AskRainbow — assistant commercial IA (askrainbow.ai) pour commerciaux terrain B2B. À ne pas confondre avec l'application météo rainbow.ai.",
     applicationCategory: "BusinessApplication",
     applicationSubCategory: "Assistant commercial IA (pas un CRM)",
     operatingSystem: "iOS, Web",
@@ -55,10 +55,10 @@ export function buildSchemas(dir: Direction) {
     "@context": "https://schema.org",
     "@type": "Organization",
     "@id": BASE + "#organization",
-    name: "Rainbow AI",
-    alternateName: ["Rainbow", "askrainbow", "Rainbow AI France"],
+    name: "AskRainbow",
+    alternateName: ["Rainbow", "Rainbow AI", "askrainbow", "AskRainbow France"],
     disambiguatingDescription:
-      "Éditeur de l'assistant commercial IA Rainbow (askrainbow.ai). À ne pas confondre avec rainbow.ai, application de prévisions météo.",
+      "Éditeur de l'assistant commercial IA AskRainbow (askrainbow.ai). À ne pas confondre avec rainbow.ai, application de prévisions météo.",
     url: BASE,
     logo: BASE + "/logo.svg",
     description:
@@ -115,7 +115,20 @@ export function buildSchemas(dir: Direction) {
     ],
   };
 
-  return [softwareApplication, organization, faqPage, breadcrumbList];
+  const webSite = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": BASE + "#website",
+    name: "AskRainbow",
+    alternateName: ["Rainbow", "Rainbow AI", "askrainbow.ai"],
+    url: BASE,
+    inLanguage: "fr-FR",
+    description: dir.seo.metaDesc,
+    publisher: { "@id": BASE + "#organization" },
+    about: { "@id": BASE + "#software" },
+  };
+
+  return [webSite, softwareApplication, organization, faqPage, breadcrumbList];
 }
 
 /**

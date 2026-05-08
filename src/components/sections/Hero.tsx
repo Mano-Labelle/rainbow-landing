@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { DIRECTION } from "@/content/direction";
 import { HeroChat } from "@/components/hero/HeroChat";
 import { StoreButton } from "@/components/brand/StoreButton";
@@ -52,6 +53,19 @@ export function Hero() {
               >
                 dans les 30 prochains jours (prévenez-moi)
               </a>
+            </div>
+            <div className="mt-4 flex items-center gap-2 text-xs text-lavender-dim">
+              <span className="inline-block w-1.5 h-1.5 rounded-full bg-spec-green" aria-hidden />
+              <span>
+                Bêta gratuite, sans carte.{" "}
+                <Link
+                  href="/tarifs"
+                  className="underline decoration-dotted underline-offset-2 hover:text-lavender transition"
+                >
+                  15 à 25 €/u/mois après lancement
+                </Link>
+                .
+              </span>
             </div>
           </div>
         </div>
