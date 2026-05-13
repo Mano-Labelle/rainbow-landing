@@ -16,7 +16,7 @@ export const article: Article = {
     "Un commercial DM passe 2 à 3 h/jour en documentation réglementaire et compte-rendu.",
     "Veeva CRM et IQVIA OCE sont les références enterprise — coût de licence élevé, interface lourde, mobile limité.",
     "Rainbow capte la voix du commercial après une visite hospitalière ou en cabinet, extrait les entités, et conserve la traçabilité.",
-    "Prix Rainbow : 15–25 €/u/mois, à comparer à 100–300 €/u/mois pour une licence Veeva chargée.",
+    "Rainbow est actuellement en bêta gratuite (post-bêta sur demande), à comparer à 100–300 €/u/mois pour une licence Veeva chargée.",
   ],
   sections: [
     {
@@ -64,7 +64,7 @@ export const article: Article = {
         rows: [
           ["Type", "Assistant vocal", "CRM pharma/DM enterprise", "CRM pharma enterprise"],
           ["Cible", "PME DM + commerciaux individuels", "Enterprise pharma + DM", "Enterprise pharma"],
-          ["Prix France 2026", "15–25 €/u/mois", "100–300 €/u/mois", "Sur devis (similaire Veeva)"],
+          ["Prix France 2026", "Bêta gratuite (post-bêta sur demande)", "100–300 €/u/mois", "Sur devis (similaire Veeva)"],
           ["Interface", "Voix native", "Desktop + Mobile Veeva", "Desktop + Mobile OCE"],
           ["Hors ligne", "Natif", "Partiel (Veeva Mobile)", "Partiel"],
           ["Mise en œuvre", "2 minutes", "3–12 mois (intégrateur)", "3–12 mois"],
@@ -100,8 +100,8 @@ export const article: Article = {
       h2: "Combien coûte un assistant IA en dispositif médical en France ?",
       paragraphs: [
         {
-          lead: "Rainbow coûte 15–25 €/utilisateur/mois, à comparer aux 100–300 € d'une licence Veeva ou IQVIA chargée.",
-          body: "Pour une équipe DM de 10 délégués, Rainbow représente 1 800–3 000 €/an, contre 12 000–36 000 € pour Veeva. La comparaison est valide uniquement si votre besoin est la capture vocale — Veeva reste incontournable pour les workflows compliance complets d'un gros laboratoire.",
+          lead: "Rainbow est actuellement en bêta gratuite (post-bêta discuté avec l'éditeur), à comparer aux 100–300 € d'une licence Veeva ou IQVIA chargée.",
+          body: "Pour une équipe DM de 10 délégués, Veeva représente 12 000–36 000 € par an. La comparaison de coût total avec Rainbow tient une fois le tarif post-bêta fixé, et la comparaison fonctionnelle est valide uniquement si votre besoin est la capture vocale (Veeva reste incontournable pour les workflows compliance complets d'un gros laboratoire).",
         },
       ],
     },

@@ -22,7 +22,7 @@ export const article: Article = {
     "Modjo = intelligence conversationnelle sur calls et Zoom. Rainbow = capture vocale après visite terrain.",
     "Modjo cible les inside sales, SDR et managers sales (coaching, scoring d'appels).",
     "Rainbow cible les commerciaux terrain B2B (vin, médical, automobile) qui passent l'essentiel de leur temps en voiture.",
-    "Modjo coûte ~99 €/utilisateur/mois (15 sièges minimum). Rainbow coûte 15–25 €/utilisateur/mois sans minimum.",
+    "Modjo coûte ~99 €/utilisateur/mois (15 sièges minimum). Rainbow est actuellement en bêta gratuite (post-bêta sur demande), sans minimum de sièges.",
   ],
   sections: [
     {
@@ -53,7 +53,7 @@ export const article: Article = {
           ["Capture", "Voix du commercial (mémo)", "Enregistrement du call entier"],
           ["Moment", "Après la visite, en voiture, le soir", "Pendant le call (temps réel)"],
           ["Cible", "Commerciaux terrain B2B", "Inside sales, SDR, managers sales"],
-          ["Prix France (u/mois)", "15–25 €", "~99 €"],
+          ["Prix France (u/mois)", "Bêta gratuite (post-bêta sur demande)", "~99 €"],
           ["Minimum de sièges", "1", "15 sièges"],
           ["Intégrations clés", "CRM via CSV + API sur demande", "Aircall, Ringover, Zoom, Teams, HubSpot, Salesforce"],
           ["Hébergement", "UE (France)", "UE (France), SOC2 Type II"],
@@ -85,7 +85,7 @@ export const article: Article = {
           bullets: [
             "Vos rendez-vous sont physiques : chez le caviste, à l'hôpital, en concession, chez le client.",
             "Vous voulez un outil qui fonctionne hors ligne (rural, parking, hôpital, salon).",
-            "Votre budget est en dizaines d'euros par mois, pas en centaines.",
+            "Votre budget est plafonné — Rainbow est actuellement en bêta gratuite, post-bêta sur demande.",
             "Vous êtes seul commercial ou en TPE — le minimum 15 sièges est rédhibitoire.",
           ],
         },
@@ -130,7 +130,7 @@ export const article: Article = {
   keyTakeaways: [
     "Modjo enregistre les calls et visios ; Rainbow capte la dictée post-visite.",
     "Modjo cible l'inside sales ; Rainbow cible le commercial terrain.",
-    "Modjo est ~4x plus cher par siège et demande 15 sièges minimum.",
+    "Modjo demande 15 sièges minimum et coûte ~99 €/u/mois ; Rainbow est actuellement en bêta gratuite sans minimum.",
     "Les deux peuvent coexister pour les équipes hybrides calls + terrain.",
   ],
   comparison: {

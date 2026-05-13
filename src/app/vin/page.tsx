@@ -4,7 +4,7 @@ import { Nav } from "@/components/sections/Nav";
 import { Footer } from "@/components/sections/Footer";
 import { StoreButton } from "@/components/brand/StoreButton";
 import { HeroChat } from "@/components/hero/HeroChat";
-import { IOS_APP_URL, WEB_APP_URL } from "@/content/app-urls";
+import { ANDROID_APP_URL, IOS_APP_URL, WEB_APP_URL } from "@/content/app-urls";
 
 const SITE = "https://askrainbow.ai";
 const URL = `${SITE}/vin`;
@@ -67,7 +67,7 @@ const VS_BAQIO = {
     ["Vocabulaire vin (cuvées, appellations, dégustation)", "Oui", "Adapté wine-industry"],
     ["Gestion de stock, commandes, facturation vin", "Non", "Oui — natif"],
     ["Mode hors-ligne (vignobles, caves)", "Oui — natif", "Limité"],
-    ["Pricing 2026", "15-25 €/u/mois (bêta gratuite)", "≈ 58 €/u/mois (Baqio)"],
+    ["Pricing 2026", "Bêta gratuite (post-bêta sur demande)", "≈ 58 €/u/mois (Baqio)"],
     ["Cible", "Commercial vin individuel ou équipe 1-30", "Domaines, négoces, distributeurs"],
   ],
 };
@@ -91,11 +91,11 @@ const WINE_FAQ = [
   },
   {
     q: "Combien coûte Rainbow par rapport à Baqio pour un commercial vin ?",
-    a: "Baqio est à environ 58 €/u/mois (qualifié de « pas cher » par les négoces interrogés). AskRainbow sera à 15-25 €/u/mois post-bêta — soit 2 à 4 fois moins cher. Rainbow est un assistant, Baqio est un CRM-ERP : ils ne se remplacent pas, ils se complètent. Détail tarifs : /tarifs.",
+    a: "AskRainbow est actuellement en bêta gratuite, sans carte bancaire. Le tarif post-bêta est discuté au cas par cas (mano@askrainbow.ai) — Rainbow et Baqio ne se remplacent pas, ils se complètent : Rainbow capte sur le terrain, Baqio (≈ 58 €/u/mois) gère le négoce.",
   },
   {
     q: "Comment commence-t-on ?",
-    a: "Téléchargez Rainbow sur iPhone (App Store) ou ouvrez la version web. Bêta gratuite, sans carte bancaire. Première dictée en moins de 2 minutes — pas de setup, pas de formation. Si vous êtes sur Android, laissez votre email pour être prévenu à la sortie (dans les 30 prochains jours).",
+    a: "Téléchargez Rainbow sur iPhone (App Store), Android (Google Play) ou ouvrez la version web. Bêta gratuite, sans carte bancaire. Première dictée en moins de 2 minutes — pas de setup, pas de formation.",
   },
   {
     q: "Y a-t-il des cas concrets de commerciaux vin qui utilisent Rainbow ?",
@@ -131,7 +131,7 @@ const serviceSchema = {
   },
   description:
     "AskRainbow équipe les commerciaux vin terrain : capture vocale en sortie de visite caviste, mémoire relationnelle (préférences sommeliers, dégustations), export CSV vers Baqio / WineCRM / autres.",
-  offers: { "@id": SITE + "/tarifs#offer" },
+  offers: { "@id": SITE + "/beta#offer" },
   url: URL,
 };
 
@@ -216,10 +216,11 @@ export default function VinPage() {
               </div>
               <div className="mt-3 flex flex-wrap items-center gap-3">
                 <StoreButton kind="apple" />
+                <StoreButton kind="google" />
                 <StoreButton kind="web" variant="ghost" />
               </div>
               <div className="mt-3 text-xs text-lavender-dim">
-                Android — bientôt. <Link href="/tarifs" className="underline decoration-dotted underline-offset-2 hover:text-lavender">15-25 €/u/mois après lancement</Link>.
+                <Link href="/beta" className="underline decoration-dotted underline-offset-2 hover:text-lavender">Bêta gratuite, sans carte</Link>.
               </div>
             </div>
           </div>
@@ -309,8 +310,9 @@ export default function VinPage() {
           </h2>
           <p className="mt-3 text-base text-lavender-muted max-w-2xl">
             Baqio est un CRM-ERP wine-industry, ≈ 58 €/u/mois. Rainbow est un
-            assistant vocal commercial, 15-25 €/u/mois. Les deux cohabitent : Rainbow
-            capte sur le terrain, Baqio gère le négoce.
+            assistant vocal commercial actuellement en bêta gratuite (post-bêta sur
+            demande). Les deux cohabitent : Rainbow capte sur le terrain, Baqio
+            gère le négoce.
           </p>
           <div className="mt-6 overflow-x-auto">
             <table className="w-full text-sm border-y border-ink-border/40">
@@ -342,23 +344,24 @@ export default function VinPage() {
           </div>
         </section>
 
-        {/* Pricing strip */}
+        {/* Beta strip */}
         <section className="mt-16 rounded-2xl border border-ink-border/50 bg-ink-panel/40 p-6 md:p-8 grid md:grid-cols-[1.2fr_1fr] gap-6 items-center">
           <div>
             <div className="text-xs font-mono tracking-[0.16em] uppercase text-spec-green">
               Bêta · gratuit · sans carte
             </div>
             <h2 className="mt-2 text-2xl md:text-3xl font-serif text-lavender">
-              180 à 300 €/an, par commercial.
+              Le dimanche, lui, n&apos;a pas de prix.
             </h2>
             <p className="mt-3 text-sm text-lavender-muted leading-relaxed">
-              Soit 2 à 4 fois moins cher que Baqio. Pour un commercial vin qui facture
-              35 €/h chargé, 4 heures gagnées par semaine valent ≈ 7 000 €/an. ROI
-              brut : 25 à 40x sur le temps. Et le dimanche, lui, n&apos;a pas de prix.
+              Pour un commercial vin qui facture 35 €/h chargé, 4 heures gagnées
+              par semaine valent ≈ 7 000 €/an de temps libéré. Rainbow est en bêta
+              gratuite, sans carte bancaire. Le tarif post-bêta est discuté avec
+              l&apos;éditeur (mano@askrainbow.ai).
             </p>
             <div className="mt-4">
-              <Link href="/tarifs" className="text-sm underline decoration-dotted underline-offset-2 text-accent hover:text-lavender">
-                Détail des tarifs →
+              <Link href="/beta" className="text-sm underline decoration-dotted underline-offset-2 text-accent hover:text-lavender">
+                Détail de la bêta →
               </Link>
             </div>
           </div>
@@ -367,13 +370,19 @@ export default function VinPage() {
               href={IOS_APP_URL}
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold bg-accent text-ink hover:opacity-90 transition"
             >
-              Télécharger sur iPhone
+              iPhone
+            </a>
+            <a
+              href={ANDROID_APP_URL}
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm border border-accent/60 text-accent hover:bg-accent hover:text-ink transition"
+            >
+              Android
             </a>
             <a
               href={WEB_APP_URL}
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm border border-ink-border text-lavender hover:border-lavender transition"
             >
-              Ouvrir la version web
+              Version web
             </a>
           </div>
         </section>
@@ -454,8 +463,8 @@ export default function VinPage() {
               </Link>
             </li>
             <li>
-              <Link href="/tarifs" className="underline decoration-dotted underline-offset-2 hover:text-lavender">
-                Tarifs AskRainbow
+              <Link href="/beta" className="underline decoration-dotted underline-offset-2 hover:text-lavender">
+                Bêta AskRainbow
               </Link>
             </li>
           </ul>

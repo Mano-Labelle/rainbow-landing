@@ -60,7 +60,7 @@ export const article: Article = {
           ["Sortie", "Base de données structurée", "Scoring, forecast, workflow", "Compte-rendu, email, relance"],
           ["Utilisateur principal", "Commercial + direction", "Direction commerciale", "Commercial terrain"],
           ["Exemple français", "Sellsy, Pipedrive", "Salesforce + Einstein", "Rainbow, Modjo"],
-          ["Prix France 2026", "29 € à 330 €/u/mois", "Inclus dans CRM ou +50 €", "15 € à 99 €/u/mois"],
+          ["Prix France 2026", "29 € à 330 €/u/mois", "Inclus dans CRM ou +50 €", "Du forfait mobile pro à 99 €/u/mois selon le positionnement"],
         ],
         caption:
           "Les trois catégories peuvent coexister dans une même entreprise ; chacune peut aussi fonctionner seule selon la taille.",

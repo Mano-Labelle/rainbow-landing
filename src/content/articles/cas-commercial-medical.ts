@@ -163,7 +163,7 @@ export const article: Article = {
     },
     {
       q: "Combien coûte Rainbow pour un labo de DM ?",
-      a: "Bêta gratuite sans carte. Au lancement payant, entre 15 et 25 €/utilisateur/mois sans engagement, sans minimum d'utilisateurs. Pour une équipe de 10 commerciaux DM, c'est 1 800 à 3 000 €/an — moins qu'une seule heure de consulting Veeva.",
+      a: "AskRainbow est actuellement en bêta gratuite, sans carte bancaire. Le tarif post-bêta est discuté au cas par cas avec l'éditeur (mano@askrainbow.ai).",
     },
     {
       q: "Rainbow comprend-il le vocabulaire métier (gammes, classes de DM, références) ?",

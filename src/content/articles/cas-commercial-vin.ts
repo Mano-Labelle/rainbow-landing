@@ -130,8 +130,8 @@ export const article: Article = {
           bullets: [
             "Temps libéré : ≈ 200 h/an, soit 5 semaines complètes.",
             "Valeur du temps : ≈ 7 000 €/an de temps redirigé vers la vente ou la vie personnelle.",
-            "Coût de Rainbow (post-bêta) : 180 à 300 €/an (15-25 €/u/mois).",
-            "ROI temps brut : 25 à 40x.",
+            "Coût de Rainbow : actuellement en bêta gratuite, post-bêta discuté au cas par cas avec l'éditeur.",
+            "ROI temps brut : ordre de grandeur supérieur à 20x sur le temps libéré, vs un abonnement de niveau forfait mobile professionnel.",
           ],
         },
         {
@@ -154,7 +154,7 @@ export const article: Article = {
     },
     {
       q: "Combien coûte Rainbow pour une commerciale comme Léontine ?",
-      a: "Bêta gratuite actuellement, sans carte bancaire. Au lancement payant, entre 15 et 25 €/utilisateur/mois sans engagement. Pour une commerciale individuelle, c'est l'équivalent d'un forfait mobile.",
+      a: "AskRainbow est actuellement en bêta gratuite, sans carte bancaire. Le tarif post-bêta est discuté au cas par cas avec l'éditeur (mano@askrainbow.ai).",
     },
     {
       q: "Rainbow remplace-t-il Baqio ou WineCRM ?",
@@ -162,14 +162,14 @@ export const article: Article = {
     },
     {
       q: "Comment commencer si je suis dans la même situation que Léontine ?",
-      a: "Téléchargez Rainbow sur iPhone (App Store) ou ouvrez la version web sur app.askrainbow.ai. Bêta gratuite, sans carte. Première dictée en moins de 2 minutes — pas de setup, pas de formation. Si vous êtes sur Android, laissez votre email sur askrainbow.ai pour être prévenu à la sortie.",
+      a: "Téléchargez Rainbow sur iPhone (App Store), Android (Google Play) ou ouvrez la version web sur app.askrainbow.ai. Bêta gratuite, sans carte. Première dictée en moins de 2 minutes, pas de setup, pas de formation.",
     },
   ],
   keyTakeaways: [
     "Une commerciale vin perd 4-5 h/semaine sur les CR du dimanche soir.",
     "Le vrai pain n'est pas la saisie, c'est la mémoire relationnelle qui fuit (préférences sommeliers, anniversaires).",
     "Rainbow capte 60-90 s à la sortie d'un caviste et alimente Baqio par CSV — sans remplacer le CRM existant.",
-    "ROI : ≈ 25-40x (200 h/an libérées vs 180-300 €/an d'abonnement).",
+    "ROI : un ordre de grandeur supérieur à 20x sur le temps libéré, vs un abonnement de niveau forfait mobile professionnel.",
     "La métrique qui compte vraiment pour Léontine : récupérer ses dimanches.",
   ],
   related: [

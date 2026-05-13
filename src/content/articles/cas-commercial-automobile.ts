@@ -167,7 +167,7 @@ export const article: Article = {
     },
     {
       q: "Combien coûte Rainbow pour une équipe de 50 commerciaux automobile B2B ?",
-      a: "Bêta gratuite sans carte. Au lancement payant, entre 15 et 25 €/u/mois sans engagement, soit 9 000 à 15 000 €/an pour 50 commerciaux. Voir le détail des tarifs : /tarifs.",
+      a: "AskRainbow est actuellement en bêta gratuite, sans carte bancaire. Le tarif post-bêta est discuté au cas par cas avec l'éditeur (mano@askrainbow.ai). Voir /beta.",
     },
     {
       q: "Rainbow gère-t-il le vocabulaire métier (LLD, LOA, gestion de parc, hybride rechargeable, autonomie) ?",
@@ -179,7 +179,7 @@ export const article: Article = {
     "Le pain principal n'est pas le temps : c'est la dispersion de l'information client entre DMS, CRM, configurateur, Excel.",
     "Rainbow consolide la capture en un point vocal, exporte par CSV vers les 4 outils.",
     "Effet stratégique : continuité d'activité préservée en cas de turnover commercial.",
-    "Modèle de pricing aligné : 15-25 €/u/mois, soit 9-15 k€/an pour 50 commerciaux.",
+    "Modèle de pricing aligné : actuellement en bêta gratuite, post-bêta discuté au cas par cas avec l'éditeur.",
   ],
   related: [
     "assistant-commercial-automobile-b2b",

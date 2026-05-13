@@ -16,7 +16,7 @@ export const article: Article = {
     "Les commerciaux auto B2B jonglent en moyenne avec 40 outils par jour (source : MotorK 2026).",
     "Les données client sont fragmentées sur 3+ bases (DMS constructeur, CRM, Excel flotte).",
     "Un assistant vocal capture la visite client dans une seule dictée, puis alimente le CRM et le DMS.",
-    "Rainbow coûte 15–25 €/utilisateur/mois — à comparer aux 40 €+/u/mois des CRM auto-spécialisés (Youday, SelliCar).",
+    "Rainbow est actuellement en bêta gratuite (post-bêta sur demande), à comparer aux 40 €+/u/mois des CRM auto-spécialisés (Youday, SelliCar).",
   ],
   sections: [
     {
@@ -85,7 +85,7 @@ export const article: Article = {
           ["Pipeline spécifique LLD/LOA", "Non", "Oui"],
           ["Intégration DMS constructeur", "Non native", "Native"],
           ["Mobile / terrain", "Natif, hors ligne", "Variable selon éditeur"],
-          ["Prix France 2026", "15–25 €/u/mois", "40–100 €/u/mois"],
+          ["Prix France 2026", "Bêta gratuite (post-bêta sur demande)", "40–100 €/u/mois"],
           ["Cible", "Commerciaux individuels + PME", "Concessions + équipes sales auto"],
         ],
         caption:
@@ -110,8 +110,8 @@ export const article: Article = {
       h2: "Combien coûte un assistant IA pour un commercial auto B2B en France ?",
       paragraphs: [
         {
-          lead: "Rainbow coûte 15–25 €/utilisateur/mois — 2 à 4x moins qu'un CRM auto-spécialisé.",
-          body: "Pour une équipe de 5 commerciaux B2B / flotte, Rainbow représente 900–1 500 €/an, contre 2 400–6 000 € pour Youday ou SelliCar. Si vous avez déjà un CRM auto-spécialisé, Rainbow se positionne en couche vocale par-dessus — 15–25 € par commercial en plus, avec un gain documenté de 3 à 5 h/semaine.",
+          lead: "Rainbow est actuellement en bêta gratuite, sensiblement moins cher qu'un CRM auto-spécialisé une fois le tarif post-bêta connu.",
+          body: "Pour une équipe de 5 commerciaux B2B / flotte, Youday ou SelliCar représentent 2 400–6 000 €/an. Si vous avez déjà un CRM auto-spécialisé, Rainbow se positionne en couche vocale par-dessus, avec un gain documenté de 3 à 5 h/semaine.",
         },
       ],
       callout: {
@@ -144,7 +144,7 @@ export const article: Article = {
   ],
   keyTakeaways: [
     "Un commercial auto B2B jongle avec 40 outils par jour — Rainbow consolide la capture en un seul flux vocal.",
-    "Rainbow coûte 15–25 €/u/mois, 2 à 4x moins que Youday ou SelliCar.",
+    "Rainbow est en bêta gratuite (post-bêta sur demande), sensiblement moins cher que Youday ou SelliCar.",
     "Rainbow alimente un DMS ou un CRM auto-spécialisé — il ne les remplace pas sur le métier.",
     "La dictée en voiture (mains libres, hors ligne) est un des cas d'usage centraux.",
   ],

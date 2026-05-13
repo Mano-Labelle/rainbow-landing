@@ -28,8 +28,8 @@ export function Nav() {
           >
             Comparaisons
           </Link>
-          <Link href="/tarifs" className="hover:text-lavender transition">
-            Tarifs
+          <Link href="/beta" className="hover:text-lavender transition">
+            Bêta
           </Link>
           <Link href="/ma-commission" className="transition hover:opacity-90">
             <span className="rink-warm font-medium">Ma commission</span>

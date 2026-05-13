@@ -8,7 +8,7 @@ export const article: Article = {
     "Rainbow vs Baqio : assistant vocal vin ou CRM-ERP wine-industry ?",
   metaTitle: "Rainbow vs Baqio (2026) — quel outil pour le vin ?",
   metaDesc:
-    "AskRainbow (assistant vocal pour commerciaux vin, 15-25 €/u/mois) ou Baqio (CRM-ERP wine-industry, ≈58 €/u/mois) ? Comparatif honnête, cas d'usage, pricing 2026.",
+    "AskRainbow (assistant vocal pour commerciaux vin, bêta gratuite) ou Baqio (CRM-ERP wine-industry, ≈58 €/u/mois) ? Comparatif honnête, cas d'usage, pricing 2026.",
   datePublished: "2026-05-08",
   dateModified: "2026-05-08",
   comparison: {
@@ -21,7 +21,7 @@ export const article: Article = {
     "Baqio est un CRM-ERP français spécialisé dans la filière vin (négoces, vignerons, distributeurs), qualifié de « pas cher » à ≈58 €/u/mois par les commerciaux interrogés. AskRainbow est un assistant commercial IA conçu pour la voix des commerciaux vin sur le terrain. Voici quand chacun est le bon choix, et comment ils cohabitent.",
   tldr: [
     "Baqio = CRM-ERP wine-industry (commandes, factures, stock, traçabilité), ≈ 58 €/u/mois.",
-    "Rainbow = assistant vocal IA pour commercial vin terrain, 15-25 €/u/mois (bêta gratuite).",
+    "Rainbow = assistant vocal IA pour commercial vin terrain, actuellement en bêta gratuite (post-bêta sur demande).",
     "Verdict : Baqio pour gérer le négoce ; Rainbow pour donner une mémoire vocale au commercial.",
     "Cohabitation naturelle : Rainbow capte sur le terrain, Baqio gère le back-office, l'un alimente l'autre par export CSV.",
   ],
@@ -68,7 +68,7 @@ export const article: Article = {
           ["Briefing avant visite caviste", "Oui — natif", "Non"],
           ["Setup / configuration", "0 minute (téléchargez et parlez)", "Plusieurs jours à plusieurs semaines"],
           ["Cible utilisateur", "1-30 commerciaux vin terrain", "Négoces, vignerons, distributeurs structurés"],
-          ["Pricing 2026", "15-25 €/u/mois (bêta gratuite)", "≈ 58 €/u/mois (≈ 700 €/an)"],
+          ["Pricing 2026", "Bêta gratuite (post-bêta sur demande)", "≈ 58 €/u/mois (≈ 700 €/an)"],
         ],
       },
     },
@@ -105,7 +105,7 @@ export const article: Article = {
       ],
       callout: {
         kind: "tip",
-        text: "Combinaison gagnante pour un négoce vin avec commerciaux terrain : Baqio au siège (commandes, factures, stock) + Rainbow en mobilité (capture vocale, mémoire relationnelle). Les deux sont français, exportent en CSV, et coexistent à environ 75-85 €/u/mois total — soit le prix d'un Sellsy seul, mais avec la couverture vin spécifique.",
+        text: "Combinaison gagnante pour un négoce vin avec commerciaux terrain : Baqio au siège (commandes, factures, stock) + Rainbow en mobilité (capture vocale, mémoire relationnelle). Les deux sont français, exportent en CSV, et coexistent à un coût total raisonnable pour la couverture vin spécifique (Rainbow est actuellement en bêta gratuite, post-bêta discuté avec l'éditeur).",
       },
     },
     {
@@ -136,21 +136,21 @@ export const article: Article = {
         },
         {
           lead:
-            "AskRainbow : 15 à 25 €/u/mois prévu post-bêta, sans engagement, sans setup.",
+            "AskRainbow : bêta gratuite actuellement, sans carte, sans engagement, sans setup. Le tarif post-bêta est discuté au cas par cas avec l'éditeur.",
           body:
-            "Bêta gratuite actuellement, sans carte. Pour une équipe de 5 commerciaux : 900 à 1 500 €/an post-bêta. Détail tarifs : /tarifs.",
+            "Voir /beta pour démarrer.",
         },
       ],
       callout: {
         kind: "info",
-        text: "Combiner les deux pour un négoce vin avec 5 commerciaux : ≈ 4 400 à 5 000 €/an total (Baqio ≈ 3 500 + Rainbow ≈ 900-1 500). Soit l'équivalent d'une seule heure perdue par commercial par semaine en CR mal saisis.",
+        text: "Combiner les deux pour un négoce vin avec 5 commerciaux représente actuellement le coût Baqio seul (Rainbow est en bêta gratuite). Soit l'équivalent d'une seule heure perdue par commercial par semaine en CR mal saisis, dès que le tarif post-bêta de Rainbow sera connu.",
       },
     },
   ],
   faq: [
     {
       q: "Rainbow remplace-t-il Baqio ?",
-      a: "Non. Baqio est un CRM-ERP wine-industry qui gère commandes, factures, stock et traçabilité. Rainbow est un assistant vocal pour la capture en mobilité. Pour un négoce vin, Rainbow s'ajoute à Baqio (15-25 €/u/mois supplémentaires) pour les commerciaux terrain et alimente Baqio par export CSV.",
+      a: "Non. Baqio est un CRM-ERP wine-industry qui gère commandes, factures, stock et traçabilité. Rainbow est un assistant vocal pour la capture en mobilité. Pour un négoce vin, Rainbow s'ajoute à Baqio (bêta gratuite actuellement, post-bêta sur demande) pour les commerciaux terrain et alimente Baqio par export CSV.",
     },
     {
       q: "Baqio a-t-il une fonction d'assistant IA ou de capture vocale ?",
@@ -179,9 +179,9 @@ export const article: Article = {
   ],
   keyTakeaways: [
     "Baqio = CRM-ERP wine-industry pour négoces / domaines, ≈ 58 €/u/mois.",
-    "Rainbow = assistant vocal IA pour commercial vin terrain, 15-25 €/u/mois (bêta gratuite).",
+    "Rainbow = assistant vocal IA pour commercial vin terrain, actuellement en bêta gratuite (post-bêta sur demande).",
     "Les deux sont complémentaires, pas concurrents — Rainbow capte sur le terrain, Baqio gère le négoce.",
-    "Coût combiné pour 5 commerciaux vin : ≈ 4 400-5 000 €/an total.",
+    "Coût combiné pour 5 commerciaux vin : actuellement le coût Baqio seul (Rainbow est en bêta gratuite).",
     "Pour un commercial vin individuel ou freelance : Rainbow seul peut suffire.",
   ],
   related: [

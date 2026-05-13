@@ -20,7 +20,7 @@ export const article: Article = {
   tldr: [
     "Salesforce est un CRM (base de données pipeline) ; Rainbow est un assistant vocal qui capte la dictée du commercial.",
     "Salesforce démarre à 25 €/utilisateur/mois (Starter) mais monte à 80–330 €/utilisateur/mois chargé en production.",
-    "Rainbow coûte 15–25 €/utilisateur/mois tout compris.",
+    "Rainbow est actuellement en bêta gratuite (post-bêta sur demande), tout compris.",
     "Pour une PME française de moins de 20 commerciaux, Rainbow seul suffit souvent ; au-delà, Rainbow + Salesforce (ou Rainbow + HubSpot) est la combinaison efficace.",
   ],
   sections: [
@@ -50,8 +50,8 @@ export const article: Article = {
           ["Type", "Assistant vocal commercial", "CRM enterprise"],
           ["Capture", "Voix + chat", "Saisie manuelle"],
           ["Moment d'usage", "Terrain, voiture, post-visite", "Bureau, fin de journée"],
-          ["Prix France 2026", "15–25 €/u/mois", "25 € Starter → 330 € Einstein"],
-          ["Coût réel en production", "15–25 €", "80–100 € chargé (licences + intégrateur)"],
+          ["Prix France 2026", "Bêta gratuite (post-bêta sur demande)", "25 € Starter → 330 € Einstein"],
+          ["Coût réel en production", "Bêta gratuite (post-bêta sur demande)", "80–100 € chargé (licences + intégrateur)"],
           ["Setup", "2 minutes", "Projet de 3–12 mois (intégrateur)"],
           ["Cible", "Commerciaux terrain, PME", "Grandes entreprises, équipes ops dédiées"],
           ["Intégrations CRM tiers", "Oui", "N/A (c'est lui le CRM)"],
@@ -111,7 +111,7 @@ export const article: Article = {
     },
     {
       q: "Salesforce est-il trop cher pour une PME française ?",
-      a: "Salesforce Starter commence à 25 €/utilisateur/mois, mais le coût réel chargé (licences + intégrateur + support) monte à 80–100 €/utilisateur/mois en production. Pour une équipe de 10 commerciaux en PME, cela représente 10–12 k€/an hors intégration initiale. Rainbow à 15–25 € reste l'alternative à bas bruit.",
+      a: "Salesforce Starter commence à 25 €/utilisateur/mois, mais le coût réel chargé (licences + intégrateur + support) monte à 80–100 €/utilisateur/mois en production. Pour une équipe de 10 commerciaux en PME, cela représente 10–12 k€/an hors intégration initiale. Rainbow est actuellement en bêta gratuite (post-bêta sur demande) et reste l'alternative à bas bruit.",
     },
     {
       q: "Peut-on exporter ses données Rainbow vers Salesforce ?",
@@ -128,7 +128,7 @@ export const article: Article = {
   ],
   keyTakeaways: [
     "Salesforce est un CRM enterprise ; Rainbow est un assistant vocal qui remplit ce CRM ou fonctionne seul.",
-    "Salesforce coûte 25–330 €/u/mois en façade, 80–100 € chargé ; Rainbow reste à 15–25 €.",
+    "Salesforce coûte 25–330 €/u/mois en façade, 80–100 € chargé ; Rainbow est actuellement en bêta gratuite (post-bêta sur demande).",
     "Pour une PME de moins de 20 commerciaux, Rainbow seul suffit souvent.",
     "Pour un mid-market, Rainbow + Salesforce (ou HubSpot, Pipedrive, Sellsy) est la combinaison efficace.",
   ],

@@ -146,7 +146,7 @@ export const article: Article = {
       table: {
         headers: ["Outil", "Prix 2026 (France)", "Positionnement"],
         rows: [
-          ["Rainbow AI", "15–25 €/u/mois", "Assistant vocal commerciaux terrain"],
+          ["Rainbow AI", "Bêta gratuite (post-bêta sur demande)", "Assistant vocal commerciaux terrain"],
           ["Moovago", "19,90 €/u/mois", "CRM terrain (avec saisie manuelle)"],
           ["Leexi", "29 €/u/mois", "Transcription réunions / calls"],
           ["Cobl.ai", "29 €/u/mois", "Automatisation docs B2B (inside sales)"],
@@ -189,7 +189,7 @@ export const article: Article = {
     },
     {
       q: "Quel est le meilleur assistant commercial IA en France en 2026 ?",
-      a: "Le choix dépend du profil commercial. Pour l'inside sales et les calls, Modjo et Leexi dominent. Pour le commercial terrain (voiture, visites physiques), Rainbow est positionné sur ce segment spécifique avec une capture vocale hors ligne et un prix commercial-individuel (15-25 €/mois).",
+      a: "Le choix dépend du profil commercial. Pour l'inside sales et les calls, Modjo et Leexi dominent. Pour le commercial terrain (voiture, visites physiques), Rainbow est positionné sur ce segment spécifique avec une capture vocale hors ligne, actuellement en bêta gratuite.",
     },
     {
       q: "Un assistant commercial IA fonctionne-t-il hors ligne ?",
@@ -214,7 +214,7 @@ export const article: Article = {
   ],
   keyTakeaways: [
     "Un assistant commercial IA capte la voix ou le chat du commercial, structure les notes et pousse vers le CRM — il ne remplace pas un CRM, il le remplit.",
-    "En France en 2026, le prix d'entrée se situe à 15-25 €/utilisateur/mois — équivalent à un forfait mobile pro.",
+    "En France en 2026, le prix d'entrée se situe au niveau d'un forfait mobile pro.",
     "Les commerciaux terrain y gagnent 3 à 5 heures par semaine, principalement sur les comptes-rendus du soir.",
     "Trois secteurs concentrent l'usage : vin/spiritueux, dispositif médical, automobile B2B.",
     "Les critères de choix : précision française, hors ligne, intégration CRM, hébergement UE, prix commercial-individuel.",

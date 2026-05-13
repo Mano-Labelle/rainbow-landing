@@ -15,10 +15,10 @@ export const article: Article = {
   datePublished: "2026-04-22",
   dateModified: "2026-04-22",
   heroLead:
-    "Modjo est excellent pour les équipes sales qui passent leur journée en call ou en Zoom — il enregistre, transcrit, score les appels. Si vous êtes commercial terrain (voiture, visite physique, rendez-vous chez le client), Modjo n'est pas fait pour votre usage. Rainbow est l'alternative conçue pour le terrain, à 15–25 €/utilisateur/mois.",
+    "Modjo est excellent pour les équipes sales qui passent leur journée en call ou en Zoom, il enregistre, transcrit, score les appels. Si vous êtes commercial terrain (voiture, visite physique, rendez-vous chez le client), Modjo n'est pas fait pour votre usage. Rainbow est l'alternative conçue pour le terrain, actuellement en bêta gratuite (post-bêta sur demande).",
   tldr: [
     "Modjo écoute vos calls ; Rainbow écoute votre dictée après une visite terrain.",
-    "Modjo démarre à 99 €/u/mois avec 15 sièges minimum ; Rainbow à 15–25 €/u/mois sans minimum.",
+    "Modjo démarre à 99 €/u/mois avec 15 sièges minimum ; Rainbow est actuellement en bêta gratuite (post-bêta sur demande), sans minimum.",
     "Rainbow fonctionne hors ligne — indispensable en rural, en hôpital, en parking.",
     "Rainbow est français, hébergé en France ; Modjo aussi, mais calibré pour des équipes plus grandes.",
   ],
@@ -38,7 +38,7 @@ export const article: Article = {
         {
           lead: "Trois alternatives françaises sont positionnées sur le commercial terrain en 2026 : Rainbow, Trustlead et Jay.",
           bullets: [
-            "Rainbow — français, 15–25 €/u/mois, mode hors ligne natif, export CSV complet.",
+            "Rainbow — français, bêta gratuite (post-bêta sur demande), mode hors ligne natif, export CSV complet.",
             "Trustlead — français, tarif sur devis, intégration native à 7 CRM (Salesforce, HubSpot, Pipedrive, etc).",
             "Jay (heyjay.fr) — français, tarif non public, documentation limitée.",
           ],
@@ -75,7 +75,7 @@ export const article: Article = {
     },
     {
       q: "Quelle alternative à Modjo coûte moins cher ?",
-      a: "Rainbow (15–25 €/u/mois) est environ 4x moins cher que Modjo (~99 €/u/mois) — mais ils ne font pas la même chose. La comparaison est seulement pertinente si votre usage est terrain, pas inside sales.",
+      a: "Rainbow est actuellement en bêta gratuite (post-bêta sur demande), sensiblement moins cher que Modjo (~99 €/u/mois), mais ils ne font pas la même chose. La comparaison est seulement pertinente si votre usage est terrain, pas inside sales.",
     },
     {
       q: "Rainbow et Modjo exportent-ils les données vers le CRM ?",
@@ -93,7 +93,7 @@ export const article: Article = {
   keyTakeaways: [
     "Modjo est fait pour les calls ; Rainbow pour le terrain.",
     "Les deux peuvent coexister pour les équipes hybrides.",
-    "Rainbow coûte ~4x moins cher par siège et démarre à 1 siège.",
+    "Rainbow est actuellement en bêta gratuite (post-bêta sur demande) et démarre à 1 siège.",
     "Rainbow fonctionne hors ligne — prérequis pour le rural, l'hôpital, le parking.",
   ],
   comparison: {

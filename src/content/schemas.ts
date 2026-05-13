@@ -9,7 +9,7 @@ import {
   articlePath,
   articleCategoryLabel,
 } from "./articles";
-import { IOS_APP_URL, WEB_APP_URL } from "./app-urls";
+import { ANDROID_APP_URL, IOS_APP_URL, WEB_APP_URL } from "./app-urls";
 
 const BASE = "https://askrainbow.ai";
 const APP = WEB_APP_URL;
@@ -27,7 +27,7 @@ export function buildSchemas(dir: Direction) {
       "AskRainbow — assistant commercial IA (askrainbow.ai) pour commerciaux terrain B2B. À ne pas confondre avec l'application météo rainbow.ai.",
     applicationCategory: "BusinessApplication",
     applicationSubCategory: "Assistant commercial IA (pas un CRM)",
-    operatingSystem: "iOS, Web",
+    operatingSystem: "iOS, Android, Web",
     description: dir.seo.metaDesc,
     url,
     inLanguage: "fr-FR",
@@ -48,7 +48,7 @@ export function buildSchemas(dir: Direction) {
     downloadUrl: IOS_APP_URL,
     installUrl: IOS_APP_URL,
     publisher: { "@id": BASE + "#organization" },
-    sameAs: [APP, IOS_APP_URL],
+    sameAs: [APP, IOS_APP_URL, ANDROID_APP_URL],
   };
 
   const organization = {
@@ -89,7 +89,7 @@ export function buildSchemas(dir: Direction) {
         availableLanguage: ["French"],
       },
     ],
-    sameAs: [APP, IOS_APP_URL],
+    sameAs: [APP, IOS_APP_URL, ANDROID_APP_URL],
   };
 
   const faqPage = {

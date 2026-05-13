@@ -6,7 +6,7 @@ export const article: Article = {
   title: "Rainbow vs Sidely : assistant vocal léger ou plateforme SFA terrain complète ?",
   metaTitle: "Rainbow vs Sidely (2026) — terrain B2B France",
   metaDesc:
-    "AskRainbow (assistant vocal terrain, 15-25 €/u/mois) ou Sidely (plateforme SFA / sales force automation terrain, 30-60 €/u/mois) ? Comparatif honnête, cas d'usage 2026.",
+    "AskRainbow (assistant vocal terrain, bêta gratuite) ou Sidely (plateforme SFA / sales force automation terrain, 30-60 €/u/mois) ? Comparatif honnête, cas d'usage 2026.",
   datePublished: "2026-05-08",
   dateModified: "2026-05-08",
   comparison: {
@@ -19,7 +19,7 @@ export const article: Article = {
     "Sidely (go-sidely.com) est une plateforme française de sales force automation pour les équipes commerciales terrain : géolocalisation de tournée, planification, signatures, photos produit, relevés de linéaire. AskRainbow est un assistant commercial IA plus léger, dédié à la capture vocale et la mémoire relationnelle. Voici quand chacun est le bon choix.",
   tldr: [
     "Sidely = plateforme SFA terrain française, structurée pour FMCG / retail / distribution, 30-60 €/u/mois.",
-    "Rainbow = assistant vocal IA pour commerciaux terrain B2B, 15-25 €/u/mois (bêta gratuite).",
+    "Rainbow = assistant vocal IA pour commerciaux terrain B2B, actuellement en bêta gratuite (post-bêta sur demande).",
     "Verdict : Sidely pour équipes 10+ avec besoin de pilotage tournée, géoloc, relevés linéaire. Rainbow pour équipes 1-30 avec pain principal sur la capture et la mémoire.",
     "Cohabitation possible : certaines équipes utilisent Sidely pour la tournée, Rainbow pour la voix. Mais pour la majorité, on choisit l'un ou l'autre.",
   ],
@@ -66,7 +66,7 @@ export const article: Article = {
           ["Briefing avant rendez-vous (« prépare la visite »)", "Oui — natif", "Limité"],
           ["Setup / formation requise", "0 minute", "Plusieurs jours à plusieurs semaines"],
           ["Cible utilisateur", "1-30 commerciaux B2B", "10+ commerciaux FMCG / retail / B2B"],
-          ["Pricing 2026", "15-25 €/u/mois (bêta gratuite)", "30-60 €/u/mois selon édition"],
+          ["Pricing 2026", "Bêta gratuite (post-bêta sur demande)", "30-60 €/u/mois selon édition"],
         ],
       },
     },
@@ -137,9 +137,9 @@ export const article: Article = {
         },
         {
           lead:
-            "AskRainbow : 15 à 25 €/u/mois post-bêta, sans engagement, sans setup.",
+            "AskRainbow : bêta gratuite actuellement, sans engagement, sans setup. Le tarif post-bêta est discuté au cas par cas avec l'éditeur.",
           body:
-            "Bêta gratuite actuellement. Pour une équipe de 10 commerciaux : 1 800 à 3 000 €/an post-bêta. Détail : /tarifs.",
+            "Sans carte bancaire pour démarrer. Voir /beta.",
         },
       ],
     },
@@ -172,7 +172,7 @@ export const article: Article = {
   ],
   keyTakeaways: [
     "Sidely = plateforme SFA terrain pour équipes 10+ structurées (FMCG, retail), 30-60 €/u/mois.",
-    "Rainbow = assistant vocal léger pour 1-30 commerciaux relationnels, 15-25 €/u/mois.",
+    "Rainbow = assistant vocal léger pour 1-30 commerciaux relationnels, actuellement en bêta gratuite (post-bêta sur demande).",
     "Choisir Sidely si pain = pilotage tournée, géoloc, relevé linéaire, signatures.",
     "Choisir Rainbow si pain = capture rapide, mémoire relationnelle, mobilité, individu-friendly.",
     "Cohabitation possible mais souvent surdimensionnée — choisir l'un.",

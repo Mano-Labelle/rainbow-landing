@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { DIRECTION } from "@/content/direction";
-import { IOS_APP_URL } from "@/content/app-urls";
+import { ANDROID_APP_URL, IOS_APP_URL } from "@/content/app-urls";
 import type { Article } from "@/content/articles";
 
 /** Inline TL;DR bullets + post-article CTA block. */
@@ -81,6 +81,12 @@ export function ArticleCta({ article }: { article: Article }) {
             Télécharger sur iOS
           </a>
           <a
+            href={ANDROID_APP_URL}
+            className="inline-block px-6 py-3 rounded-lg border border-accent/60 text-accent font-medium hover:bg-accent hover:text-ink transition"
+          >
+            Télécharger sur Android
+          </a>
+          <a
             href="https://app.askrainbow.ai"
             className="inline-block px-6 py-3 rounded-lg border border-ink-border bg-ink-panel/60 text-lavender font-medium hover:border-lavender-muted transition"
           >
@@ -88,7 +94,7 @@ export function ArticleCta({ article }: { article: Article }) {
           </a>
         </div>
         <div className="text-xs text-lavender-dim font-mono">
-          Bêta gratuite · sans carte · Android dans les 30 prochains jours
+          Bêta gratuite · sans carte bancaire · iPhone, Android, web
         </div>
       </div>
     </section>

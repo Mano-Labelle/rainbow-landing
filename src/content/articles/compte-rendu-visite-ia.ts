@@ -74,7 +74,7 @@ export const article: Article = {
       paragraphs: [
         {
           lead: "Entre 0 € (outil généraliste) et 100 €/utilisateur/mois (couche enterprise) en 2026.",
-          body: "Rainbow (15–25 €/u/mois), Leexi (29 €), Modjo (~99 €), ChatGPT Pro individuel (≈20 €/mois) couvrent le spectre. Pour un commercial seul avec quelques visites/semaine, ChatGPT suffit ; pour une équipe avec CRM, un outil spécialisé est plus efficace.",
+          body: "Rainbow (bêta gratuite, post-bêta sur demande), Leexi (29 €), Modjo (~99 €), ChatGPT Pro individuel (≈20 €/mois) couvrent le spectre. Pour un commercial seul avec quelques visites/semaine, ChatGPT suffit ; pour une équipe avec CRM, un outil spécialisé est plus efficace.",
         },
       ],
     },

@@ -6,7 +6,7 @@ export const article: Article = {
   title: "Rainbow vs Axonaut : assistant vocal terrain ou suite TPE/PME française complète ?",
   metaTitle: "Rainbow vs Axonaut (2026) — TPE/PME France",
   metaDesc:
-    "AskRainbow (assistant vocal terrain, 15-25 €/u/mois) ou Axonaut (suite TPE/PME française complète CRM + factu + projets, 30-50 €/u/mois) ? Comparatif honnête 2026.",
+    "AskRainbow (assistant vocal terrain, bêta gratuite) ou Axonaut (suite TPE/PME française complète CRM + factu + projets, 30-50 €/u/mois) ? Comparatif honnête 2026.",
   datePublished: "2026-05-08",
   dateModified: "2026-05-08",
   comparison: {
@@ -19,7 +19,7 @@ export const article: Article = {
     "Axonaut est une suite SaaS française fondée à Toulouse en 2017, pensée pour les TPE et PME : CRM, devis, factures, gestion de projets, ressources humaines, le tout dans une seule interface. AskRainbow est un assistant commercial IA ciblé sur les commerciaux terrain. Voici comment chacun se positionne et quand les associer.",
   tldr: [
     "Axonaut = suite SaaS française tout-en-un TPE/PME (CRM + factu + projets + RH), 30-50 €/u/mois.",
-    "Rainbow = assistant vocal IA pour commerciaux terrain, 15-25 €/u/mois (bêta gratuite).",
+    "Rainbow = assistant vocal IA pour commerciaux terrain, actuellement en bêta gratuite (post-bêta sur demande).",
     "Verdict : Axonaut pour gérer toute votre TPE/PME en un outil ; Rainbow pour donner une mémoire vocale aux commerciaux mobiles.",
     "Les deux cohabitent bien : Rainbow alimente Axonaut CRM par export CSV.",
   ],
@@ -66,7 +66,7 @@ export const article: Article = {
           ["Briefing avant rendez-vous", "Oui — natif", "Non"],
           ["Setup / formation requise", "0 minute (téléchargez et parlez)", "Quelques jours à plusieurs semaines"],
           ["Cible", "1-30 commerciaux terrain B2B", "1-50 collaborateurs TPE/PME"],
-          ["Pricing 2026", "15-25 €/u/mois (bêta gratuite)", "30 à 50 €/u/mois selon édition"],
+          ["Pricing 2026", "Bêta gratuite (post-bêta sur demande)", "30 à 50 €/u/mois selon édition"],
         ],
       },
     },
@@ -117,7 +117,7 @@ export const article: Article = {
         },
         {
           lead:
-            "L'argument économique : 15-25 €/u/mois en plus pour Rainbow, contre un risque évité : Axonaut sous-utilisé par des commerciaux qui n'y entrent jamais leurs visites.",
+            "L'argument économique : Rainbow est actuellement en bêta gratuite (post-bêta sur demande) en plus de votre Axonaut, contre un risque évité : Axonaut sous-utilisé par des commerciaux qui n'y entrent jamais leurs visites.",
           body:
             "Le calcul tient si vos commerciaux saisissaient déjà mal ; si Axonaut est utilisé à 80 % par votre équipe sédentaire (devis, facturation), vous n'avez peut-être pas besoin de Rainbow.",
         },
@@ -134,9 +134,9 @@ export const article: Article = {
         },
         {
           lead:
-            "AskRainbow : 15 à 25 €/u/mois post-bêta, sans engagement, sans palier.",
+            "AskRainbow : bêta gratuite actuellement, sans engagement, sans palier. Le tarif post-bêta est discuté au cas par cas avec l'éditeur.",
           body:
-            "Bêta gratuite actuellement. Pour une équipe de 10 commerciaux : 1 800 à 3 000 €/an post-bêta. Détail : /tarifs.",
+            "Sans carte bancaire pour démarrer. Voir /beta.",
         },
       ],
     },
@@ -144,7 +144,7 @@ export const article: Article = {
   faq: [
     {
       q: "Rainbow remplace-t-il Axonaut ?",
-      a: "Non. Axonaut couvre CRM + factu + projets + RH ; Rainbow ne fait que la couche capture vocale + assistant chat. Pour une PME qui a Axonaut, Rainbow s'ajoute pour les commerciaux terrain à 15-25 €/u/mois et alimente Axonaut CRM par export CSV.",
+      a: "Non. Axonaut couvre CRM + factu + projets + RH ; Rainbow ne fait que la couche capture vocale + assistant chat. Pour une PME qui a Axonaut, Rainbow s'ajoute pour les commerciaux terrain (bêta gratuite actuellement, post-bêta sur demande) et alimente Axonaut CRM par export CSV.",
     },
     {
       q: "Axonaut a-t-il une fonction d'assistant IA ?",
@@ -169,7 +169,7 @@ export const article: Article = {
   ],
   keyTakeaways: [
     "Axonaut = suite SaaS française tout-en-un TPE/PME (CRM + factu + projets + RH), 30-50 €/u/mois.",
-    "Rainbow = assistant vocal IA pour commerciaux terrain, 15-25 €/u/mois (bêta gratuite).",
+    "Rainbow = assistant vocal IA pour commerciaux terrain, actuellement en bêta gratuite (post-bêta sur demande).",
     "Pour une PME B2B avec terrain : Axonaut au siège + Rainbow en mobilité = combinaison pragmatique.",
     "Pour un commercial individuel : Rainbow seul peut suffire avant d'ajouter Axonaut.",
     "Les deux sont français, RGPD, et exportent en CSV — aucun verrou propriétaire.",

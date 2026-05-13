@@ -10,17 +10,17 @@ import type { Article } from "./index";
 export const article: Article = {
   slug: "alternative-hubspot-pme",
   category: "comparaison",
-  title: "Alternative à HubSpot pour PME commerciale : Rainbow à 15 €/mois",
+  title: "Alternative à HubSpot pour PME commerciale : Rainbow en bêta gratuite",
   metaTitle: "Alternative HubSpot PME (2026) — Rainbow voix + mobile",
   metaDesc:
-    "HubSpot est cher pour une PME (45 €+/u/mois) et mal adapté au terrain. Rainbow est l'alternative voix + mobile à 15 €/u/mois.",
+    "HubSpot est cher pour une PME (45 €+/u/mois) et mal adapté au terrain. Rainbow est l'alternative voix + mobile, actuellement en bêta gratuite.",
   datePublished: "2026-04-22",
   dateModified: "2026-04-22",
   heroLead:
-    "HubSpot Sales Hub est une bonne plateforme inbound marketing + CRM, mais son prix (45 €+/utilisateur/mois) et son orientation desktop le rendent peu adapté aux commerciaux terrain français. Rainbow est l'alternative vocale et mobile à 15–25 €/utilisateur/mois.",
+    "HubSpot Sales Hub est une bonne plateforme inbound marketing + CRM, mais son prix (45 €+/utilisateur/mois) et son orientation desktop le rendent peu adapté aux commerciaux terrain français. Rainbow est l'alternative vocale et mobile, actuellement en bêta gratuite (post-bêta sur demande).",
   tldr: [
     "HubSpot Sales Hub démarre à 45 €/u/mois ; les hausses de prix en cours de contrat sont documentées sur Trustpilot FR.",
-    "Rainbow coûte 15–25 €/u/mois, sans hausses cachées, avec export CSV complet.",
+    "Rainbow est actuellement en bêta gratuite (post-bêta sur demande), sans hausses cachées, avec export CSV complet.",
     "Pour les commerciaux terrain (voiture, visite physique), Rainbow est plus adapté que HubSpot Mobile.",
     "Rainbow peut alimenter HubSpot si vous gardez HubSpot comme CRM principal — pas besoin de tout migrer.",
   ],
@@ -53,7 +53,7 @@ export const article: Article = {
             "Pipedrive — pipeline-centric, 29–99 €/u/mois, bonne app mobile.",
             "Brevo — français (ex Sendinblue), marketing + CRM, à partir de 19 €/mois.",
             "Axonaut / noCRM — petites équipes, 10–20 €/u/mois.",
-            "Rainbow — assistant vocal pour commerciaux terrain, 15–25 €/u/mois.",
+            "Rainbow — assistant vocal pour commerciaux terrain, actuellement en bêta gratuite (post-bêta sur demande).",
           ],
         },
       ],
@@ -78,7 +78,7 @@ export const article: Article = {
         headers: ["", "Rainbow", "HubSpot Sales Hub"],
         rows: [
           ["Type", "Assistant vocal commercial", "CRM + inbound marketing"],
-          ["Prix France 2026", "15–25 €/u/mois", "45–150 €/u/mois"],
+          ["Prix France 2026", "Bêta gratuite (post-bêta sur demande)", "45–150 €/u/mois"],
           ["Capture terrain", "Voix natif, hors ligne", "Saisie manuelle, app mobile"],
           ["Inbound marketing", "Non", "Oui (landing pages, emailing, SEO)"],
           ["Pipeline reporting", "Basique (CSV)", "Avancé"],
@@ -122,7 +122,7 @@ export const article: Article = {
     },
   ],
   keyTakeaways: [
-    "HubSpot Sales Hub coûte 45 €+/u/mois ; Rainbow 15–25 €.",
+    "HubSpot Sales Hub coûte 45 €+/u/mois ; Rainbow est actuellement en bêta gratuite (post-bêta sur demande).",
     "Pour une PME commerciale terrain, Rainbow seul suffit souvent.",
     "Rainbow peut alimenter HubSpot si vous gardez HubSpot comme CRM inbound.",
     "Migrer HubSpot → Rainbow prend moins d'une semaine pour une PME standard.",

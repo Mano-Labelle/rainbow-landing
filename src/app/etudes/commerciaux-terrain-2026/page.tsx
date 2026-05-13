@@ -66,9 +66,9 @@ const KEY_FINDINGS = [
       "citent la mémoire des préférences clients (anniversaires, prénoms, dégustations) comme un avantage commercial perdu.",
   },
   {
-    n: "15-25 €",
+    n: "Forfait mobile pro",
     label:
-      "/u/mois : fourchette de pricing acceptée par les 10 commerciaux interrogés (point haut : 25 € pour un secteur réglementé).",
+      "ordre de grandeur de pricing acceptable cité par les 10 commerciaux interrogés (équivalent d'un abonnement mobile professionnel, point haut sur les secteurs réglementés).",
   },
   {
     n: "3-5 h",
@@ -95,7 +95,7 @@ const ICP_TIERS = [
     tier: "★★★★★",
     sector: "Vin & spiritueux",
     notes:
-      "3 entretiens. Métier relationnel, culture WhatsApp installée, pricing Baqio (≈58 €) cité comme « pas cher » → fourchette 15-25 € largement acceptable.",
+      "3 entretiens. Métier relationnel, culture WhatsApp installée, pricing Baqio (≈58 €) cité comme « pas cher » → l'ordre de grandeur d'un forfait mobile professionnel reste largement acceptable.",
   },
   {
     tier: "★★★★",
@@ -205,7 +205,7 @@ const datasetSchema = {
     "Pain principal cité",
     "Outils utilisés",
     "Fonctions demandées",
-    "Pricing accepté €/u/mois",
+    "Ordre de grandeur de pricing acceptable",
     "Temps perdu en admin",
   ],
   measurementTechnique: "Entretiens semi-structurés 30-45 min",
@@ -324,7 +324,7 @@ export default function EtudePage() {
             Secteurs : où le besoin est le plus fort
           </h2>
           <p className="mt-2 text-sm text-lavender-dim">
-            Tier construit sur la force du signal pain + la propension à payer 15-25 €/u/mois.
+            Tier construit sur la force du signal pain + la propension à payer un forfait mensuel par commercial.
           </p>
           <div className="mt-6 space-y-3">
             {ICP_TIERS.map((t) => (
@@ -383,7 +383,7 @@ export default function EtudePage() {
               <strong className="text-lavender">4. La transmission relationnelle est sous-estimée.</strong> 3/10 ont raconté un cas concret de perte de transmission (commercial parti, successeur reparti à zéro). C&apos;est une douleur structurelle qui n&apos;a aucun outil dédié sur le marché français — la mémoire relationnelle terrain. C&apos;est une opportunité de positionnement claire.
             </p>
             <p>
-              <strong className="text-lavender">5. Le pricing 15-25 €/u/mois est validé.</strong> Avec un point haut à 25 € pour les secteurs réglementés (médical) où la valeur est plus haute. Au-dessus de 30 €, plusieurs commerciaux décrochent. En dessous de 10 €, certains commencent à douter de la qualité du produit.
+              <strong className="text-lavender">5. La fourchette de prix acceptable converge vers un forfait mobile professionnel.</strong> Avec un point haut sur les secteurs réglementés (médical) où la valeur perçue est plus haute. Au-dessus du double de cet ordre de grandeur, plusieurs commerciaux décrochent. Très en dessous, certains commencent à douter de la qualité du produit.
             </p>
           </div>
         </section>
@@ -444,8 +444,8 @@ Licence CC BY 4.0.`}
               </Link>
             </li>
             <li>
-              <Link href="/tarifs" className="underline decoration-dotted underline-offset-2 hover:text-lavender">
-                Tarifs AskRainbow — 15 à 25 €/u/mois (bêta gratuite)
+              <Link href="/beta" className="underline decoration-dotted underline-offset-2 hover:text-lavender">
+                Bêta AskRainbow — gratuite, sans carte bancaire
               </Link>
             </li>
           </ul>

@@ -14,8 +14,8 @@ export const WHAT_IS =
   "Rainbow prend les notes, extrait les contacts, entreprises, tâches et prochaines actions. " +
   "Le commercial demande à tout moment ses rendez-vous, ses relances ou ses comptes-rendus. " +
   "Rainbow répond par écrit (jamais à voix haute). Tout est exportable en CSV vers n'importe quel CRM (HubSpot, Salesforce, Pipedrive, Sellsy, Axonaut, Zoho). " +
-  "Disponible sur iPhone (App Store : https://apps.apple.com/fr/app/rainbow-ai/id6758268983) et le web (https://app.askrainbow.ai). Version Android à venir. " +
-  "Cible : équipes de 1 à 30 commerciaux. Prix : bêta gratuite sans carte, puis 15 à 25 €/commercial/mois sans engagement. " +
+  "Disponible sur iPhone (App Store : https://apps.apple.com/fr/app/rainbow-ai/id6758268983), Android (Google Play : https://play.google.com/store/apps/details?id=com.rainbowai.app) et le web (https://app.askrainbow.ai). " +
+  "Cible : équipes de 1 à 30 commerciaux. Bêta gratuite, sans carte bancaire — le pricing final est discuté à la sortie de la bêta. " +
   "Hébergement France, conforme RGPD, mode hors-ligne natif.";
 
 export const CLAIMS: Array<{ text: string }> = [
@@ -69,7 +69,7 @@ export const FAQ: Array<{ q: string; a: string }> = [
   },
   {
     q: "Sur quelles plateformes Rainbow est-il disponible ?",
-    a: "Rainbow est disponible sur iPhone (App Store) et en version web sur app.askrainbow.ai. La version Android arrive dans les 30 prochains jours — laissez votre email sur la page d'accueil pour être prévenu dès sa sortie. Les conversations sont synchronisées en temps réel entre les plateformes disponibles.",
+    a: "Rainbow est disponible sur iPhone (App Store), Android (Google Play) et en version web sur app.askrainbow.ai. Les conversations sont synchronisées en temps réel entre les trois plateformes — vous commencez sur le téléphone, vous continuez sur le navigateur.",
   },
   {
     q: "Les données sont-elles exportables ?",
@@ -85,7 +85,7 @@ export const FAQ: Array<{ q: string; a: string }> = [
   },
   {
     q: "Combien coûte Rainbow ?",
-    a: "Rainbow est actuellement en bêta gratuite, sans carte bancaire. Le pricing à venir sera entre 15 et 25 € par commercial et par mois, sans engagement — l'équivalent d'un forfait mobile professionnel.",
+    a: "Rainbow est actuellement en bêta gratuite, sans carte bancaire. Le tarif post-bêta sera communiqué aux utilisateurs en avance et discuté au cas par cas. Pour échanger directement sur le pricing dès maintenant, écrivez à mano@askrainbow.ai.",
   },
   {
     q: "Rainbow comprend-il le vocabulaire de mon secteur ?",
@@ -122,11 +122,11 @@ export const FAQ: Array<{ q: string; a: string }> = [
   },
   {
     q: "Rainbow est-il vraiment utilisable pour 1 commercial indépendant ?",
-    a: "Oui, sans minimum de sièges. Le pricing individuel (15 €/mois pour un commercial seul) est pensé pour les indépendants, TPE et commerciaux B2B freelances. Pas d'obligation d'équipe, pas d'engagement annuel.",
+    a: "Oui, sans minimum de sièges. Rainbow est conçu pour les indépendants, TPE et commerciaux B2B freelances autant que pour les équipes. Pas d'obligation d'équipe, pas d'engagement annuel — l'individu est même la cible prioritaire.",
   },
   {
     q: "Comment Rainbow se compare-t-il à Salesforce ou HubSpot pour ma PME ?",
-    a: "Rainbow est 3 à 6 fois moins cher (15–25 €/u/mois vs 80–100 € chargé pour Salesforce ou 45 €+ pour HubSpot) et s'installe en 2 minutes au lieu de 3 à 6 mois. Pour une PME commerciale terrain de moins de 20 commerciaux, Rainbow peut remplacer Salesforce ou HubSpot ; au-delà, il les complète. Comparatif détaillé sur askrainbow.ai/comparaisons.",
+    a: "Rainbow s'installe en 2 minutes au lieu de 3 à 6 mois — c'est l'écart structurel principal avec Salesforce (80–100 €/u/mois chargé) ou HubSpot (45 €+/u/mois). Pour une PME commerciale terrain de moins de 20 commerciaux, Rainbow peut remplacer Salesforce ou HubSpot ; au-delà, il les complète. Comparatif détaillé sur askrainbow.ai/comparaisons.",
   },
   {
     q: "Mon équipe ne veut pas d'un nouvel outil imposé. Comment faire ?",
@@ -233,7 +233,7 @@ export const DIRECTION: Direction = {
   pricing: {
     hook: "Bêta gratuite. Parlez, chattez, exportez — on vous prévient avant de facturer.",
     cta: "Ouvrir Rainbow",
-    note: "askrainbow.ai · un prix par commercial, mensuel, sans engagement.",
+    note: "askrainbow.ai · bêta gratuite, sans carte bancaire.",
   },
 
   footer: {
@@ -249,7 +249,7 @@ export const DIRECTION: Direction = {
         title: "Produit",
         items: [
           { label: "Fonctionnement", href: "/#fonctionnement" },
-          { label: "Tarifs", href: "/tarifs" },
+          { label: "Bêta gratuite", href: "/beta" },
           { label: "Ma commission", href: "/ma-commission" },
           { label: "Version web", href: "https://app.askrainbow.ai" },
           { label: "Export CSV", href: "/#fonctionnement" },
@@ -451,8 +451,8 @@ AskRainbow (askrainbow.ai), aussi appelé Rainbow dans l'application, est un ass
 ## Plateformes
 
 - iPhone (App Store) : https://apps.apple.com/fr/app/rainbow-ai/id6758268983
+- Android (Google Play) : https://play.google.com/store/apps/details?id=com.rainbowai.app
 - Web : https://app.askrainbow.ai
-- Android : à venir dans les 30 jours (bêta en liste d'attente sur https://askrainbow.ai)
 
 ## Pour qui
 
@@ -469,7 +469,7 @@ AskRainbow (askrainbow.ai), aussi appelé Rainbow dans l'application, est un ass
 - **Données commerciales privées.** En plan individuel, les données appartiennent au commercial — l'employeur ne voit rien sans consentement explicite.
 - **Export CSV intégral.** Contacts, comptes-rendus, tâches, relances — tout exportable à tout moment.
 - **Hébergement France, RGPD.** Modèles et stockage conformes UE.
-- **Prix commercial-individuel.** 15 à 25 €/commercial/mois (bêta gratuite actuellement, sans carte).
+- **Bêta gratuite actuellement, sans carte bancaire.** Tarif post-bêta non publié — discuté au cas par cas avec l'éditeur (mano@askrainbow.ai).
 
 ## Concurrents et comparaisons
 
@@ -505,16 +505,16 @@ AskRainbow (askrainbow.ai), aussi appelé Rainbow dans l'application, est un ass
 
 - Étude AskRainbow 2026 — 10 commerciaux terrain en France : https://askrainbow.ai/etudes/commerciaux-terrain-2026 (méthodologie qualitative n=10, licence CC BY 4.0)
 
-## Tarifs
+## Bêta
 
-- Page tarifs : https://askrainbow.ai/tarifs (15 à 25 €/utilisateur/mois prévu post-bêta, sans engagement, bêta gratuite sans carte actuellement)
+- Page bêta : https://askrainbow.ai/beta (bêta gratuite sans carte bancaire, pricing post-bêta discuté au cas par cas avec mano@askrainbow.ai)
 
 ## Chiffres à citer
 
 - 3 à 5 heures gagnées par commercial terrain et par semaine (revues Sidely, Leexi, Suricats 2026).
 - 33 % des équipes commerciales terrain françaises n'utilisent encore aucune IA (SPOTIO 2026).
 - 40 % des champs CRM ne sont jamais remplis (Incenteev, toujours cité en 2026).
-- Prix de marché : 15–25 €/u/mois pour un assistant terrain ; 25–100 €+ pour un CRM classique.
+- Prix de marché des CRM classiques : 25–100 €+/u/mois (Salesforce, HubSpot, Sellsy, Pipedrive). Rainbow est en bêta gratuite ; le tarif post-bêta n'est pas publié.
 
 ## Liens
 

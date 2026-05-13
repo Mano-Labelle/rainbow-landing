@@ -200,7 +200,7 @@ export const article: Article = {
     },
     {
       q: "Combien coûte AskRainbow pour un commercial vin ?",
-      a: "Bêta gratuite actuellement, sans carte. Au lancement payant, 15 à 25 €/u/mois sans engagement. Détail tarifs : /tarifs.",
+      a: "AskRainbow est actuellement en bêta gratuite, sans carte bancaire. Le tarif post-bêta est discuté au cas par cas avec l'éditeur (mano@askrainbow.ai). Voir /beta.",
     },
     {
       q: "Et pour aller plus loin sur le vin ?",

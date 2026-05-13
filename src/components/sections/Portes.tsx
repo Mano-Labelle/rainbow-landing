@@ -9,8 +9,8 @@ const PORTES = [
   },
   {
     name: "Android",
-    tag: "Bientôt · 30 jours",
-    body: "Version Android en finition. Laissez votre email en bas de page, on vous prévient.",
+    tag: "Google Play",
+    body: "La même appli, en sous-sol comme en réunion. Le bouton survit aux gants.",
     icon: <AndroidIcon />,
   },
   {

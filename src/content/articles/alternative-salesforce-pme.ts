@@ -10,16 +10,16 @@ export const article: Article = {
   slug: "alternative-salesforce-pme",
   category: "comparaison",
   title: "Alternative à Salesforce pour PME commerciale terrain : Rainbow",
-  metaTitle: "Alternative Salesforce PME — Rainbow 15 €/u/mois",
+  metaTitle: "Alternative Salesforce PME — Rainbow (bêta gratuite)",
   metaDesc:
-    "Salesforce est trop cher et trop lourd pour une PME de commerciaux terrain. Rainbow est l'alternative à 15 €/u/mois — voix, mobile, hors ligne.",
+    "Salesforce est trop cher et trop lourd pour une PME de commerciaux terrain. Rainbow est l'alternative en bêta gratuite, voix, mobile, hors ligne.",
   datePublished: "2026-04-22",
   dateModified: "2026-04-22",
   heroLead:
-    "Salesforce est excellent pour les grandes organisations qui ont un budget, un intégrateur et une équipe Sales Ops. Pour une PME commerciale terrain française, il est le plus souvent trop cher (80–100 €/utilisateur chargé) et trop complexe (projet 3–12 mois). Rainbow est l'alternative conçue pour cette PME : voix, mobile, hors ligne, 15–25 €/utilisateur/mois.",
+    "Salesforce est excellent pour les grandes organisations qui ont un budget, un intégrateur et une équipe Sales Ops. Pour une PME commerciale terrain française, il est le plus souvent trop cher (80–100 €/utilisateur chargé) et trop complexe (projet 3–12 mois). Rainbow est l'alternative conçue pour cette PME : voix, mobile, hors ligne, actuellement en bêta gratuite (post-bêta sur demande).",
   tldr: [
     "Salesforce Starter = 25 €/u/mois ; en production, coût réel 80–100 € (licences + intégrateur + support).",
-    "Rainbow = 15–25 €/u/mois tout compris, sans intégrateur.",
+    "Rainbow est actuellement en bêta gratuite (post-bêta sur demande), tout compris, sans intégrateur.",
     "Pour une PME française de moins de 20 commerciaux, Rainbow remplace souvent Salesforce.",
     "Pour plus de 50 commerciaux, Rainbow + Salesforce (ou Rainbow + HubSpot) est la combinaison efficace.",
   ],
@@ -51,7 +51,7 @@ export const article: Article = {
             "Pipedrive — pipeline-centric, ~29–99 €/u/mois.",
             "Sellsy — français, CRM + facturation, 29 €+/u/mois.",
             "noCRM / Axonaut — petites équipes, 10–20 €/u/mois, moins structuré.",
-            "Rainbow — assistant vocal, 15–25 €/u/mois, fait remplir le CRM (ou remplace un CRM de base).",
+            "Rainbow — assistant vocal, actuellement en bêta gratuite (post-bêta sur demande), fait remplir le CRM (ou remplace un CRM de base).",
           ],
         },
       ],
@@ -75,12 +75,12 @@ export const article: Article = {
       table: {
         headers: ["Poste", "Salesforce (10 commerciaux)", "Rainbow (10 commerciaux)"],
         rows: [
-          ["Licences annuelles", "≈ 10 000–12 000 €", "≈ 2 400–3 000 €"],
+          ["Licences annuelles", "≈ 10 000–12 000 €", "Bêta gratuite (post-bêta sur demande)"],
           ["Intégration initiale", "15 000–40 000 € (une fois)", "0 €"],
           ["Formation", "5 jours + support", "30 minutes"],
           ["Adoption commerciale", "40–60 %", "80–95 %"],
           ["Temps avant usage réel", "3–6 mois", "1 jour"],
-          ["Total année 1", "≈ 25 000–52 000 €", "≈ 2 400–3 000 €"],
+          ["Total année 1", "≈ 25 000–52 000 €", "Bêta gratuite actuellement"],
         ],
         caption:
           "Ordres de grandeur issus de revues Impli, Salesdorado, Cartelis (avril 2026) pour une PME commerciale terrain française de 10 personnes.",
@@ -124,7 +124,7 @@ export const article: Article = {
     },
   ],
   keyTakeaways: [
-    "Salesforce en production coûte 80–100 €/u/mois chargé, Rainbow 15–25 €.",
+    "Salesforce en production coûte 80–100 €/u/mois chargé, Rainbow est actuellement en bêta gratuite (post-bêta sur demande).",
     "Pour moins de 20 commerciaux PME terrain, Rainbow seul peut remplacer Salesforce.",
     "Pour plus de 50 commerciaux, Rainbow + Salesforce (ou + HubSpot) est la combinaison.",
     "Le vrai problème d'un CRM n'est pas le prix — c'est l'adoption commerciale. Rainbow attaque l'adoption.",

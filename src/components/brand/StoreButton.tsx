@@ -1,4 +1,4 @@
-import { IOS_APP_URL, WEB_APP_URL } from "@/content/app-urls";
+import { ANDROID_APP_URL, IOS_APP_URL, WEB_APP_URL } from "@/content/app-urls";
 
 interface StoreButtonProps {
   kind: "apple" | "google" | "web";
@@ -9,7 +9,7 @@ interface StoreButtonProps {
 
 const DEFAULT_HREF: Record<StoreButtonProps["kind"], string> = {
   apple: IOS_APP_URL,
-  google: "#android-waitlist",
+  google: ANDROID_APP_URL,
   web: WEB_APP_URL,
 };
 
@@ -30,7 +30,7 @@ export function StoreButton({
     kind === "apple"
       ? "Téléchargez sur l'"
       : kind === "google"
-        ? "Bientôt sur"
+        ? "Téléchargez sur"
         : "Essayez en ligne";
 
   const base =

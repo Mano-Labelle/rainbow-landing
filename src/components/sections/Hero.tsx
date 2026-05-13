@@ -43,26 +43,17 @@ export function Hero() {
             </div>
             <div className="mt-3 flex flex-wrap items-center gap-3">
               <StoreButton kind="apple" />
+              <StoreButton kind="google" />
               <StoreButton kind="web" variant="ghost" />
-            </div>
-            <div className="mt-3 text-xs text-lavender-dim">
-              Android —{" "}
-              <a
-                href="#android-waitlist"
-                className="underline decoration-dotted underline-offset-2 hover:text-lavender transition"
-              >
-                dans les 30 prochains jours (prévenez-moi)
-              </a>
             </div>
             <div className="mt-4 flex items-center gap-2 text-xs text-lavender-dim">
               <span className="inline-block w-1.5 h-1.5 rounded-full bg-spec-green" aria-hidden />
               <span>
-                Bêta gratuite, sans carte.{" "}
                 <Link
-                  href="/tarifs"
+                  href="/beta"
                   className="underline decoration-dotted underline-offset-2 hover:text-lavender transition"
                 >
-                  15 à 25 €/u/mois après lancement
+                  Bêta gratuite, sans carte
                 </Link>
                 .
               </span>

@@ -16,11 +16,11 @@ export const article: Article = {
   datePublished: "2026-04-22",
   dateModified: "2026-04-22",
   heroLead:
-    "Rainbow et VoiceLine captent tous deux la voix du commercial terrain pour alimenter un CRM. VoiceLine, basé à Aix-la-Chapelle, vient de lever 10 M€ et pousse en France sur les secteurs pharma, dispositif médical, F&B. Rainbow est français, hébergé en France, avec un prix positionné à 15–25 €/utilisateur/mois — accessible aux PME et commerciaux individuels.",
+    "Rainbow et VoiceLine captent tous deux la voix du commercial terrain pour alimenter un CRM. VoiceLine, basé à Aix-la-Chapelle, vient de lever 10 M€ et pousse en France sur les secteurs pharma, dispositif médical, F&B. Rainbow est français, hébergé en France, actuellement en bêta gratuite (post-bêta sur demande), accessible aux PME et commerciaux individuels.",
   tldr: [
     "VoiceLine et Rainbow captent la voix du commercial ; les deux transforment la dictée en données CRM.",
     "VoiceLine cible les grandes équipes sales (pharma, medtech, F&B) avec intégration SAP et AppExchange Salesforce.",
-    "Rainbow cible les PME et commerciaux individuels français (vin, dispositif médical, automobile B2B) avec un prix 15–25 €/u/mois.",
+    "Rainbow cible les PME et commerciaux individuels français (vin, dispositif médical, automobile B2B), actuellement en bêta gratuite.",
     "Verdict : VoiceLine pour l'enterprise européen ; Rainbow pour le commercial individuel et la PME française.",
   ],
   sections: [
@@ -48,7 +48,7 @@ export const article: Article = {
           ["Langues supportées", "FR (natif)", "DE, EN, FR, ES (expansion en cours)"],
           ["Cible", "PME + commerciaux individuels français", "Grandes équipes sales (pharma, medtech, F&B, banque)"],
           ["Intégrations", "CRM via CSV + API sur demande", "SAP AppExchange, Salesforce, HubSpot, Microsoft Dynamics"],
-          ["Prix (u/mois)", "15–25 €", "Non public — tarif enterprise"],
+          ["Prix (u/mois)", "Bêta gratuite (post-bêta sur demande)", "Non public — tarif enterprise"],
           ["Minimum de sièges", "1", "Déploiement équipe"],
           ["Hébergement", "UE (France)", "UE (Allemagne)"],
           ["Mode hors ligne", "Natif", "Partiel"],
@@ -78,7 +78,7 @@ export const article: Article = {
           lead: "Rainbow est le bon choix pour le commercial individuel ou la PME française qui veut démarrer sans projet IT.",
           bullets: [
             "Vous êtes commercial français sur le terrain (vin, DM, automobile B2B) et vous voulez un outil à votre nom.",
-            "Votre budget mensuel est en dizaines d'euros, pas en centaines.",
+            "Votre budget mensuel est plafonné — Rainbow est actuellement en bêta gratuite, post-bêta sur demande.",
             "Vous voulez un hébergement 100 % France (pas DE).",
             "Vous commencez seul ou à 2-3 — le déploiement équipe de VoiceLine ne colle pas à votre scale.",
           ],
@@ -119,7 +119,7 @@ export const article: Article = {
   ],
   keyTakeaways: [
     "VoiceLine est un acteur allemand enterprise en expansion en France (10 M€ levés en février 2026).",
-    "Rainbow est français, positionné pour la PME et le commercial individuel, 15–25 €/u/mois.",
+    "Rainbow est français, positionné pour la PME et le commercial individuel, actuellement en bêta gratuite (post-bêta sur demande).",
     "Les deux couvrent la capture vocale post-visite, mais avec des cibles et des prix très différents.",
     "Pour une PME française de moins de 50 commerciaux, Rainbow est plus adapté. Au-delà, VoiceLine mérite un devis.",
   ],

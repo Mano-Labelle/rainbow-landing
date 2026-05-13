@@ -15,7 +15,7 @@ export const article: Article = {
   tldr: [
     "Les commerciaux vin perdent 3 à 5 h par semaine en rédaction de comptes-rendus et relances.",
     "Un assistant vocal capte en voiture, après une visite, ce qui a été dit, dégusté, promis.",
-    "Rainbow est positionné à 15–25 €/utilisateur/mois — moins de la moitié du prix de Baqio (≈58 €/mo).",
+    "Rainbow est actuellement en bêta gratuite (post-bêta sur demande), sensiblement moins cher que Baqio (≈58 €/mo) une fois le tarif post-bêta connu.",
     "Le vrai gain n'est pas la saisie CRM : c'est la mémoire relationnelle (préférences du sommelier, carte des vins du restaurant, anniversaires).",
   ],
   sections: [
@@ -95,13 +95,13 @@ export const article: Article = {
       h2: "Combien coûte un assistant IA pour un commercial vin en France ?",
       paragraphs: [
         {
-          lead: "Entre 15 et 25 €/utilisateur/mois en 2026 pour Rainbow — environ 180 € à 300 €/an par commercial.",
-          body: "L'ordre de grandeur est celui d'un forfait mobile professionnel. Pour un domaine ou un négociant avec 3 commerciaux, le coût annuel est de 600 à 900 €/an, à comparer aux 1 à 2 jours perdus par semaine en rédaction actuelle.",
+          lead: "Rainbow est actuellement en bêta gratuite en 2026 (post-bêta discuté au cas par cas avec l'éditeur).",
+          body: "L'ordre de grandeur post-bêta visé est celui d'un forfait mobile professionnel, à comparer aux 1 à 2 jours perdus par semaine en rédaction actuelle.",
         },
       ],
       callout: {
         kind: "tip",
-        text: "Pour un commercial vin qui facture 40 €/h de temps de travail chargé, 3 heures gagnées par semaine représentent ≈ 6 000 €/an de temps libéré. Un assistant à 180 €/an a un ROI de 30x sur le temps.",
+        text: "Pour un commercial vin qui facture 40 €/h de temps de travail chargé, 3 heures gagnées par semaine représentent ≈ 6 000 €/an de temps libéré. L'ordre de grandeur du ROI est très favorable face à un abonnement de niveau forfait mobile pro.",
       },
     },
     {
@@ -133,12 +133,12 @@ export const article: Article = {
     },
     {
       q: "Comment un commercial vin démarre-t-il avec Rainbow ?",
-      a: "Rainbow est actuellement en bêta gratuite sur iOS (Android dans les 30 prochains jours) — sans carte bancaire. La prise en main est d'environ 30 minutes — le temps d'enregistrer le premier mémo vocal et de voir le résultat.",
+      a: "Rainbow est actuellement en bêta gratuite sur iOS, Android (Google Play) et Web, sans carte bancaire. La prise en main est d'environ 30 minutes, le temps d'enregistrer le premier mémo vocal et de voir le résultat.",
     },
   ],
   keyTakeaways: [
     "Un commercial vin gagne 3 à 5 h/semaine avec un assistant vocal IA.",
-    "Rainbow coûte 15–25 €/u/mois — moins cher que Baqio, et complémentaire d'un CRM wine-industry.",
+    "Rainbow est en bêta gratuite (post-bêta sur demande), moins cher que Baqio et complémentaire d'un CRM wine-industry.",
     "Le vrai gain est la mémoire relationnelle (préférences, détails personnels, dégustations).",
     "Rainbow fonctionne hors ligne — adapté aux vignobles et caves sans réseau.",
   ],

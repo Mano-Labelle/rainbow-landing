@@ -15,11 +15,11 @@ export const article: Article = {
   datePublished: "2026-04-22",
   dateModified: "2026-04-22",
   heroLead:
-    "Rainbow et Trustlead sont les deux assistants vocaux français pour commerciaux terrain lancés depuis 2024. Trustlead se positionne comme un pont vers les CRM existants (Salesforce, HubSpot, Pipedrive). Rainbow est pensé pour fonctionner avec ou sans CRM, avec un hébergement français et un prix commercial-individuel (15–25 €/mois).",
+    "Rainbow et Trustlead sont les deux assistants vocaux français pour commerciaux terrain lancés depuis 2024. Trustlead se positionne comme un pont vers les CRM existants (Salesforce, HubSpot, Pipedrive). Rainbow est pensé pour fonctionner avec ou sans CRM, avec un hébergement français. Rainbow est actuellement en bêta gratuite (post-bêta discuté au cas par cas avec l'éditeur).",
   tldr: [
     "Les deux outils captent la voix du commercial après une visite et transforment la dictée en notes structurées.",
     "Trustlead mise sur l'intégration native avec 7 CRM (Salesforce, HubSpot, Dynamics 365, Sidely, Odoo, Pipedrive, Monday). Rainbow mise sur l'usage standalone + export CSV.",
-    "Rainbow est moins cher en individuel (15–25 €/mois vs Trustlead pricing sur demande).",
+    "Rainbow est actuellement en bêta gratuite (post-bêta sur demande), Trustlead est sur devis.",
     "Verdict : Trustlead si vous êtes en équipe Salesforce ou HubSpot stable ; Rainbow si vous êtes commercial indépendant ou en PME sans CRM imposé.",
   ],
   sections: [
@@ -44,11 +44,11 @@ export const article: Article = {
         rows: [
           ["Année de lancement", "2024", "2024"],
           ["Origine", "Paris, France", "Paris, France"],
-          ["Capture vocale", "Oui — iOS + Web (Android à venir)", "Oui — Android (co.trustlead.app)"],
+          ["Capture vocale", "Oui — iOS + Android + Web", "Oui — Android (co.trustlead.app)"],
           ["Mode hors ligne", "Oui, natif", "Partiel (selon abonnement)"],
           ["Fonctionne sans CRM", "Oui, standalone + CSV", "Non (CRM requis)"],
           ["Intégrations CRM", "Sur demande + CSV", "Salesforce, HubSpot, Dynamics, Sidely, Odoo, Pipedrive, Monday"],
-          ["Prix France (u/mois)", "15–25 €", "Sur devis (non publié)"],
+          ["Prix France (u/mois)", "Bêta gratuite (post-bêta sur demande)", "Sur devis (non publié)"],
           ["Essai gratuit", "Bêta gratuite, sans CB", "Sur demande"],
           ["Hébergement", "UE (France)", "UE"],
           ["Cible principale", "Commerciaux terrain PME + individuels", "Équipes sales établies sur un CRM"],
@@ -78,7 +78,7 @@ export const article: Article = {
           bullets: [
             "Vous êtes commercial indépendant ou en TPE qui veut un outil à son nom, pas à celui de l'entreprise.",
             "Votre employeur hésite sur le CRM à adopter — Rainbow fait gagner du temps sans forcer le choix.",
-            "Vous voulez un prix individuel lisible (15–25 €/mois) sans devis ni négociation.",
+            "Vous voulez tester gratuitement (bêta sans CB) sans devis ni négociation.",
             "L'export CSV complet et la portabilité des données sont non négociables pour vous.",
           ],
         },
@@ -109,7 +109,7 @@ export const article: Article = {
     },
     {
       q: "Quel est le prix de Trustlead en 2026 ?",
-      a: "Trustlead n'affiche pas de grille publique ; le prix est sur devis. Les revues publiques en avril 2026 évoquent une gamme en ligne avec les CRM auxquels il se connecte, donc probablement 30–60 €/utilisateur/mois selon le CRM cible. Rainbow reste en 15–25 €/mois public.",
+      a: "Trustlead n'affiche pas de grille publique ; le prix est sur devis. Les revues publiques en avril 2026 évoquent une gamme en ligne avec les CRM auxquels il se connecte, donc probablement 30–60 €/utilisateur/mois selon le CRM cible. Rainbow est actuellement en bêta gratuite (post-bêta sur demande).",
     },
     {
       q: "Rainbow et Trustlead sont-ils compatibles RGPD ?",
@@ -123,7 +123,7 @@ export const article: Article = {
   keyTakeaways: [
     "Rainbow et Trustlead sont deux outils français, nés en 2024, pour la capture vocale post-visite.",
     "Trustlead est meilleur si vous avez un CRM établi parmi les 7 supportés ; Rainbow est meilleur en standalone ou en PME sans CRM imposé.",
-    "Rainbow publie un prix individuel (15–25 €/mois) ; Trustlead est sur devis.",
+    "Rainbow est actuellement en bêta gratuite (post-bêta sur demande) ; Trustlead est sur devis.",
     "Les deux sont RGPD-compatibles (hébergement UE) ; vérifier DPA et sous-traitants au contrat.",
   ],
   comparison: {

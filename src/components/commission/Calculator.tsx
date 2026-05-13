@@ -2,8 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { COMMISSION } from "@/content/direction";
-import { IOS_APP_URL } from "@/content/app-urls";
-import { AndroidWaitlist } from "@/components/waitlist/AndroidWaitlist";
+import { ANDROID_APP_URL, IOS_APP_URL } from "@/content/app-urls";
 
 const SAVE_RATE = 0.7; // Rainbow recovers 70% of admin time
 const VARIABLE_PCT = 0.3; // variable comp = 30% of OTE for a typical field rep
@@ -251,7 +250,7 @@ export function Calculator() {
           </p>
         </div>
 
-        {/* CTAs */}
+        {/* CTAs — iPhone + Android both live */}
         <div className="mt-10 flex flex-wrap gap-3">
           <a
             href={IOS_APP_URL}
@@ -259,19 +258,14 @@ export function Calculator() {
           >
             {COMMISSION.cta.ios}
           </a>
+          <a
+            href={ANDROID_APP_URL}
+            className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-accent/60 text-accent text-sm font-semibold hover:bg-accent hover:text-ink transition"
+          >
+            {COMMISSION.cta.android}
+          </a>
         </div>
         <p className="mt-3 text-xs text-lavender-dim">{COMMISSION.cta.fine}</p>
-
-        {/* Android — coming soon + waitlist */}
-        <div className="mt-6 pt-6 border-t border-ink-border/40">
-          <div className="text-xs font-mono tracking-[0.12em] uppercase text-lavender-dim mb-2">
-            Android — dans les 30 prochains jours
-          </div>
-          <div className="text-sm text-lavender-muted mb-3">
-            Laissez votre email, on vous prévient dès que Rainbow Android est dispo.
-          </div>
-          <AndroidWaitlist compact source="android-waitlist" />
-        </div>
 
         {/* Share */}
         <div className="mt-8 pt-6 border-t border-ink-border/40">

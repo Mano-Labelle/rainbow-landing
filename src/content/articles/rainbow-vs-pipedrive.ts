@@ -6,7 +6,7 @@ export const article: Article = {
   title: "Rainbow vs Pipedrive : assistant vocal terrain ou pipeline CRM international ?",
   metaTitle: "Rainbow vs Pipedrive (2026) — quel outil pour quel cas ?",
   metaDesc:
-    "AskRainbow (assistant vocal terrain, 15-25 €/u/mois) ou Pipedrive (pipeline CRM international, 14-99 $/u/mois) ? Comparatif honnête pour commerciaux terrain en France.",
+    "AskRainbow (assistant vocal terrain, bêta gratuite) ou Pipedrive (pipeline CRM international, 14-99 $/u/mois) ? Comparatif honnête pour commerciaux terrain en France.",
   datePublished: "2026-05-08",
   dateModified: "2026-05-08",
   comparison: {
@@ -19,7 +19,7 @@ export const article: Article = {
     "Pipedrive est un CRM pipeline-first fondé en Estonie en 2010, utilisé par 100 000+ entreprises dans 179 pays. AskRainbow est un assistant commercial IA dédié aux commerciaux terrain B2B en France. Voici quand chacun gagne, et comment les faire fonctionner ensemble.",
   tldr: [
     "Pipedrive = CRM pipeline-first international, 14 à 99 $/u/mois selon l'édition.",
-    "Rainbow = assistant vocal IA pour commerciaux terrain en France, 15-25 €/u/mois (bêta gratuite).",
+    "Rainbow = assistant vocal IA pour commerciaux terrain en France, actuellement en bêta gratuite (post-bêta sur demande).",
     "Verdict : Pipedrive pour structurer un pipeline et un funnel ; Rainbow pour capter la voix du commercial sur le terrain.",
     "Cohabitation : Rainbow alimente Pipedrive par export CSV — ce qui résout le 1er problème du CRM (40 % de champs vides).",
   ],
@@ -65,7 +65,7 @@ export const article: Article = {
           ["Marché cible", "Commerciaux terrain B2B France", "Inside sales B2B mondial"],
           ["Interface française complète", "Oui (natif)", "Oui (traduit)"],
           ["Hébergement France RGPD", "Oui", "Stocké en UE (Allemagne)"],
-          ["Pricing 2026", "15-25 €/u/mois (bêta gratuite)", "14-99 $/u/mois selon édition"],
+          ["Pricing 2026", "Bêta gratuite (post-bêta sur demande)", "14-99 $/u/mois selon édition"],
         ],
       },
     },
@@ -133,9 +133,9 @@ export const article: Article = {
         },
         {
           lead:
-            "AskRainbow : 15 à 25 €/u/mois prévu post-bêta, sans engagement, sans palier d'édition.",
+            "AskRainbow : bêta gratuite actuellement, sans engagement, sans palier d'édition. Le tarif post-bêta est discuté au cas par cas avec l'éditeur.",
           body:
-            "Bêta gratuite actuellement. Pour une équipe de 10 commerciaux : 1 800 à 3 000 €/an post-bêta. Détail : /tarifs.",
+            "Sans carte bancaire pour démarrer. Voir /beta.",
         },
       ],
     },
@@ -163,12 +163,12 @@ export const article: Article = {
     },
     {
       q: "Combien coûte Rainbow vs Pipedrive ?",
-      a: "Rainbow : 15-25 €/u/mois post-bêta (gratuit actuellement). Pipedrive : 14-99 $/u/mois selon édition (≈ 17-100 €). Pour une équipe de 10 commerciaux : Rainbow ≈ 1 800-3 000 €/an ; Pipedrive Advanced ≈ 3 600 €/an.",
+      a: "Rainbow est actuellement en bêta gratuite (post-bêta discuté au cas par cas avec l'éditeur). Pipedrive : 14-99 $/u/mois selon édition (≈ 17-100 €). Pour une équipe de 10 commerciaux : Pipedrive Advanced ≈ 3 600 €/an.",
     },
   ],
   keyTakeaways: [
     "Pipedrive = pipeline CRM international pour cycles de vente structurés, 14-99 $/u/mois.",
-    "Rainbow = assistant vocal IA pour commerciaux terrain en France, 15-25 €/u/mois (bêta gratuite).",
+    "Rainbow = assistant vocal IA pour commerciaux terrain en France, actuellement en bêta gratuite (post-bêta sur demande).",
     "Cas typique : Rainbow + Pipedrive cohabitent. Rainbow capte la voix terrain, Pipedrive structure le pipeline.",
     "Pour une équipe sédentaire avec funnel défini : Pipedrive seul.",
     "Pour des commerciaux 100 % terrain qui ne remplissent pas le CRM : Rainbow seul peut suffire.",

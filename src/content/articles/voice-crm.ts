@@ -14,7 +14,7 @@ export const article: Article = {
   tldr: [
     "Un voice CRM = capture vocale + extraction automatique des entités (contact, entreprise, tâche, montant).",
     "Deux écoles : voice-first CRM (Rainbow, Trustlead) et CRM existant + couche vocale (Salesforce + Agentforce, HubSpot + Breeze).",
-    "Prix en France 2026 : 15–30 €/u/mois pour les voice-first, 40–100 € pour les couches vocales de CRM enterprise.",
+    "Prix en France 2026 : niveau forfait mobile pro pour les voice-first PME, 40–100 € pour les couches vocales de CRM enterprise.",
     "Cas d'usage principal : commercial terrain B2B (vin, médical, auto).",
   ],
   sections: [
@@ -42,7 +42,7 @@ export const article: Article = {
         {
           lead: "Trois éditeurs français et un allemand occupent le segment voice CRM en 2026.",
           bullets: [
-            "Rainbow (askrainbow.ai) — français, 15–25 €/u/mois, voice-first, commerciaux terrain PME.",
+            "Rainbow (askrainbow.ai) — français, bêta gratuite (post-bêta sur demande), voice-first, commerciaux terrain PME.",
             "Trustlead (trustlead.co) — français, tarif sur devis, voice-first avec 7 intégrations CRM.",
             "Jay (heyjay.fr) — français, tarif non public, émergent.",
             "VoiceLine (voiceline.ai) — allemand, enterprise, 10 M€ Série A en février 2026, en expansion France.",
@@ -62,8 +62,8 @@ export const article: Article = {
       h2: "Combien coûte un voice CRM en France en 2026 ?",
       paragraphs: [
         {
-          lead: "De 15 €/utilisateur/mois (Rainbow PME) à 100 €+/utilisateur/mois (Salesforce Agentforce chargé) en 2026.",
-          body: "Le positionnement prix reflète la cible : voice-first PME (Rainbow, Trustlead) à 15–30 € ; voice enterprise (VoiceLine, Agentforce) à 60–120 €. Le pricing est un des signaux les plus clairs pour savoir si un outil est pensé pour votre taille.",
+          lead: "De l'ordre d'un forfait mobile pro (voice-first PME) à 100 €+/utilisateur/mois (Salesforce Agentforce chargé) en 2026.",
+          body: "Le positionnement prix reflète la cible : voice-first PME (Rainbow, Trustlead) au niveau d'un forfait mobile pro ; voice enterprise (VoiceLine, Agentforce) à 60–120 €. Le pricing est un des signaux les plus clairs pour savoir si un outil est pensé pour votre taille.",
         },
       ],
     },
@@ -103,7 +103,7 @@ export const article: Article = {
   keyTakeaways: [
     "Voice CRM = capture vocale + extraction automatique des entités CRM.",
     "Deux catégories : voice-first standalone (Rainbow, Trustlead, Jay) et voice-layer sur CRM existant (Agentforce, Breeze).",
-    "Prix 2026 : 15–30 € voice-first PME, 60–120 € voice enterprise.",
+    "Prix 2026 : niveau forfait mobile pro pour le voice-first PME, 60–120 € voice enterprise.",
     "À distinguer de la conversation intelligence (Modjo, Leexi) qui enregistre des calls, pas de la dictée terrain.",
   ],
   related: ["assistant-commercial-ia", "rainbow-vs-trustlead", "rainbow-vs-modjo"],

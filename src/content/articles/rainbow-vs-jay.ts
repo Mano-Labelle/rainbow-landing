@@ -19,7 +19,7 @@ export const article: Article = {
   tldr: [
     "Jay et Rainbow captent tous deux la voix du commercial pour générer des notes et des relances.",
     "Les deux éditeurs sont français et ciblent le marché PME commercial.",
-    "Rainbow publie un prix clair (15–25 €/utilisateur/mois) ; Jay n'affiche pas de grille publique en avril 2026.",
+    "Rainbow est actuellement en bêta gratuite (post-bêta discuté avec l'éditeur) ; Jay n'affiche pas de grille publique en avril 2026.",
     "Rainbow met l'accent sur le mode hors ligne et l'export CSV complet ; Jay n'est pas documenté sur ces points.",
   ],
   sections: [
@@ -43,9 +43,9 @@ export const article: Article = {
         headers: ["", "Rainbow", "Jay (heyjay.fr)"],
         rows: [
           ["Origine", "France", "France"],
-          ["Capture vocale", "Oui — iOS + Web (Android à venir)", "Oui"],
+          ["Capture vocale", "Oui — iOS + Android + Web", "Oui"],
           ["Mode hors ligne documenté", "Oui (natif)", "Non documenté publiquement"],
-          ["Prix public", "15–25 €/u/mois", "Non publié"],
+          ["Prix public", "Bêta gratuite (post-bêta sur demande)", "Non publié"],
           ["Essai gratuit", "Bêta gratuite, sans CB", "Sur demande"],
           ["Export CSV complet", "Oui", "Non documenté"],
           ["Intégrations CRM", "CSV + API sur demande", "Non documenté publiquement"],
@@ -74,7 +74,7 @@ export const article: Article = {
         {
           lead: "Rainbow est le bon choix si la transparence tarifaire, le hors ligne et l'export CSV sont des critères forts.",
           bullets: [
-            "Vous voulez un prix public en euros affichés sans devis.",
+            "Vous voulez tester sans devis (bêta gratuite, sans CB).",
             "Vous êtes souvent hors réseau (rural, hôpital, parking) et le mode hors ligne est non négociable.",
             "Vous voulez garantir la portabilité des données (export CSV complet).",
             "Vous êtes commercial individuel ou TPE avec un budget mensuel limité.",
@@ -107,14 +107,14 @@ export const article: Article = {
   ],
   keyTakeaways: [
     "Jay et Rainbow sont deux éditeurs français lancés en 2024 sur le même créneau (capture vocale commerciale).",
-    "Rainbow se démarque par la transparence (prix public, essai sans CB, export CSV) et le mode hors ligne documenté.",
+    "Rainbow se démarque par la transparence (bêta gratuite sans CB, export CSV) et le mode hors ligne documenté.",
     "Jay reste à questionner en direct pour obtenir prix et intégrations.",
   ],
   comparison: {
     vs: "Jay",
     vsHomepage: "https://heyjay.fr",
     verdict:
-      "Rainbow si vous voulez un prix public, un mode hors ligne documenté et un export CSV ; Jay si vous cherchez un contact direct avec un éditeur émergent.",
+      "Rainbow si vous voulez tester sans CB (bêta gratuite), un mode hors ligne documenté et un export CSV ; Jay si vous cherchez un contact direct avec un éditeur émergent.",
   },
   related: ["assistant-commercial-ia", "rainbow-vs-trustlead", "rainbow-vs-modjo"],
 };

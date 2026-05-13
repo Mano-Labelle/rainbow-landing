@@ -6,7 +6,7 @@ export const article: Article = {
   title: "Rainbow vs Sellsy : assistant commercial IA ou suite SaaS PME complète ?",
   metaTitle: "Rainbow vs Sellsy (2026) — quel outil pour quelle PME ?",
   metaDesc:
-    "AskRainbow (assistant commercial IA, 15-25 €/u/mois) ou Sellsy (suite SaaS PME complète, 49-89 €/u/mois) ? Comparatif honnête, cas d'usage, pricing 2026.",
+    "AskRainbow (assistant commercial IA, bêta gratuite) ou Sellsy (suite SaaS PME complète, 49-89 €/u/mois) ? Comparatif honnête, cas d'usage, pricing 2026.",
   datePublished: "2026-05-08",
   dateModified: "2026-05-08",
   comparison: {
@@ -19,7 +19,7 @@ export const article: Article = {
     "Sellsy est une suite SaaS française complète — CRM, facturation, comptabilité, gestion de trésorerie — utilisée par 18 000+ PME françaises. AskRainbow est un assistant commercial IA dédié aux commerciaux terrain. Ce comparatif honnête montre dans quels cas chacun gagne, et dans quels cas les deux peuvent fonctionner ensemble.",
   tldr: [
     "Sellsy = suite SaaS PME complète (CRM + factu + compta), 49-89 €/u/mois.",
-    "Rainbow = assistant commercial IA pour le terrain uniquement, 15-25 €/u/mois.",
+    "Rainbow = assistant commercial IA pour le terrain uniquement, actuellement en bêta gratuite (post-bêta sur demande).",
     "Verdict : pour une PME qui veut UN seul outil pour gérer son back-office, Sellsy. Pour des commerciaux terrain qui galèrent avec la saisie, Rainbow — en complément ou à la place du CRM Sellsy.",
     "Possible cohabitation : Rainbow capte sur le terrain, Sellsy gère facturation et comptabilité, l'un alimente l'autre par export CSV.",
   ],
@@ -65,9 +65,9 @@ export const article: Article = {
           ["Export CSV intégral", "Oui", "Oui"],
           ["Hébergement France RGPD", "Oui", "Oui"],
           ["Application iPhone native", "Oui (App Store)", "Oui"],
-          ["Application Android native", "À venir 30 jours", "Oui"],
+          ["Application Android native", "Oui (Google Play)", "Oui"],
           ["Setup / configuration", "0 minute (téléchargez et parlez)", "Plusieurs jours à plusieurs semaines"],
-          ["Pricing 2026", "15-25 €/u/mois (bêta gratuite)", "49-89 €/u/mois selon édition"],
+          ["Pricing 2026", "Bêta gratuite (post-bêta sur demande)", "49-89 €/u/mois selon édition"],
         ],
       },
     },
@@ -118,7 +118,7 @@ export const article: Article = {
         },
         {
           lead:
-            "Cette cohabitation a un coût additionnel modeste (15-25 €/u/mois pour Rainbow) au regard de l'amélioration du remplissage CRM.",
+            "Cette cohabitation est actuellement gratuite côté Rainbow (bêta), avec un tarif post-bêta discuté au cas par cas, au regard de l'amélioration du remplissage CRM.",
           body:
             "L'argument économique chez vos commerciaux : « Sellsy garde 100 % de ce que vous y mettez. Le problème est ce que vous n'y mettez pas. Rainbow ferme cet écart. »",
         },
@@ -135,9 +135,9 @@ export const article: Article = {
         },
         {
           lead:
-            "AskRainbow : 15 à 25 €/u/mois prévu post-bêta, sans engagement, sans minimum d'utilisateurs.",
+            "AskRainbow : bêta gratuite actuellement, sans carte bancaire. Le tarif post-bêta est discuté au cas par cas avec l'éditeur.",
           body:
-            "Bêta gratuite actuellement, sans carte bancaire. Détail tarifaire complet : /tarifs.",
+            "Sans engagement, sans minimum d'utilisateurs. Voir /beta.",
         },
       ],
     },
@@ -145,7 +145,7 @@ export const article: Article = {
   faq: [
     {
       q: "Rainbow remplace-t-il Sellsy ?",
-      a: "Non. Sellsy gère votre facturation, comptabilité, trésorerie et CRM. Rainbow capte la voix du commercial terrain et alimente Sellsy CRM par export CSV. Pour une PME qui a déjà Sellsy, Rainbow s'ajoute à 15-25 €/u/mois pour les commerciaux mobiles.",
+      a: "Non. Sellsy gère votre facturation, comptabilité, trésorerie et CRM. Rainbow capte la voix du commercial terrain et alimente Sellsy CRM par export CSV. Pour une PME qui a déjà Sellsy, Rainbow s'ajoute en couche capture (bêta gratuite actuellement, post-bêta sur demande) pour les commerciaux mobiles.",
     },
     {
       q: "Sellsy a-t-il une fonction de capture vocale ?",
@@ -170,7 +170,7 @@ export const article: Article = {
   ],
   keyTakeaways: [
     "Sellsy = suite SaaS PME complète (CRM + factu + compta) à 49-89 €/u/mois.",
-    "Rainbow = assistant commercial IA dédié au terrain à 15-25 €/u/mois (bêta gratuite).",
+    "Rainbow = assistant commercial IA dédié au terrain, actuellement en bêta gratuite (post-bêta sur demande).",
     "Les deux sont complémentaires : Rainbow capte sur le terrain, Sellsy gère le back-office.",
     "Pour une PME 5-200 avec back-office : commencer par Sellsy. Pour 1-5 commerciaux terrain : Rainbow seul peut suffire.",
     "Pas de verrou : les deux exportent en CSV, migration possible à tout moment.",

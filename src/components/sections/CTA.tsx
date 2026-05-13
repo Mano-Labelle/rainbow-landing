@@ -3,7 +3,7 @@ import { Arc } from "@/components/brand/Arc";
 import { RInk } from "@/components/brand/RInk";
 import { StoreButton } from "@/components/brand/StoreButton";
 import { AppleQR } from "@/components/brand/AppleQR";
-import { AndroidWaitlist } from "@/components/waitlist/AndroidWaitlist";
+import { AndroidQR } from "@/components/brand/AndroidQR";
 
 export function CTA() {
   return (
@@ -39,11 +39,17 @@ export function CTA() {
               {DIRECTION.pricing.hook}
             </p>
 
-            <div className="mt-10 grid md:grid-cols-[auto_1fr] items-start gap-8 md:gap-12">
+            <div className="mt-10 grid md:grid-cols-[auto_auto_1fr] items-start gap-8 md:gap-10">
               <div className="hidden md:flex flex-col items-start gap-2">
-                <AppleQR size={200} />
+                <AppleQR size={180} />
                 <div className="text-[11px] font-mono tracking-[0.12em] uppercase text-lavender-dim">
                   Scannez pour l&apos;App Store
+                </div>
+              </div>
+              <div className="hidden md:flex flex-col items-start gap-2">
+                <AndroidQR size={180} />
+                <div className="text-[11px] font-mono tracking-[0.12em] uppercase text-lavender-dim">
+                  Scannez pour Google Play
                 </div>
               </div>
               <div>
@@ -51,43 +57,15 @@ export function CTA() {
                   Installez Rainbow sur votre téléphone.
                 </div>
                 <div className="mt-1 text-sm text-lavender-muted">
-                  Scannez le QR, ou attrapez-le dans l&apos;App Store.
+                  Scannez un QR, ou cliquez ci-dessous. iPhone et Android — la même conversation.
                 </div>
                 <div className="mt-5 flex flex-wrap gap-3">
                   <StoreButton kind="apple" />
+                  <StoreButton kind="google" />
                   <StoreButton kind="web" variant="ghost" />
                 </div>
                 <div className="mt-5 text-xs font-mono tracking-wide text-lavender-dim">
                   {DIRECTION.pricing.note}
-                </div>
-
-                {/* Android waitlist — anchored so other links can jump here */}
-                <div
-                  id="android-waitlist"
-                  className="mt-10 pt-8 border-t border-ink-border/40"
-                >
-                  <div className="flex items-start gap-3 mb-4">
-                    <div className="shrink-0 mt-0.5 w-8 h-8 rounded-lg border border-ink-border/60 bg-ink-panel/60 flex items-center justify-center text-lavender-muted">
-                      <svg
-                        width="18"
-                        height="18"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        aria-hidden
-                      >
-                        <path d="M17.6 9.48l1.84-3.18a.4.4 0 10-.69-.4l-1.86 3.23a11.87 11.87 0 00-9.78 0L5.25 5.9a.4.4 0 10-.69.4L6.4 9.48A10.8 10.8 0 001 18h22a10.8 10.8 0 00-5.4-8.52zM7 15.25a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5zm10 0a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <div className="font-serif text-lg text-lavender">
-                        Android — dans les 30 prochains jours
-                      </div>
-                      <div className="text-sm text-lavender-muted mt-1">
-                        Rainbow Android arrive. Laissez votre email, on vous prévient dès que c&apos;est disponible.
-                      </div>
-                    </div>
-                  </div>
-                  <AndroidWaitlist source="android-waitlist" />
                 </div>
               </div>
             </div>
