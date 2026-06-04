@@ -14,12 +14,12 @@ const TIERS: Tier[] = [
 const NIVEAU_EMOJI: Record<string, string> = { junior: "🌱", confirme: "📈", senior: "🏆" };
 
 const NEGOCIABLE = [
-  ["🚙", "La catégorie / le modèle", "Pousse un cran au-dessus de ce qu'on te propose."],
-  ["💶", "Le budget / loyer mensuel", "Argumente avec tes vrais kilomètres des 12 derniers mois."],
-  ["⚡", "Électrique vs thermique", "Le plus gros levier 2026 — l'employeur y gagne, échange-le."],
-  ["⛽", "La carte carburant / recharge", "Prise en charge directe, pas d'avance de ta poche."],
-  ["🛣️", "Le forfait km", "Qu'il colle à ta tournée réelle, sinon facture à la restitution."],
-  ["📝", "L'usage perso écrit au contrat", "C'est ça qui en fait une voiture de fonction, pas de service."],
+  ["🚙", "La catégorie / le modèle", "Pousse un cran au-dessus de ce qu'on te propose. Ex : on te propose une Clio → demande une 308 ou une Mégane E-Tech."],
+  ["💶", "Le budget / loyer mensuel", "Argumente avec tes vrais kilomètres. Ex : 35 000 km/an justifie un budget plus élevé qu'un poste sédentaire à 12 000 km."],
+  ["⚡", "Électrique vs thermique", "Le plus gros levier 2026 : l'employeur évite le malus (jusqu'à 80 000 €), toi tu as 70% d'abattement sur l'avantage en nature. Échange-le contre une catégorie au-dessus."],
+  ["⛽", "La carte carburant / recharge", "Prise en charge directe, pas d'avance de ta poche. En électrique, la recharge au bureau n'est même pas imposée."],
+  ["🛣️", "Le forfait km", "Qu'il colle à ta tournée réelle. Ex : 40 000 km parcourus pour 25 000 prévus = le dépassement te tombe dessus à la restitution."],
+  ["📝", "L'usage perso écrit au contrat", "C'est ça qui en fait une voiture de fonction (perso autorisé), pas une voiture de service qu'on peut te retirer du jour au lendemain."],
 ] as const;
 
 const QUESTIONS = [
@@ -32,9 +32,9 @@ const QUESTIONS = [
   "La grille de vétusté et les conditions de restitution me sont-elles données à l'avance ?",
 ];
 const PIEGES = [
-  ["Le forfait km sous-évalué", "Dépassement facturé en fin de contrat. Fais corriger le forfait avant de signer."],
-  ["L'usure « normale » facturée", "Micro-rayures, sièges : c'est de l'usure normale. Tu as 15 jours pour contester par LRAR."],
-  ["Pas d'état des lieux contradictoire", "Exige-le, présent, avec photos. Sinon c'est leur parole contre la tienne."],
+  ["Le forfait km sous-évalué", "Le dépassement se facture 0,10 à 0,22 €/km. Ex : 10 000 km de trop = jusqu'à 2 000 € à rendre la voiture. Fais corriger le forfait avant de signer."],
+  ["L'usure « normale » facturée", "Micro-rayures, pédales, sièges un peu marqués : c'est normal, ça ne doit pas être facturé. Ex : une rayure de 15 cm facturée 400 € à tort. Tu as 15 jours pour contester par LRAR."],
+  ["Pas d'état des lieux contradictoire", "Exige d'être présent à la restitution, avec photos. Sinon c'est leur expertise contre rien, et la facture tombe après ton départ."],
 ] as const;
 const SOURCES = [["URSSAF", "barème 2026"], ["service-public", "fiscalité"], ["Arval", "300 entreprises"], ["L'Argus", "malus & modèles"], ["Flotauto", "immatriculations"]];
 
@@ -104,7 +104,7 @@ export function VoitureTool() {
 
       {step === "email" && (
         <form onSubmit={submitEmail} className="mt-6 rounded-2xl border border-ink-border/60 bg-ink-panel/40 p-6">
-          <p className="text-lavender-muted">Entre ton email pour démarrer. On y va étape par étape, 1 minute.</p>
+          <p className="text-lavender-muted">Une voiture de fonction, c'est 5 000 à 10 000 € de package par an. Entre ton email et je te montre, point par point, ce que tu peux négocier et les pièges qui coûtent cher.</p>
           <input type="email" inputMode="email" autoComplete="email" placeholder="ton@email.fr" value={email} onChange={(e) => setEmail(e.target.value)}
             className="mt-4 w-full rounded-xl border border-ink-border bg-ink px-4 py-3 text-lavender placeholder:text-lavender-dim focus:border-accent focus:outline-none" />
           {emailErr && <p className="mt-2 text-sm text-spec-orange">{emailErr}</p>}
@@ -129,6 +129,7 @@ export function VoitureTool() {
 
       {step === "standard" && tier && (
         <Screen title={`💰 Ton standard 2026`} sub={tier.label}>
+          <p className="mb-4 text-lavender-muted">Voilà le budget voiture typique pour un commercial terrain à ton niveau. Si on te propose moins, tu as un argument.</p>
           <p className="font-serif text-4xl text-lavender">{tier.budget}</p>
           <p className="mt-3 text-lavender-muted">🔧 Thermique / hybride : <span className="text-lavender">{tier.modeles}</span></p>
           <p className="mt-1 text-lavender-muted">⚡ Électrique : <span className="text-lavender">{tier.elec}</span></p>
@@ -143,6 +144,7 @@ export function VoitureTool() {
 
       {step === "negociable" && (
         <Screen title="🤝 Ce qui se négocie" sub="6 leviers que la plupart oublient">
+          <p className="mb-4 text-lavender-muted">Tu ne négocies pas "une voiture", tu négocies un package. Voici où il y a de la marge :</p>
           <div className="space-y-3">
             {NEGOCIABLE.map(([e, t, d]) => (
               <div key={t} className="rounded-xl border border-ink-border/60 bg-ink p-4">
@@ -157,6 +159,7 @@ export function VoitureTool() {
 
       {step === "questions" && (
         <Screen title="❓ Avant de signer" sub="Les 7 questions à poser, noir sur blanc">
+          <p className="mb-4 text-lavender-muted">Pose-les avant de signer, idéalement par écrit. Ce qui n'est pas dans le contrat n'existe pas.</p>
           <ol className="space-y-3">
             {QUESTIONS.map((q, i) => (
               <li key={i} className="rounded-xl border border-ink-border/60 bg-ink p-4 text-sm text-lavender">
@@ -170,6 +173,7 @@ export function VoitureTool() {
 
       {step === "pieges" && (
         <Screen title="⚠️ Restitution" sub="Ne te fais pas avoir en rendant la voiture">
+          <p className="mb-4 text-lavender-muted">C'est au moment de rendre la voiture qu'on se fait avoir. Les 3 pièges les plus fréquents :</p>
           <div className="space-y-3">
             {PIEGES.map(([t, d]) => (
               <div key={t} className="rounded-xl border border-ink-border/60 bg-ink p-4">

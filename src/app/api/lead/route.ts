@@ -76,7 +76,8 @@ export async function POST(req: Request) {
   }
 
   // 2. Send + schedule the welcome sequence.
-  const seq = buildSequence(cleanMagnet);
+  const seq = buildSequence(cleanMagnet, cleanEmail);
+  const unsub = `https://askrainbow.ai/desabonnement?e=${encodeURIComponent(cleanEmail)}`;
   const now = Date.now();
   const results = await Promise.allSettled(
     seq.map((e) => {
@@ -86,7 +87,7 @@ export async function POST(req: Request) {
         reply_to: REPLY_TO,
         subject: e.subject,
         html: e.html,
-        headers: { "List-Unsubscribe": "<mailto:stop@news.askrainbow.ai>" },
+        headers: { "List-Unsubscribe": `<${unsub}>`, "List-Unsubscribe-Post": "List-Unsubscribe=One-Click" },
       };
       if (e.delayDays > 0) {
         payload.scheduled_at = new Date(now + e.delayDays * 86_400_000).toISOString();
