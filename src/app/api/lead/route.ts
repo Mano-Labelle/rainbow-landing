@@ -18,11 +18,6 @@ const RESEND = "https://api.resend.com";
 const FROM = "Mano (Rainbow) <mano@news.askrainbow.ai>";
 const REPLY_TO = "mano@askrainbow.ai";
 
-const PDF_URL: Record<Magnet, string> = {
-  salaires: "https://askrainbow.ai/pdf/salaires-itinerants-2026.pdf",
-  voiture: "https://askrainbow.ai/pdf/negocier-voiture-fonction-2026.pdf",
-};
-
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 const MAX_EMAIL_LEN = 254;
 
@@ -81,7 +76,7 @@ export async function POST(req: Request) {
   }
 
   // 2. Send + schedule the welcome sequence.
-  const seq = buildSequence(cleanMagnet, PDF_URL[cleanMagnet]);
+  const seq = buildSequence(cleanMagnet);
   const now = Date.now();
   const results = await Promise.allSettled(
     seq.map((e) => {

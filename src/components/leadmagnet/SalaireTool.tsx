@@ -25,13 +25,15 @@ const SECTORS: Sector[] = [
   { id: "vin", label: "Vin / spiritueux / CHR", ranges: [[30, 34], [36, 42], [44, 50]], variable: "variable", mid: 39 },
 ];
 const RANKED = [...SECTORS].sort((a, b) => b.mid - a.mid);
+const SECTOR_EMOJI: Record<string, string> = { "medical-device": "💊", industrie: "🏭", btp: "🏗️", telecom: "📡", distribution: "🛒", enr: "⚡", "visiteur-medical": "🩺", auto: "🚗", agro: "🌾", vin: "🍷" };
+const ANCIEN_EMOJI = ["🌱", "📈", "🏆"];
 
 const ANCIENNETES = ["Junior (0-2 ans)", "Confirmé (3-5 ans)", "Senior (5 ans +)"];
 
 const REGIONS = [
-  { id: "idf", label: "Île-de-France", mult: 1.12, note: "+12% vs province" },
-  { id: "metropole", label: "Grande métropole (Lyon, Lille…)", mult: 1.05, note: "+5% vs province" },
-  { id: "province", label: "Reste de la France", mult: 1.0, note: "référence" },
+  { id: "idf", emoji: "🗼", label: "Île-de-France", mult: 1.12, note: "+12% sur le même poste" },
+  { id: "metropole", emoji: "🏙️", label: "Grande métropole (Lyon, Lille…)", mult: 1.05, note: "+5%" },
+  { id: "reste", emoji: "🗺️", label: "Partout ailleurs en France", mult: 1.0, note: "référence" },
 ];
 
 const SOURCES = [
@@ -125,7 +127,7 @@ export function SalaireTool() {
       {step === "secteur" && (
         <Choice title="Ton secteur ?" cols={2}>
           {SECTORS.map((s) => (
-            <Tile key={s.id} onClick={() => { setSector(s); postLead({ sector: s.label }); setStep("ancien"); }}>{s.label}</Tile>
+            <Tile key={s.id} onClick={() => { setSector(s); postLead({ sector: s.label }); setStep("ancien"); }}>{SECTOR_EMOJI[s.id]} {s.label}</Tile>
           ))}
         </Choice>
       )}
@@ -133,7 +135,7 @@ export function SalaireTool() {
       {step === "ancien" && (
         <Choice title="Ton ancienneté ?">
           {ANCIENNETES.map((a, i) => (
-            <Tile key={a} onClick={() => { setAncien(i); setStep("region"); }}>{a}</Tile>
+            <Tile key={a} onClick={() => { setAncien(i); setStep("region"); }}>{ANCIEN_EMOJI[i]} {a}</Tile>
           ))}
         </Choice>
       )}
@@ -142,7 +144,7 @@ export function SalaireTool() {
         <Choice title="Tu bosses où ?">
           {REGIONS.map((r) => (
             <Tile key={r.id} onClick={() => { setRegion(r); setStep("result"); }}>
-              {r.label} <span className="text-lavender-dim">· {r.note}</span>
+              {r.emoji} {r.label} <span className="text-lavender-dim">· {r.note}</span>
             </Tile>
           ))}
         </Choice>
@@ -178,7 +180,7 @@ export function SalaireTool() {
 
           {/* insights */}
           <div className="grid gap-3 sm:grid-cols-3">
-            <Insight k={`+${Math.round((region.mult - 1) * 100)}%`} v={region.id === "province" ? "L'Île-de-France paie +12% sur le même poste." : `Ta région, ${region.note}.`} />
+            <Insight k={region.id === "reste" ? "+12%" : `+${Math.round((region.mult - 1) * 100)}%`} v={region.id === "reste" ? "Ce que tu gagnerais en plus en Île-de-France." : "Ta région paie au-dessus du reste de la France."} />
             <Insight k="+8%" v="Le fixe a grimpé en 2 ans. Le variable, lui, se stabilise." />
             <Insight k="47k" v="La moyenne tous secteurs terrain, dont 26% de variable." />
           </div>

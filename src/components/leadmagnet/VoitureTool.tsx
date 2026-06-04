@@ -12,6 +12,7 @@ const TIERS: Tier[] = [
   { id: "confirme", label: "Confirmé / KAM", budget: "~450-700 €/mois", modeles: "3008, Symbioz hybride, Golf", elec: "Mégane E-Tech, Tesla Model 3, ID.4, Enyaq" },
   { id: "senior", label: "Senior / cadre", budget: "~800-1 200 €/mois", modeles: "Série 5, A6, Classe E", elec: "BMW i4, Q4 e-tron, Tesla Model Y" },
 ];
+const NIVEAU_EMOJI: Record<string, string> = { junior: "🌱", confirme: "📈", senior: "🏆" };
 
 const NEGOCIABLE = [
   "La catégorie / le modèle (pousse un cran au-dessus)",
@@ -105,7 +106,7 @@ export function VoitureTool() {
             {TIERS.map((t) => (
               <button key={t.id} onClick={() => { setTier(t); setStep("result"); }}
                 className="rounded-xl border border-ink-border bg-ink-panel/40 px-5 py-4 text-left font-medium text-lavender transition hover:border-accent">
-                {t.label}
+                {NIVEAU_EMOJI[t.id]} {t.label}
               </button>
             ))}
           </div>
@@ -127,9 +128,9 @@ export function VoitureTool() {
             <Insight k="-70%" v="L'abattement sur l'avantage en nature d'une électrique." />
           </div>
 
-          <Block title="Ce qui se négocie" items={NEGOCIABLE} />
-          <Block title="Avant de signer : les 7 questions" items={QUESTIONS} ordered />
-          <Block title="Restitution : ne te fais pas avoir" items={PIEGES} />
+          <Block title="🤝 Ce qui se négocie" items={NEGOCIABLE} />
+          <Block title="❓ Avant de signer : les 7 questions" items={QUESTIONS} ordered />
+          <Block title="⚠️ Restitution : ne te fais pas avoir" items={PIEGES} />
 
           <button onClick={share} className="w-full rounded-full bg-accent px-6 py-3 font-semibold text-ink">Partage la checklist</button>
           <p className="text-center text-sm text-lavender-muted">Ta checklist complète + les modèles 2026 par budget arrivent dans ta boîte mail 📬</p>
