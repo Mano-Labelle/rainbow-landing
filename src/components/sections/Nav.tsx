@@ -13,9 +13,6 @@ export function Nav() {
           <Link href="/#fonctionnement" className="hover:text-lavender transition">
             Comment ça marche
           </Link>
-          <Link href="/#faq" className="hover:text-lavender transition">
-            FAQ
-          </Link>
           <div className="relative group">
             <button className="inline-flex items-center gap-1 hover:text-lavender transition">
               Ressources
@@ -27,13 +24,13 @@ export function Nav() {
               <div className="min-w-56 rounded-2xl border border-ink-border/70 bg-ink-panel/95 p-2 shadow-xl backdrop-blur">
                 {(
                   [
-                    ["💰", "Salaire", "/salaires"],
+                    ["💰", "Grille des salaires", "/salaires"],
                     ["🚗", "Voiture de fonction", "/voiture"],
-                    ["🧮", "Ma commission", "/ma-commission"],
-                    ["🍷", "Vin", "/vin"],
-                    ["📊", "Comparaisons", "/comparaisons"],
-                    ["📚", "Guides", "/guides"],
-                    ["✨", "Bêta", "/beta"],
+                    ["🧮", "Calcule ta commission", "/ma-commission"],
+                    ["🍷", "Rainbow pour le vin", "/vin"],
+                    ["⚖️", "Rainbow vs autres", "/comparaisons"],
+                    ["📚", "Guides pratiques", "/guides"],
+                    ["✨", "Bêta gratuite", "/beta"],
                   ] as const
                 ).map(([emoji, label, href]) => (
                   <Link
@@ -47,6 +44,9 @@ export function Nav() {
               </div>
             </div>
           </div>
+          <Link href="/#faq" className="hover:text-lavender transition">
+            FAQ
+          </Link>
         </div>
         <div className="flex items-center gap-3">
           <a

@@ -112,7 +112,7 @@ export function SalaireTool() {
 
       {step === "email" && (
         <form onSubmit={submitEmail} className="mt-6 rounded-2xl border border-ink-border/60 bg-ink-panel/40 p-6">
-          <p className="text-lavender-muted">Entre ton email pour démarrer. 3 questions, 30 secondes.</p>
+          <p className="text-lavender-muted">Le commercial terrain gagne 47 000 € en moyenne, mais d'un secteur à l'autre ça va du simple au double. Entre ton email et vois où tu te situes vraiment, secteur par secteur et région par région.</p>
           <input
             type="email" inputMode="email" autoComplete="email" placeholder="ton@email.fr"
             value={email} onChange={(e) => setEmail(e.target.value)}
