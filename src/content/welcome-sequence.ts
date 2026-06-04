@@ -13,7 +13,7 @@ const FONT = "font-family:Inter,-apple-system,'Segoe UI',Arial,sans-serif";
 function shell(inner: string, unsubUrl: string): string {
   return `<div style="background:#f4f1fb;padding:24px 12px;margin:0;${FONT}">
   <div style="max-width:560px;margin:0 auto;background:#ffffff;border-radius:18px;overflow:hidden">
-    <div style="background:#0A0612;padding:16px 28px"><img src="${LOGO}" alt="Rainbow" height="22" style="height:22px;display:block"></div>
+    <div style="background:#0A0612;padding:16px 28px"><img src="${LOGO}" alt="" height="22" style="height:22px;vertical-align:middle;display:inline-block"> <span style="${FONT};color:#ffffff;font-weight:600;font-size:18px;vertical-align:middle;margin-left:6px">Rainbow</span></div>
     <div style="height:5px;background:linear-gradient(90deg,#B57DFF,#FF5EC4,#FFA060)"></div>
     <div style="padding:30px 28px;${FONT};color:#1a1626;font-size:16px;line-height:1.6">${inner}</div>
     <div style="padding:18px 28px;background:#faf8ff;text-align:center;${FONT}">
@@ -63,12 +63,12 @@ export function buildSequence(magnet: Magnet, email: string): SequenceEmail[] {
   const e1 =
     magnet === "salaires"
       ? {
-          subject: "Ta grille des salaires 2026 (et un mot)",
-          html: wrap(`${p("Salut,")}${p("Merci d'avoir testé l'outil. Voilà la grille complète des salaires des commerciaux terrain en 2026, à garder :")}${salaireGrille()}${p("Moi c'est Mano, je fais Rainbow. Je t'envoie de temps en temps un truc court et utile pour les gens de la route, jamais de spam.")}${p("Bonne route,<br>Mano")}`),
+          subject: "Ta grille des salaires 2026",
+          html: wrap(`${p("Salut 👋,")}${p("Merci d'avoir testé le simulateur de salaire.")}${p("Comme promis, voilà la grille complète des salaires des commerciaux terrain en 2026 :")}${salaireGrille()}${p("Et bienvenue dans la newsletter de Rainbow : tu recevras de temps en temps des astuces, des conseils et des situations concrètes pour mieux gérer ton métier d'itinérant.")}${p("Bonne route,<br>Mano")}`),
         }
       : {
-          subject: "Ta checklist voiture de fonction (et un mot)",
-          html: wrap(`${p("Salut,")}${p("Merci d'avoir testé l'outil. Voilà l'essentiel à négocier sur ta voiture de fonction, à garder sous la main :")}${voitureChecklist()}${p("Moi c'est Mano, je fais Rainbow. Je t'envoie de temps en temps un truc court et utile pour les gens de la route, jamais de spam.")}${p("Bonne route,<br>Mano")}`),
+          subject: "Ta checklist voiture de fonction",
+          html: wrap(`${p("Salut 👋,")}${p("Merci d'avoir testé le guide voiture de fonction.")}${p("Comme promis, voilà l'essentiel à négocier sur ta voiture de fonction :")}${voitureChecklist()}${p("Et bienvenue dans la newsletter de Rainbow : tu recevras de temps en temps des astuces, des conseils et des situations concrètes pour mieux gérer ton métier d'itinérant.")}${p("Bonne route,<br>Mano")}`),
         };
 
   return [

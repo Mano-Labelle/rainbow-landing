@@ -10,33 +10,43 @@ export function Nav() {
           <Logo size={22} />
         </Link>
         <div className="hidden md:flex items-center gap-7 text-sm text-lavender-muted">
-          <Link
-            href="/#fonctionnement"
-            className="hover:text-lavender transition"
-          >
+          <Link href="/#fonctionnement" className="hover:text-lavender transition">
             Comment ça marche
-          </Link>
-          <Link href="/vin" className="hover:text-lavender transition">
-            <span className="rink-warm font-medium">Vin</span>
-          </Link>
-          <Link href="/guides" className="hover:text-lavender transition">
-            Guides
-          </Link>
-          <Link
-            href="/comparaisons"
-            className="hover:text-lavender transition"
-          >
-            Comparaisons
-          </Link>
-          <Link href="/beta" className="hover:text-lavender transition">
-            Bêta
-          </Link>
-          <Link href="/ma-commission" className="transition hover:opacity-90">
-            <span className="rink-warm font-medium">Ma commission</span>
           </Link>
           <Link href="/#faq" className="hover:text-lavender transition">
             FAQ
           </Link>
+          <div className="relative group">
+            <button className="inline-flex items-center gap-1 hover:text-lavender transition">
+              Ressources
+              <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true" className="opacity-70">
+                <path d="M1 3l4 4 4-4" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
+            <div className="invisible absolute right-0 top-full pt-3 opacity-0 transition group-hover:visible group-hover:opacity-100">
+              <div className="min-w-56 rounded-2xl border border-ink-border/70 bg-ink-panel/95 p-2 shadow-xl backdrop-blur">
+                {(
+                  [
+                    ["💰", "Salaire", "/salaires"],
+                    ["🚗", "Voiture de fonction", "/voiture"],
+                    ["🧮", "Ma commission", "/ma-commission"],
+                    ["🍷", "Vin", "/vin"],
+                    ["📊", "Comparaisons", "/comparaisons"],
+                    ["📚", "Guides", "/guides"],
+                    ["✨", "Bêta", "/beta"],
+                  ] as const
+                ).map(([emoji, label, href]) => (
+                  <Link
+                    key={href}
+                    href={href}
+                    className="flex items-center gap-2 rounded-xl px-3 py-2 text-lavender-muted transition hover:bg-ink hover:text-lavender"
+                  >
+                    <span>{emoji}</span> {label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
         <div className="flex items-center gap-3">
           <a
