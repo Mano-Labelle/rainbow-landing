@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { track } from "@/lib/track";
 
 // Data backbone: leadmagnets/data_salaries_2026.md (itinerants only, € brut annuel package).
 // Ranges by ancienneté: [junior 0-2, confirmé 3-5, senior 5+].
@@ -70,6 +71,7 @@ export function SalaireTool() {
       return;
     }
     setEmailErr("");
+    track("lead_opt_in", { magnet: "salaires" });
     postLead();
     setStep("secteur");
   }

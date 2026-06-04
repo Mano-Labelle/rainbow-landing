@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { track } from "@/lib/track";
 
 // Data backbone: leadmagnets/data_voiture_fonction_2026.md
 // Guided, paced experience — one idea per screen (no scroll wall). Frame = empowerment, not cost.
@@ -52,6 +53,7 @@ export function VoitureTool() {
     const clean = email.trim().toLowerCase();
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(clean)) { setEmailErr("Hmm, cet email a l'air invalide."); return; }
     setEmailErr("");
+    track("lead_opt_in", { magnet: "voiture" });
     fetch("/api/lead", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ email: clean, magnet: "voiture" }) }).catch(() => {});
     setStep("niveau");
   }
