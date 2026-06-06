@@ -30,7 +30,7 @@ const p = (t: string) => `<p style="margin:0 0 16px;${FONT};font-size:16px;line-
 
 // Full-width rounded image hero at the top of an email.
 function imgHero(file: string): string {
-  return `<img src="${IMG}/${file}" width="100%" alt="" style="width:100%;max-width:504px;border-radius:14px;display:block;margin:0 0 22px">`;
+  return `<img src="${IMG}/${file}?v=2" width="100%" alt="" style="width:100%;max-width:504px;border-radius:14px;display:block;margin:0 0 22px">`;
 }
 
 // Spaced bullet list (readability).
