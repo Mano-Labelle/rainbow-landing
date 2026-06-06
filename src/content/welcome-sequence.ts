@@ -1,15 +1,16 @@
 // Opt-in welcome / nurture sequence for the lead magnets.
 // Sent + scheduled by /api/lead at opt-in time (Resend `scheduled_at`).
 // Audience = ALL itinerant field workers (agronomes, chantier managers, chargés
-// d'affaires, technico-commerciaux, field reps) — NOT just "sales". Frame = charge
+// d'affaires, technico-commerciaux, field reps), NOT just "sales". Frame = charge
 // mentale of the day + the after-visit admin, and concrete Rainbow usage. "tu".
-// Every email re-greets + carries a short story (read standalone). NO em-dashes.
-// One adaptive download link (/telecharger routes to App Store or Play by device).
+// Every email: image hero + re-greeting + a short story, generous spacing, no
+// em-dashes. One adaptive download link (/telecharger routes by device), benefit CTA.
 
 export type Magnet = "salaires" | "voiture";
 
 const TELECHARGER = "https://askrainbow.ai/telecharger";
 const LOGO = "https://askrainbow.ai/logo.png";
+const IMG = "https://askrainbow.ai/email";
 const FONT = "font-family:Inter,-apple-system,'Segoe UI',Arial,sans-serif";
 
 function shell(inner: string, unsubUrl: string): string {
@@ -17,7 +18,7 @@ function shell(inner: string, unsubUrl: string): string {
   <div style="max-width:560px;margin:0 auto;background:#ffffff;border-radius:18px;overflow:hidden">
     <div style="background:#0A0612;padding:16px 28px"><img src="${LOGO}" alt="" height="22" style="height:22px;vertical-align:middle;display:inline-block"> <span style="${FONT};color:#ffffff;font-weight:600;font-size:18px;vertical-align:middle;margin-left:6px">Rainbow</span></div>
     <div style="height:5px;background:linear-gradient(90deg,#B57DFF,#FF5EC4,#FFA060)"></div>
-    <div style="padding:30px 28px;${FONT};color:#1a1626;font-size:16px;line-height:1.6">${inner}</div>
+    <div style="padding:28px 28px;${FONT};color:#1a1626;font-size:16px;line-height:1.65">${inner}</div>
     <div style="padding:18px 28px;background:#faf8ff;text-align:center;${FONT}">
       <a href="${unsubUrl}" style="${FONT};color:#8a82a0;font-size:12px">Se désabonner</a>
     </div>
@@ -25,35 +26,35 @@ function shell(inner: string, unsubUrl: string): string {
 </div>`;
 }
 
-const p = (t: string) => `<p style="margin:0 0 14px;${FONT};font-size:16px;line-height:1.6;color:#1a1626">${t}</p>`;
+const p = (t: string) => `<p style="margin:0 0 16px;${FONT};font-size:16px;line-height:1.65;color:#1a1626">${t}</p>`;
 
-// Branded gradient hero (solid fallback for clients that drop gradients).
-// TODO: swap the text hero for a real generated image once Mano provides one.
-function hero(title: string, sub: string): string {
-  return `<div style="background:#140a2e;background:linear-gradient(135deg,#0A0612,#2a1655);border-radius:16px;padding:30px 24px;text-align:center;margin:0 0 22px">
-    <img src="${LOGO}" alt="" height="26" style="height:26px;margin-bottom:12px">
-    <div style="${FONT};color:#ffffff;font-size:21px;font-weight:700;line-height:1.3">${title}</div>
-    ${sub ? `<div style="${FONT};color:#c9bff0;font-size:14px;margin-top:8px">${sub}</div>` : ""}
-  </div>`;
+// Full-width rounded image hero at the top of an email.
+function imgHero(file: string): string {
+  return `<img src="${IMG}/${file}" width="100%" alt="" style="width:100%;max-width:504px;border-radius:14px;display:block;margin:0 0 22px">`;
+}
+
+// Spaced bullet list (readability).
+function bullets(items: string[]): string {
+  return `<ul style="margin:8px 0 18px;padding-left:20px">${items.map((i) => `<li style="${FONT};font-size:16px;line-height:1.6;color:#1a1626;margin:8px 0">${i}</li>`).join("")}</ul>`;
 }
 
 // One usage "card": emoji chip + title + body + who-uses-it line.
 function card(emoji: string, title: string, body: string, who: string): string {
-  return `<table role="presentation" width="100%" style="border-collapse:collapse;margin:14px 0"><tr>
+  return `<table role="presentation" width="100%" style="border-collapse:collapse;margin:16px 0"><tr>
     <td width="56" valign="top" style="${FONT}">
       <div style="width:46px;height:46px;border-radius:13px;background:#f4f1fb;text-align:center;line-height:46px;font-size:23px">${emoji}</div>
     </td>
     <td valign="top" style="${FONT};padding-left:12px">
-      <div style="${FONT};font-weight:700;font-size:15px;color:#1a1626;margin-bottom:3px">${title}</div>
+      <div style="${FONT};font-weight:700;font-size:15px;color:#1a1626;margin-bottom:4px">${title}</div>
       <div style="${FONT};font-size:14px;line-height:1.55;color:#444">${body}</div>
-      ${who ? `<div style="${FONT};font-size:12px;color:#8a82a0;margin-top:5px">${who}</div>` : ""}
+      ${who ? `<div style="${FONT};font-size:12px;color:#8a82a0;margin-top:6px">${who}</div>` : ""}
     </td></tr></table>`;
 }
 
-// Download block: one adaptive link (routes to App Store or Play by device).
+// Download block: one adaptive link (routes to App Store or Play by device), benefit-first.
 function appButton(): string {
-  return `<div style="margin:24px 0;text-align:center">
-    <a href="${TELECHARGER}" style="${FONT};background:#0A0612;color:#ffffff;text-decoration:none;font-weight:700;padding:14px 26px;border-radius:12px;display:inline-block;font-size:15px">📲 Télécharger Rainbow</a>
+  return `<div style="margin:26px 0;text-align:center">
+    <a href="${TELECHARGER}" style="${FONT};background:#FF5EC4;color:#0A0612;text-decoration:none;font-weight:700;padding:14px 30px;border-radius:12px;display:inline-block;font-size:16px">Je gagne du temps</a>
     <div style="${FONT};font-size:12px;color:#8a82a0;margin-top:10px">Sur iPhone et Android</div>
   </div>`;
 }
@@ -97,11 +98,11 @@ export function buildSequence(magnet: Magnet, email: string): SequenceEmail[] {
     magnet === "salaires"
       ? {
           subject: "Ta grille des salaires 2026",
-          html: wrap(`${p("Salut 👋,")}${p("Merci d'avoir testé le simulateur de salaire.")}${p("Comme promis, voilà la grille complète des salaires des commerciaux terrain en 2026 :")}${salaireGrille()}${p("Et bienvenue dans la newsletter de Rainbow : de temps en temps, des astuces et des situations concrètes pour mieux gérer ton métier d'itinérant.")}${p("Bonne route,<br>Mano")}`),
+          html: wrap(`${p("Salut 👋")}${p("Merci d'avoir testé le simulateur de salaire.")}${p("Comme promis, voilà la grille complète des salaires des commerciaux terrain en 2026 :")}${salaireGrille()}${p("Et bienvenue dans la newsletter de Rainbow : de temps en temps, des astuces et des situations concrètes pour mieux gérer ton métier d'itinérant.")}${p("Bonne route,<br>Mano")}`),
         }
       : {
           subject: "Ta checklist voiture de fonction",
-          html: wrap(`${p("Salut 👋,")}${p("Merci d'avoir testé le guide voiture de fonction.")}${p("Comme promis, voilà l'essentiel à négocier sur ta voiture de fonction :")}${voitureChecklist()}${p("Et bienvenue dans la newsletter de Rainbow : de temps en temps, des astuces et des situations concrètes pour mieux gérer ton métier d'itinérant.")}${p("Bonne route,<br>Mano")}`),
+          html: wrap(`${p("Salut 👋")}${p("Merci d'avoir testé le guide voiture de fonction.")}${p("Comme promis, voilà l'essentiel à négocier sur ta voiture de fonction :")}${voitureChecklist()}${p("Et bienvenue dans la newsletter de Rainbow : de temps en temps, des astuces et des situations concrètes pour mieux gérer ton métier d'itinérant.")}${p("Bonne route,<br>Mano")}`),
         };
 
   return [
@@ -110,10 +111,14 @@ export function buildSequence(magnet: Magnet, email: string): SequenceEmail[] {
       delayDays: 2,
       subject: "Bienvenue, et c'est quoi Rainbow",
       html: wrap(
-        `${hero("Zéro admin en fin de journée.", "Pour tous les métiers de terrain.")}` +
-        `${p("Salut, et bienvenue dans la newsletter de Rainbow. Tu la reçois parce que tu as testé " + tested + ".")}` +
-        `${p("Moi c'est Mano. J'ai été commercial terrain, et comme beaucoup d'itinérants (agronomes, chargés d'affaires, chefs de chantier, technico-commerciaux), je connais bien le truc : garder toute la journée les infos dans la tête, jongler entre les RDV et la route, puis taper l'admin le soir au lieu d'être tranquille. La charge mentale, quoi.")}` +
-        `${p("Alors j'ai créé <b>Rainbow</b> : un assistant IA dans ton téléphone qui s'occupe de l'admin à ta place. Tu sors d'un rendez-vous, tu parles 30 secondes en voiture, et ton compte-rendu, tes tâches et tes relances s'écrivent tout seuls, rangés dans ton agenda.")}` +
+        `${imgHero("hero-voiture.jpg")}` +
+        `${p("Salut 👋")}` +
+        `${p("Ravi de t'avoir ici ! Tu reçois ce mail parce que tu as testé " + tested + ", et je voulais me présenter.")}` +
+        `${p("Moi c'est Mano. J'ai été commercial terrain. Et comme beaucoup d'itinérants (agronomes, chargés d'affaires, chefs de chantier, technico-commerciaux), je connaissais ça par cœur :")}` +
+        `${bullets(["Garder toute la journée les infos dans la tête", "Jongler entre les rendez-vous et la route", "Taper l'admin le soir, au lieu d'être tranquille"])}` +
+        `${p("La charge mentale, quoi.")}` +
+        `${p("Alors j'ai créé <b>Rainbow</b> : un assistant IA dans ton téléphone qui s'occupe de l'admin à ta place.")}` +
+        `${p("Tu sors d'un rendez-vous, tu parles 30 secondes en voiture, et ton compte-rendu, tes tâches et tes relances s'écrivent tout seuls, rangés dans ton agenda.")}` +
         `${p("Mon obsession, elle est simple : réduire à zéro le temps d'admin de tous les métiers itinérants.")}` +
         `${appButton()}` +
         `${p("Bonne route,<br>Mano")}`
@@ -123,12 +128,14 @@ export function buildSequence(magnet: Magnet, email: string): SequenceEmail[] {
       delayDays: 4,
       subject: "Comment des itinérants utilisent Rainbow",
       html: wrap(
+        `${imgHero("terrain-solaire.jpg")}` +
         `${p("Salut, c'est encore Mano 👋")}` +
-        `${p("La semaine dernière, un chef de chantier me raconte son ancien quotidien : rentrer le soir avec quatre visites de site dans la tête, et en oublier la moitié en tapant ses rapports à 20h. Depuis qu'il utilise Rainbow, il dicte 30 secondes dans son pick-up en quittant le chantier. Le soir, tout est déjà écrit.")}` +
-        `${p("Voilà comment des itinérants s'en servent, concrètement, au quotidien :")}` +
+        `${p("La semaine dernière, un chef de chantier me raconte son ancien quotidien : rentrer le soir avec quatre visites de site dans la tête, et en oublier la moitié en tapant ses rapports à 20h.")}` +
+        `${p("Depuis qu'il utilise Rainbow, il dicte 30 secondes dans sa voiture en quittant le chantier. Le soir, tout est déjà écrit.")}` +
+        `${p("Voilà comment des itinérants s'en servent, concrètement :")}` +
         `${card("🎙️", "Le compte-rendu dicté", "En sortant du rendez-vous, tu parles 30 secondes en voiture. Le compte-rendu est écrit et rangé. Le soir, plus rien à taper.", "Un chef de chantier, après chaque visite de site.")}` +
         `${card("🔔", "Les relances qui ne tombent jamais", "Tu dictes « rappeler M. Martin jeudi », c'est bloqué dans ton agenda. Plus aucune relance oubliée.", "Un chargé d'affaires dans les énergies renouvelables.")}` +
-        `${card("🌅", "Ton briefing du matin", "Chaque matin, Rainbow te prépare ta journée : tes RDV, ce qui s'est dit la dernière fois avec chacun, et tes relances du jour. Tu démarres en sachant quoi faire.", "Un commercial qui enchaîne les rendez-vous.")}` +
+        `${card("🌅", "Ton briefing du matin", "Chaque matin, Rainbow te prépare ta journée : tes RDV, ce qui s'est dit la dernière fois avec chacun, et tes relances du jour.", "Un commercial qui enchaîne les rendez-vous.")}` +
         `${card("🧠", "Le brief avant chaque RDV", "10 secondes sur ton téléphone : l'IA te ressort ce qui s'est dit la dernière fois, le détail, le prénom, la promesse faite.", "Un agronome, avant sa tournée de fermes.")}` +
         `${p("Le mieux, c'est de l'essayer sur un vrai rendez-vous à toi.")}` +
         `${appButton()}` +
@@ -139,8 +146,10 @@ export function buildSequence(magnet: Magnet, email: string): SequenceEmail[] {
       delayDays: 6,
       subject: "Se souvenir des gens (et un test pour toi)",
       html: wrap(
+        `${imgHero("agronome.jpg")}` +
         `${p("Salut, dernier mail de bienvenue 👋")}` +
-        `${p("Un agronome me disait l'autre jour : le pire, c'est d'arriver chez un client et d'avoir oublié qu'il t'avait parlé de sa fille qui passe le bac. Maintenant, avant chaque visite, Rainbow lui ressort ces détails. Ses clients le trouvent attentionné comme jamais. En vrai, c'est juste l'IA qui se souvient à sa place.")}` +
+        `${p("Un agronome me disait l'autre jour : le pire, c'est d'arriver chez un client et d'avoir oublié qu'il t'avait parlé de sa fille qui passe le bac.")}` +
+        `${p("Maintenant, avant chaque visite, Rainbow lui ressort ces détails. Ses clients le trouvent attentionné comme jamais. En vrai, c'est juste l'IA qui se souvient à sa place.")}` +
         `${card("🤝", "Se souvenir des gens", "Anniversaires, prénoms des enfants, la dernière promesse faite. L'IA ressort ce qu'elle a entendu avant chaque RDV. Tes clients se sentent suivis.", "")}` +
         `${card("🚀", "Rester proactif", "Plus besoin de courir après ta semaine : l'IA te pousse tes prochaines actions, au bon moment.", "")}` +
         `${p("<b>Le test, cette semaine :</b> à ton prochain rendez-vous, dicte ton compte-rendu 30 secondes en sortant. Une fois. Le soir, regarde : rien à taper, la tête vide.")}` +
